@@ -2,10 +2,15 @@ name: Performance Testing CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "master" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main", "master" ]
   workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
 
 jobs:
   jmeter-tests:
@@ -15,7 +20,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Set up Java
+      - name: Set up Java 21
         uses: actions/setup-java@v3
         with:
           java-version: '21'
@@ -29,24 +34,278 @@ jobs:
 
       - name: Run JMeter Performance Tests
         run: |
-          # FIX 1: Always wipe and recreate the reports folder before running.
-          # JMeter refuses to write the HTML dashboard to a non-empty directory.
           rm -rf reports
           mkdir -p reports
-
           jmeter -n \
             -t test-plan/DemoBlaze_Performance_Test_fixed.jmx \
-            -l result2.jtl \
+            -l results.jtl \
             -e -o ./reports/
 
-      - name: Upload Test Report Artifact
-        uses: actions/upload-artifact@v4
+      # ── Parse JTL and extract real metrics for the email ──────
+      - name: Parse JTL Results
+        if: always()
+        id: metrics
+        run: |
+          python3 << 'EOF'
+          import csv, os, json
+          from collections import defaultdict
+
+          jtl_path = "results.jtl"
+          stats = defaultdict(lambda: {"total": 0, "pass": 0, "fail": 0, "times": [], "bytes": 0})
+
+          try:
+              with open(jtl_path, newline='', encoding='utf-8') as f:
+                  reader = csv.DictReader(f)
+                  for row in reader:
+                      label = row.get("label", "Unknown").strip()
+                      success = row.get("success", "true").strip().lower() == "true"
+                      elapsed = int(row.get("elapsed", 0))
+                      bytes_val = int(row.get("bytes", 0))
+
+                      stats[label]["total"] += 1
+                      stats[label]["bytes"] += bytes_val
+                      stats[label]["times"].append(elapsed)
+                      if success:
+                          stats[label]["pass"] += 1
+                      else:
+                          stats[label]["fail"] += 1
+
+          except FileNotFoundError:
+              print("JTL file not found")
+              stats = {}
+
+          # Overall totals
+          grand_total = sum(v["total"] for v in stats.values())
+          grand_pass  = sum(v["pass"]  for v in stats.values())
+          grand_fail  = sum(v["fail"]  for v in stats.values())
+          all_times   = [t for v in stats.values() for t in v["times"]]
+          avg_rt      = int(sum(all_times) / len(all_times)) if all_times else 0
+          sorted_times = sorted(all_times)
+          p90 = sorted_times[int(len(sorted_times)*0.90)] if sorted_times else 0
+          p95 = sorted_times[int(len(sorted_times)*0.95)] if sorted_times else 0
+          error_rate  = round((grand_fail / grand_total * 100), 2) if grand_total > 0 else 0.0
+          overall_status = "PASS" if error_rate <= 1.0 and avg_rt <= 2000 else "FAIL"
+
+          # Per-transaction rows for email
+          rows_html = ""
+          for label, v in stats.items():
+              t = v["total"]
+              p = v["pass"]
+              f = v["fail"]
+              times = sorted(v["times"])
+              avg = int(sum(times)/len(times)) if times else 0
+              p90t = times[int(len(times)*0.90)] if times else 0
+              err = round(f/t*100, 2) if t > 0 else 0
+              tx_status = "PASS" if err <= 1.0 and avg <= 2000 else "FAIL"
+              status_color = "#27ae60" if tx_status == "PASS" else "#e74c3c"
+              rows_html += f"""
+                <tr>
+                  <td style="padding:10px 14px;border-bottom:1px solid #eee;font-weight:500;">{label}</td>
+                  <td style="padding:10px 14px;border-bottom:1px solid #eee;text-align:center;">{t}</td>
+                  <td style="padding:10px 14px;border-bottom:1px solid #eee;text-align:center;color:#27ae60;font-weight:600;">{p}</td>
+                  <td style="padding:10px 14px;border-bottom:1px solid #eee;text-align:center;color:#e74c3c;font-weight:600;">{f}</td>
+                  <td style="padding:10px 14px;border-bottom:1px solid #eee;text-align:center;">{avg} ms</td>
+                  <td style="padding:10px 14px;border-bottom:1px solid #eee;text-align:center;">{p90t} ms</td>
+                  <td style="padding:10px 14px;border-bottom:1px solid #eee;text-align:center;">{err}%</td>
+                  <td style="padding:10px 14px;border-bottom:1px solid #eee;text-align:center;">
+                    <span style="background:{status_color};color:white;padding:3px 10px;border-radius:12px;font-size:12px;font-weight:700;">{tx_status}</span>
+                  </td>
+                </tr>"""
+
+          if not rows_html:
+              rows_html = '<tr><td colspan="8" style="padding:20px;text-align:center;color:#999;">No results available</td></tr>'
+
+          # Write outputs
+          env_file = os.environ.get("GITHUB_ENV", "/dev/null")
+          with open(env_file, "a") as f:
+              f.write(f"GRAND_TOTAL={grand_total}\n")
+              f.write(f"GRAND_PASS={grand_pass}\n")
+              f.write(f"GRAND_FAIL={grand_fail}\n")
+              f.write(f"AVG_RT={avg_rt}\n")
+              f.write(f"P90={p90}\n")
+              f.write(f"P95={p95}\n")
+              f.write(f"ERROR_RATE={error_rate}\n")
+              f.write(f"OVERALL_STATUS={overall_status}\n")
+
+          # Write rows to a file (avoids multiline env var issues)
+          with open("email_rows.html", "w") as f:
+              f.write(rows_html)
+
+          print(f"Total={grand_total}, Pass={grand_pass}, Fail={grand_fail}, Avg={avg_rt}ms, ErrorRate={error_rate}%, Status={overall_status}")
+          EOF
+
+      # ── Build the full HTML email body ───────────────────────
+      - name: Build Email Body
+        if: always()
+        run: |
+          ROWS=$(cat email_rows.html)
+          REPORT_URL="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
+          RUN_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+
+          if [ "$OVERALL_STATUS" = "PASS" ]; then
+            BANNER_COLOR="#27ae60"
+            BANNER_ICON="✅"
+            BANNER_TEXT="All SLAs Met"
+          else
+            BANNER_COLOR="#e74c3c"
+            BANNER_ICON="❌"
+            BANNER_TEXT="SLA Violations Detected"
+          fi
+
+          cat > email_body.html << HTMLEOF
+          <!DOCTYPE html>
+          <html>
+          <head><meta charset="UTF-8"></head>
+          <body style="margin:0;padding:0;background:#f5f6fa;font-family:Arial,sans-serif;">
+            <div style="max-width:700px;margin:30px auto;background:white;border-radius:8px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.1);">
+
+              <!-- Header banner -->
+              <div style="background:${BANNER_COLOR};padding:28px 32px;text-align:center;">
+                <div style="font-size:36px;margin-bottom:8px;">${BANNER_ICON}</div>
+                <h1 style="margin:0;color:white;font-size:22px;font-weight:700;">JMeter Performance Test Report</h1>
+                <p style="margin:8px 0 0;color:rgba(255,255,255,0.9);font-size:15px;">${BANNER_TEXT}</p>
+              </div>
+
+              <!-- Meta info bar -->
+              <div style="background:#f8f9fa;padding:16px 32px;border-bottom:1px solid #eee;display:flex;gap:32px;">
+                <div style="flex:1;">
+                  <div style="font-size:11px;color:#999;text-transform:uppercase;letter-spacing:0.5px;">Repository</div>
+                  <div style="font-size:13px;color:#333;font-weight:600;margin-top:2px;">${{ github.repository }}</div>
+                </div>
+                <div style="flex:1;">
+                  <div style="font-size:11px;color:#999;text-transform:uppercase;letter-spacing:0.5px;">Branch</div>
+                  <div style="font-size:13px;color:#333;font-weight:600;margin-top:2px;">${{ github.ref_name }}</div>
+                </div>
+                <div style="flex:1;">
+                  <div style="font-size:11px;color:#999;text-transform:uppercase;letter-spacing:0.5px;">Run</div>
+                  <div style="font-size:13px;color:#333;font-weight:600;margin-top:2px;">#${{ github.run_number }}</div>
+                </div>
+                <div style="flex:1;">
+                  <div style="font-size:11px;color:#999;text-transform:uppercase;letter-spacing:0.5px;">Triggered by</div>
+                  <div style="font-size:13px;color:#333;font-weight:600;margin-top:2px;">${{ github.actor }}</div>
+                </div>
+              </div>
+
+              <div style="padding:28px 32px;">
+
+                <!-- KPI summary cards -->
+                <h2 style="margin:0 0 16px;font-size:16px;color:#333;font-weight:700;">Overall Summary</h2>
+                <div style="display:flex;gap:12px;margin-bottom:28px;">
+                  <div style="flex:1;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:16px;text-align:center;">
+                    <div style="font-size:28px;font-weight:700;color:#16a34a;">${GRAND_PASS}</div>
+                    <div style="font-size:12px;color:#16a34a;font-weight:600;margin-top:4px;">PASSED</div>
+                  </div>
+                  <div style="flex:1;background:#fef2f2;border:1px solid #fecaca;border-radius:8px;padding:16px;text-align:center;">
+                    <div style="font-size:28px;font-weight:700;color:#dc2626;">${GRAND_FAIL}</div>
+                    <div style="font-size:12px;color:#dc2626;font-weight:600;margin-top:4px;">FAILED</div>
+                  </div>
+                  <div style="flex:1;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:16px;text-align:center;">
+                    <div style="font-size:28px;font-weight:700;color:#2563eb;">${GRAND_TOTAL}</div>
+                    <div style="font-size:12px;color:#2563eb;font-weight:600;margin-top:4px;">TOTAL</div>
+                  </div>
+                  <div style="flex:1;background:#fafafa;border:1px solid #e5e7eb;border-radius:8px;padding:16px;text-align:center;">
+                    <div style="font-size:28px;font-weight:700;color:#374151;">${AVG_RT}ms</div>
+                    <div style="font-size:12px;color:#6b7280;font-weight:600;margin-top:4px;">AVG RESPONSE</div>
+                  </div>
+                  <div style="flex:1;background:#fafafa;border:1px solid #e5e7eb;border-radius:8px;padding:16px;text-align:center;">
+                    <div style="font-size:28px;font-weight:700;color:#374151;">${ERROR_RATE}%</div>
+                    <div style="font-size:12px;color:#6b7280;font-weight:600;margin-top:4px;">ERROR RATE</div>
+                  </div>
+                </div>
+
+                <!-- SLA targets -->
+                <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:14px 18px;margin-bottom:28px;">
+                  <div style="font-size:12px;font-weight:700;color:#92400e;margin-bottom:6px;">SLA TARGETS</div>
+                  <div style="font-size:13px;color:#78350f;">
+                    Average Response Time &lt; 2,000ms &nbsp;|&nbsp;
+                    Error Rate &le; 1% &nbsp;|&nbsp;
+                    P90 &lt; 3,000ms &nbsp;|&nbsp;
+                    P95 &lt; 3,000ms
+                  </div>
+                </div>
+
+                <!-- Per-transaction table -->
+                <h2 style="margin:0 0 12px;font-size:16px;color:#333;font-weight:700;">Transaction Breakdown</h2>
+                <div style="border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;margin-bottom:28px;">
+                  <table style="width:100%;border-collapse:collapse;font-size:13px;">
+                    <thead>
+                      <tr style="background:#f8f9fa;">
+                        <th style="padding:10px 14px;text-align:left;font-weight:700;color:#374151;border-bottom:2px solid #e5e7eb;">Transaction</th>
+                        <th style="padding:10px 14px;text-align:center;font-weight:700;color:#374151;border-bottom:2px solid #e5e7eb;">Samples</th>
+                        <th style="padding:10px 14px;text-align:center;font-weight:700;color:#16a34a;border-bottom:2px solid #e5e7eb;">Pass</th>
+                        <th style="padding:10px 14px;text-align:center;font-weight:700;color:#dc2626;border-bottom:2px solid #e5e7eb;">Fail</th>
+                        <th style="padding:10px 14px;text-align:center;font-weight:700;color:#374151;border-bottom:2px solid #e5e7eb;">Avg RT</th>
+                        <th style="padding:10px 14px;text-align:center;font-weight:700;color:#374151;border-bottom:2px solid #e5e7eb;">P90</th>
+                        <th style="padding:10px 14px;text-align:center;font-weight:700;color:#374151;border-bottom:2px solid #e5e7eb;">Error %</th>
+                        <th style="padding:10px 14px;text-align:center;font-weight:700;color:#374151;border-bottom:2px solid #e5e7eb;">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      ${ROWS}
+                    </tbody>
+                  </table>
+                </div>
+
+                <!-- Percentiles -->
+                <div style="background:#f8f9fa;border-radius:8px;padding:16px 20px;margin-bottom:28px;">
+                  <div style="font-size:13px;font-weight:700;color:#374151;margin-bottom:10px;">Response Time Percentiles (Overall)</div>
+                  <div style="display:flex;gap:24px;">
+                    <div>
+                      <span style="font-size:11px;color:#6b7280;">P90</span>
+                      <span style="font-size:18px;font-weight:700;color:#374151;margin-left:8px;">${P90} ms</span>
+                    </div>
+                    <div>
+                      <span style="font-size:11px;color:#6b7280;">P95</span>
+                      <span style="font-size:18px;font-weight:700;color:#374151;margin-left:8px;">${P95} ms</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- CTA buttons -->
+                <div style="text-align:center;margin-bottom:8px;">
+                  <a href="${REPORT_URL}"
+                     style="display:inline-block;background:#2563eb;color:white;padding:12px 28px;border-radius:6px;text-decoration:none;font-weight:700;font-size:14px;margin-right:12px;">
+                    View Full HTML Report
+                  </a>
+                  <a href="${RUN_URL}"
+                     style="display:inline-block;background:#374151;color:white;padding:12px 28px;border-radius:6px;text-decoration:none;font-weight:700;font-size:14px;">
+                    View Workflow Logs
+                  </a>
+                </div>
+
+              </div>
+
+              <!-- Footer -->
+              <div style="background:#f8f9fa;border-top:1px solid #eee;padding:16px 32px;text-align:center;">
+                <p style="margin:0;font-size:12px;color:#9ca3af;">
+                  AmaliTech Training Academy — Team 1 &nbsp;|&nbsp;
+                  Divine GIHOZO BAYINGANA &nbsp;|&nbsp;
+                  Apache JMeter 5.6.3 on Java 21
+                </p>
+              </div>
+
+            </div>
+          </body>
+          </html>
+          HTMLEOF
+
+          echo "Email body built successfully"
+
+      # ── Deploy to GitHub Pages ────────────────────────────────
+      # The reports/ folder contains index.html at its root — that's
+      # what JMeter's -o flag generates. Deploying it to gh-pages
+      # makes it directly accessible at the GitHub Pages URL.
+      - name: Deploy HTML Report to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         if: always()
         with:
-          name: jmeter-html-report
-          path: ./reports/
-          retention-days: 7
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./reports
+          publish_branch: gh-pages
+          force_orphan: true
+          commit_message: "ci: publish JMeter HTML report — run #${{ github.run_number }}"
 
+      # ── Send email with full metrics ─────────────────────────
       - name: Send Email Notification
         uses: dawidd6/action-send-mail@v3
         if: always()
@@ -56,22 +315,7 @@ jobs:
           secure: true
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_PASSWORD }}
-          subject: "JMeter Performance Test - ${{ job.status }} | Run #${{ github.run_number }}"
-          html_body: |
-            <h2>JMeter Performance Test Results</h2>
-            <p>Status: <b>${{ job.status }}</b></p>
-            <p>Repository: <b>${{ github.repository }}</b></p>
-            <p>Branch: <b>${{ github.ref_name }}</b></p>
-            <p>Run number: <b>#${{ github.run_number }}</b></p>
-            <hr/>
-            <p>
-              The full HTML Dashboard report has been uploaded as a downloadable artifact
-              on GitHub Actions and will be retained for 7 days.
-            </p>
-            <p>
-              <a href="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}">
-                Click here to view the run and download the HTML report
-              </a>
-            </p>
+          subject: "[${{ env.OVERALL_STATUS }}] JMeter Performance Test — Run #${{ github.run_number }} | ${{ github.ref_name }}"
+          html_body: file://email_body.html
           to: ${{ secrets.NOTIFICATION_EMAIL }}
           from: "GitHub Actions <${{ secrets.EMAIL_USERNAME }}>"
