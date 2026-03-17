@@ -1,0 +1,70 @@
+name: Performance Testing CI
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+  workflow_dispatch: # Allows manual trigger
+
+jobs:
+  jmeter-tests:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Install JMeter
+        run: |
+          wget https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-5.6.3.tgz
+          tar -xzf apache-jmeter-5.6.3.tgz
+          echo "$PWD/apache-jmeter-5.6.3/bin" >> $GITHUB_PATH
+
+      - name: Run JMeter Performance Tests
+        run: |
+          mkdir -p reports
+          # Run the JMeter script and generate HTML report
+          jmeter -n -t test-plan/DemoBlaze_Performance_Test_fixed.jmx -l result2.jtl -e -o ./reports/
+
+      - name: Upload Test Report Artifact
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: jmeter-reports
+          path: ./reports/
+          retention-days: 7
+
+      - name: Zip HTML Report for Email Attachment
+        if: always()
+        run: |
+          # The email action requires a file to attach, so we compress the HTML report
+          zip -r jmeter-reports.zip reports/
+
+      - name: Send Email Notification
+        uses: dawidd6/action-send-mail@v3
+        if: always()
+        with:
+          # Default Gmail SMTP setup (you can change it for Outlook, Office365, etc.)
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          
+          subject: JMeter Performance Test - ${{ job.status }}
+          html_body: |
+            <h2>JMeter Performance Test Execution Summary</h2>
+            <p>The JMeter performance tests have finished with status: <b>${{ job.status }}</b>.</p>
+            <p>You can find the compressed HTML reports attached to this email.</p>
+            <p>Workflow Run URL: <a href="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}">View full logs on GitHub</a></p>
+          
+          to: ${{ secrets.NOTIFICATION_EMAIL }}
+          from: GitHub Actions <${{ secrets.EMAIL_USERNAME }}>
+          attachments: jmeter-reports.zip
