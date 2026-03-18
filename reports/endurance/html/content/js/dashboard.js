@@ -133,7 +133,7 @@ $(document).ready(function() {
         widgets: ['zebra']
     });
 
-    var data = {"OkPercent": 100.0, "KoPercent": 0.0};
+    var data = {"OkPercent": 79.73333333333333, "KoPercent": 20.266666666666666};
     var dataset = [
         {
             "label" : "FAIL",
@@ -173,7 +173,7 @@ $(document).ready(function() {
     });
 
     // Creates APDEX table
-    createTable($("#apdexTable"), {"supportsControllersDiscrimination": true, "overall": {"data": [0.71, 500, 1500, "Total"], "isController": false}, "titles": ["Apdex", "T (Toleration threshold)", "F (Frustration threshold)", "Label"], "items": [{"data": [0.48, 500, 1500, "02_Login"], "isController": false}, {"data": [0.75, 500, 1500, "05_Place_Order"], "isController": false}, {"data": [0.92, 500, 1500, "04_Add_To_Cart"], "isController": false}, {"data": [0.4, 500, 1500, "01_Homepage"], "isController": false}, {"data": [1.0, 500, 1500, "03_View_Product"], "isController": false}]}, function(index, item){
+    createTable($("#apdexTable"), {"supportsControllersDiscrimination": true, "overall": {"data": [0.578, 500, 1500, "Total"], "isController": false}, "titles": ["Apdex", "T (Toleration threshold)", "F (Frustration threshold)", "Label"], "items": [{"data": [0.6233333333333333, 500, 1500, "02_Login"], "isController": false}, {"data": [0.735, 500, 1500, "05_Place_Order"], "isController": false}, {"data": [0.79, 500, 1500, "04_Add_To_Cart"], "isController": false}, {"data": [0.7416666666666667, 500, 1500, "01_Homepage"], "isController": false}, {"data": [0.0, 500, 1500, "03_View_Product"], "isController": false}]}, function(index, item){
         switch(index){
             case 0:
                 item = item.toFixed(3);
@@ -187,7 +187,7 @@ $(document).ready(function() {
     }, [[0, 0]], 3);
 
     // Create statistics table
-    createTable($("#statisticsTable"), {"supportsControllersDiscrimination": true, "overall": {"data": ["Total", 250, 0, 0.0, 691.3880000000003, 255, 2288, 594.0, 1400.8, 1524.5999999999985, 2246.0, 16.66777785185679, 64.57865420194679, 3.84465735215681], "isController": false}, "titles": ["Label", "#Samples", "FAIL", "Error %", "Average", "Min", "Max", "Median", "90th pct", "95th pct", "99th pct", "Transactions/s", "Received", "Sent"], "items": [{"data": ["02_Login", 50, 0, 0.0, 873.9599999999999, 706, 1742, 763.0, 1345.1, 1524.5999999999995, 1742.0, 6.48760866744518, 1.621902166861295, 1.4571777280394447], "isController": false}, {"data": ["05_Place_Order", 50, 0, 0.0, 793.7399999999998, 364, 1444, 481.5, 1408.9, 1425.3999999999999, 1444.0, 6.939625260235947, 1.3960574253990283, 2.2431796495489245], "isController": false}, {"data": ["04_Add_To_Cart", 50, 0, 0.0, 490.7599999999998, 370, 1450, 387.5, 977.1999999999996, 1278.199999999999, 1450.0, 6.915629322268326, 1.3304482192254494, 1.9720349239280774], "isController": false}, {"data": ["01_Homepage", 50, 0, 0.0, 979.88, 580, 2288, 664.5, 2182.7, 2246.0, 2288.0, 5.418879375745096, 45.08348884388209, 0.8519917768505473], "isController": false}, {"data": ["03_View_Product", 50, 0, 0.0, 318.59999999999997, 255, 445, 317.5, 399.3, 436.94999999999993, 445.0, 6.928086462519053, 72.11474967957601, 1.1298734758209783], "isController": false}]}, function(index, item){
+    createTable($("#statisticsTable"), {"supportsControllersDiscrimination": true, "overall": {"data": ["Total", 1500, 304, 20.266666666666666, 516.2666666666664, 240, 2587, 459.5, 800.9000000000001, 907.7000000000003, 1216.5400000000004, 20.551605080356776, 74.85963628368751, 4.740516718730733], "isController": false}, "titles": ["Label", "#Samples", "FAIL", "Error %", "Average", "Min", "Max", "Median", "90th pct", "95th pct", "99th pct", "Transactions/s", "Received", "Sent"], "items": [{"data": ["02_Login", 300, 0, 0.0, 703.9533333333338, 375, 1905, 727.5, 998.6000000000005, 1114.9, 1304.3700000000006, 4.58848901056882, 1.147122252642205, 1.030617648858231], "isController": false}, {"data": ["05_Place_Order", 300, 0, 0.0, 557.6366666666661, 355, 1382, 508.0, 783.3000000000002, 876.6499999999999, 1216.4600000000005, 4.646624227498722, 0.9348911141056022, 1.5019849797871845], "isController": false}, {"data": ["04_Add_To_Cart", 300, 0, 0.0, 509.7733333333336, 368, 916, 465.0, 717.5000000000002, 786.95, 876.96, 4.645472986574583, 0.8937091585499931, 1.3246856563279086], "isController": false}, {"data": ["01_Homepage", 300, 4, 1.3333333333333333, 508.35333333333335, 243, 2587, 502.5, 741.7000000000005, 791.9, 2525.9000000000037, 4.4381980915748205, 36.18372464217028, 0.6978026296323693], "isController": false}, {"data": ["03_View_Product", 300, 300, 100.0, 301.6166666666668, 240, 675, 265.0, 376.0, 424.9, 448.99, 4.64496949803363, 43.73807307311182, 0.7575292052457189], "isController": false}]}, function(index, item){
         switch(index){
             // Errors pct
             case 3:
@@ -217,7 +217,7 @@ $(document).ready(function() {
     }, [[0, 0]], 0, summaryTableHeader);
 
     // Create error table
-    createTable($("#errorsTable"), {"supportsControllersDiscrimination": false, "titles": ["Type of error", "Number of errors", "% in errors", "% in all samples"], "items": []}, function(index, item){
+    createTable($("#errorsTable"), {"supportsControllersDiscrimination": false, "titles": ["Type of error", "Number of errors", "% in errors", "% in all samples"], "items": [{"data": ["The operation lasted too long: It took 2,587 milliseconds, but should not have lasted longer than 2,000 milliseconds.", 2, 0.6578947368421053, 0.13333333333333333], "isController": false}, {"data": ["The operation lasted too long: It took 2,120 milliseconds, but should not have lasted longer than 2,000 milliseconds.", 1, 0.32894736842105265, 0.06666666666666667], "isController": false}, {"data": ["Product page missing Add to cart button", 300, 98.6842105263158, 20.0], "isController": false}, {"data": ["The operation lasted too long: It took 2,530 milliseconds, but should not have lasted longer than 2,000 milliseconds.", 1, 0.32894736842105265, 0.06666666666666667], "isController": false}]}, function(index, item){
         switch(index){
             case 2:
             case 3:
@@ -228,7 +228,7 @@ $(document).ready(function() {
     }, [[1, 1]]);
 
         // Create top5 errors by sampler
-    createTable($("#top5ErrorsBySamplerTable"), {"supportsControllersDiscrimination": false, "overall": {"data": ["Total", 250, 0, "", "", "", "", "", "", "", "", "", ""], "isController": false}, "titles": ["Sample", "#Samples", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors"], "items": [{"data": [], "isController": false}, {"data": [], "isController": false}, {"data": [], "isController": false}, {"data": [], "isController": false}, {"data": [], "isController": false}]}, function(index, item){
+    createTable($("#top5ErrorsBySamplerTable"), {"supportsControllersDiscrimination": false, "overall": {"data": ["Total", 1500, 304, "Product page missing Add to cart button", 300, "The operation lasted too long: It took 2,587 milliseconds, but should not have lasted longer than 2,000 milliseconds.", 2, "The operation lasted too long: It took 2,120 milliseconds, but should not have lasted longer than 2,000 milliseconds.", 1, "The operation lasted too long: It took 2,530 milliseconds, but should not have lasted longer than 2,000 milliseconds.", 1, "", ""], "isController": false}, "titles": ["Sample", "#Samples", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors"], "items": [{"data": [], "isController": false}, {"data": [], "isController": false}, {"data": [], "isController": false}, {"data": ["01_Homepage", 300, 4, "The operation lasted too long: It took 2,587 milliseconds, but should not have lasted longer than 2,000 milliseconds.", 2, "The operation lasted too long: It took 2,120 milliseconds, but should not have lasted longer than 2,000 milliseconds.", 1, "The operation lasted too long: It took 2,530 milliseconds, but should not have lasted longer than 2,000 milliseconds.", 1, "", "", "", ""], "isController": false}, {"data": ["03_View_Product", 300, 300, "Product page missing Add to cart button", 300, "", "", "", "", "", "", "", ""], "isController": false}]}, function(index, item){
         return item;
     }, [[0, 0]], 0);
 

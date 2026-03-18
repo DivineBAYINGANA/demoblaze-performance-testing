@@ -173,7 +173,7 @@ $(document).ready(function() {
     });
 
     // Creates APDEX table
-    createTable($("#apdexTable"), {"supportsControllersDiscrimination": true, "overall": {"data": [0.704, 500, 1500, "Total"], "isController": false}, "titles": ["Apdex", "T (Toleration threshold)", "F (Frustration threshold)", "Label"], "items": [{"data": [0.48, 500, 1500, "02_Login"], "isController": false}, {"data": [0.75, 500, 1500, "05_Place_Order"], "isController": false}, {"data": [0.86, 500, 1500, "04_Add_To_Cart"], "isController": false}, {"data": [0.43, 500, 1500, "01_Homepage"], "isController": false}, {"data": [1.0, 500, 1500, "03_View_Product"], "isController": false}]}, function(index, item){
+    createTable($("#apdexTable"), {"supportsControllersDiscrimination": true, "overall": {"data": [0.76, 500, 1500, "Total"], "isController": false}, "titles": ["Apdex", "T (Toleration threshold)", "F (Frustration threshold)", "Label"], "items": [{"data": [0.49, 500, 1500, "02_Login"], "isController": false}, {"data": [0.9, 500, 1500, "05_Place_Order"], "isController": false}, {"data": [0.96, 500, 1500, "04_Add_To_Cart"], "isController": false}, {"data": [0.49, 500, 1500, "01_Homepage"], "isController": false}, {"data": [0.96, 500, 1500, "03_View_Product"], "isController": false}]}, function(index, item){
         switch(index){
             case 0:
                 item = item.toFixed(3);
@@ -187,7 +187,7 @@ $(document).ready(function() {
     }, [[0, 0]], 3);
 
     // Create statistics table
-    createTable($("#statisticsTable"), {"supportsControllersDiscrimination": true, "overall": {"data": ["Total", 250, 1, 0.4, 671.228, 256, 2371, 593.0, 1197.9, 1308.25, 2314.29, 15.427337241592102, 63.884061150107996, 3.5585322817031786], "isController": false}, "titles": ["Label", "#Samples", "FAIL", "Error %", "Average", "Min", "Max", "Median", "90th pct", "95th pct", "99th pct", "Transactions/s", "Received", "Sent"], "items": [{"data": ["02_Login", 50, 0, 0.0, 910.0799999999998, 696, 1592, 812.5, 1206.5, 1470.2499999999995, 1592.0, 5.7696745903531035, 1.4424186475882759, 1.2959230036925917], "isController": false}, {"data": ["05_Place_Order", 50, 0, 0.0, 722.72, 359, 1366, 492.0, 1236.2, 1285.05, 1366.0, 6.187353050365053, 1.2447214144289074, 2.000013534834798], "isController": false}, {"data": ["04_Add_To_Cart", 50, 1, 2.0, 525.92, 356, 1205, 398.5, 1079.5, 1173.35, 1205.0, 6.249218847644045, 1.2200623359580054, 1.7820038120234971], "isController": false}, {"data": ["01_Homepage", 50, 0, 0.0, 872.56, 584, 2371, 659.5, 1841.2999999999997, 2313.45, 2371.0, 4.965736418710895, 44.97764254767107, 0.7807456673949746], "isController": false}, {"data": ["03_View_Product", 50, 0, 0.0, 324.85999999999996, 256, 449, 322.5, 433.59999999999997, 442.7, 449.0, 6.290890790135883, 69.204959187846, 1.0259558222194263], "isController": false}]}, function(index, item){
+    createTable($("#statisticsTable"), {"supportsControllersDiscrimination": true, "overall": {"data": ["Total", 250, 1, 0.4, 563.5280000000001, 252, 2133, 451.5, 799.7, 1048.25, 1432.5100000000027, 4.496079418746852, 15.169631456370045, 1.0370839440507877], "isController": false}, "titles": ["Label", "#Samples", "FAIL", "Error %", "Average", "Min", "Max", "Median", "90th pct", "95th pct", "99th pct", "Transactions/s", "Received", "Sent"], "items": [{"data": ["02_Login", 50, 1, 2.0, 862.7000000000002, 715, 2133, 763.5, 1110.6, 1232.6499999999996, 2133.0, 1.022745868106693, 0.2559261730895107, 0.22971831021927672], "isController": false}, {"data": ["05_Place_Order", 50, 0, 0.0, 453.18000000000006, 363, 1051, 432.0, 513.8, 545.5999999999999, 1051.0, 1.0391121825512282, 0.2092836880169583, 0.33588489494575835], "isController": false}, {"data": ["04_Add_To_Cart", 50, 0, 0.0, 414.26, 375, 561, 405.0, 482.69999999999993, 532.0499999999998, 561.0, 1.0381197574952246, 0.19971639865874927, 0.29602633709824766], "isController": false}, {"data": ["01_Homepage", 50, 0, 0.0, 719.58, 578, 1585, 688.0, 934.7999999999998, 1205.95, 1585.0, 1.0095707305253807, 6.191251659481888, 0.1587313355611194], "isController": false}, {"data": ["03_View_Product", 50, 0, 0.0, 367.92, 252, 672, 368.0, 449.8, 599.5999999999997, 672.0, 1.0371507394884774, 10.4682338554523, 0.16914470067829657], "isController": false}]}, function(index, item){
         switch(index){
             // Errors pct
             case 3:
@@ -217,7 +217,7 @@ $(document).ready(function() {
     }, [[0, 0]], 0, summaryTableHeader);
 
     // Create error table
-    createTable($("#errorsTable"), {"supportsControllersDiscrimination": false, "titles": ["Type of error", "Number of errors", "% in errors", "% in all samples"], "items": [{"data": ["502/Bad Gateway", 1, 100.0, 0.4], "isController": false}]}, function(index, item){
+    createTable($("#errorsTable"), {"supportsControllersDiscrimination": false, "titles": ["Type of error", "Number of errors", "% in errors", "% in all samples"], "items": [{"data": ["The operation lasted too long: It took 2,133 milliseconds, but should not have lasted longer than 2,000 milliseconds.", 1, 100.0, 0.4], "isController": false}]}, function(index, item){
         switch(index){
             case 2:
             case 3:
@@ -228,7 +228,7 @@ $(document).ready(function() {
     }, [[1, 1]]);
 
         // Create top5 errors by sampler
-    createTable($("#top5ErrorsBySamplerTable"), {"supportsControllersDiscrimination": false, "overall": {"data": ["Total", 250, 1, "502/Bad Gateway", 1, "", "", "", "", "", "", "", ""], "isController": false}, "titles": ["Sample", "#Samples", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors"], "items": [{"data": [], "isController": false}, {"data": [], "isController": false}, {"data": ["04_Add_To_Cart", 50, 1, "502/Bad Gateway", 1, "", "", "", "", "", "", "", ""], "isController": false}, {"data": [], "isController": false}, {"data": [], "isController": false}]}, function(index, item){
+    createTable($("#top5ErrorsBySamplerTable"), {"supportsControllersDiscrimination": false, "overall": {"data": ["Total", 250, 1, "The operation lasted too long: It took 2,133 milliseconds, but should not have lasted longer than 2,000 milliseconds.", 1, "", "", "", "", "", "", "", ""], "isController": false}, "titles": ["Sample", "#Samples", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors"], "items": [{"data": ["02_Login", 50, 1, "The operation lasted too long: It took 2,133 milliseconds, but should not have lasted longer than 2,000 milliseconds.", 1, "", "", "", "", "", "", "", ""], "isController": false}, {"data": [], "isController": false}, {"data": [], "isController": false}, {"data": [], "isController": false}, {"data": [], "isController": false}]}, function(index, item){
         return item;
     }, [[0, 0]], 0);
 
