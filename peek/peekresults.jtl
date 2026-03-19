@@ -1,0 +1,1501 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1773768188718,844,01_Homepage,200,OK,load_150 1-4,text,true,,5137,161,8,8,https://www.demoblaze.com/index.html,831,0,448
+1773768187945,1617,01_Homepage,200,OK,load_150 1-2,text,true,,4967,161,8,8,https://www.demoblaze.com/index.html,1603,0,1221
+1773768188321,1241,01_Homepage,200,OK,load_150 1-3,text,true,,4892,161,8,8,https://www.demoblaze.com/index.html,1228,0,845
+1773768187945,1617,01_Homepage,200,OK,load_150 1-1,text,true,,5024,161,8,8,https://www.demoblaze.com/index.html,1604,0,1221
+1773768189103,598,01_Homepage,200,OK,load_150 1-5,text,true,,4870,161,9,9,https://www.demoblaze.com/index.html,582,0,343
+1773768189508,783,01_Homepage,200,OK,load_150 1-6,text,true,,17517,161,10,10,https://www.demoblaze.com/index.html,696,0,334
+1773768189901,649,01_Homepage,200,OK,load_150 1-7,text,true,,4956,161,11,11,https://www.demoblaze.com/index.html,646,0,352
+1773768190308,598,01_Homepage,200,OK,load_150 1-8,text,true,,5014,161,12,12,https://www.demoblaze.com/index.html,580,0,330
+1773768190571,745,02_Login,200,OK,load_150 1-1,text,true,,256,230,13,13,https://api.demoblaze.com/login,745,0,367
+1773768190572,756,02_Login,200,OK,load_150 1-2,text,true,,256,230,13,13,https://api.demoblaze.com/login,756,0,366
+1773768190571,768,02_Login,200,OK,load_150 1-4,text,true,,256,230,13,13,https://api.demoblaze.com/login,768,0,367
+1773768190706,718,02_Login,200,OK,load_150 1-5,text,true,,256,230,13,13,https://api.demoblaze.com/login,718,0,329
+1773768190702,764,01_Homepage,200,OK,load_150 1-9,text,true,,17517,161,13,13,https://www.demoblaze.com/index.html,682,0,325
+1773768191102,594,01_Homepage,200,OK,load_150 1-10,text,true,,4980,161,13,13,https://www.demoblaze.com/index.html,576,0,336
+1773768190571,1131,02_Login,200,OK,load_150 1-3,text,true,,256,230,14,14,https://api.demoblaze.com/login,1131,0,739
+1773768191296,697,02_Login,200,OK,load_150 1-6,text,true,,256,230,14,14,https://api.demoblaze.com/login,697,0,329
+1773768191514,594,01_Homepage,200,OK,load_150 1-11,text,true,,4953,161,15,15,https://www.demoblaze.com/index.html,575,0,332
+1773768191558,713,02_Login,200,OK,load_150 1-7,text,true,,256,230,15,15,https://api.demoblaze.com/login,712,0,331
+1773768191906,670,01_Homepage,200,OK,load_150 1-12,text,true,,17517,161,16,16,https://www.demoblaze.com/index.html,588,0,340
+1773768191911,737,02_Login,200,OK,load_150 1-8,text,true,,256,230,16,16,https://api.demoblaze.com/login,737,0,331
+1773768192322,363,03_View_Product,200,OK,load_150 1-1,text,false,Product page missing Add to cart button,5638,167,16,16,https://www.demoblaze.com/prod.html?idp_=1,352,0,0
+1773768192351,372,03_View_Product,200,OK,load_150 1-4,text,false,Product page missing Add to cart button,5654,167,16,16,https://www.demoblaze.com/prod.html?idp_=1,352,0,0
+1773768192428,360,03_View_Product,200,OK,load_150 1-5,text,false,Product page missing Add to cart button,5473,167,16,16,https://www.demoblaze.com/prod.html?idp_=1,342,0,0
+1773768192335,464,03_View_Product,200,OK,load_150 1-2,text,false,Product page missing Add to cart button,20674,167,16,16,https://www.demoblaze.com/prod.html?idp_=1,366,0,0
+1773768192307,598,01_Homepage,200,OK,load_150 1-13,text,true,,4968,161,17,17,https://www.demoblaze.com/index.html,576,0,331
+1773768192705,266,03_View_Product,200,OK,load_150 1-3,text,false,Product page missing Add to cart button,5619,167,17,17,https://www.demoblaze.com/prod.html?idp_=1,244,0,0
+1773768192477,722,02_Login,200,OK,load_150 1-9,text,true,,256,230,17,17,https://api.demoblaze.com/login,722,0,334
+1773768192703,583,01_Homepage,200,OK,load_150 1-14,text,true,,4864,161,17,17,https://www.demoblaze.com/index.html,567,0,332
+1773768192700,727,02_Login,200,OK,load_150 1-10,text,true,,256,230,18,18,https://api.demoblaze.com/login,727,0,343
+1773768192995,437,03_View_Product,200,OK,load_150 1-6,text,false,Product page missing Add to cart button,20674,167,18,18,https://www.demoblaze.com/prod.html?idp_=1,363,0,0
+1773768193274,318,03_View_Product,200,OK,load_150 1-7,text,false,Product page missing Add to cart button,20674,167,18,18,https://www.demoblaze.com/prod.html?idp_=1,237,0,0
+1773768193105,705,01_Homepage,200,OK,load_150 1-15,text,true,,5242,161,19,19,https://www.demoblaze.com/index.html,687,0,342
+1773768193111,727,02_Login,200,OK,load_150 1-11,text,true,,256,230,19,19,https://api.demoblaze.com/login,727,0,346
+1773768193650,253,03_View_Product,200,OK,load_150 1-8,text,false,Product page missing Add to cart button,5686,167,19,19,https://www.demoblaze.com/prod.html?idp_=1,236,0,0
+1773768193688,384,04_Add_To_Cart,200,OK,load_150 1-1,text,true,,197,292,19,19,https://api.demoblaze.com/addtocart,384,0,0
+1773768193726,386,04_Add_To_Cart,200,OK,load_150 1-4,text,true,,197,292,20,20,https://api.demoblaze.com/addtocart,386,0,0
+1773768193510,604,01_Homepage,200,OK,load_150 1-16,text,true,,5050,161,20,20,https://www.demoblaze.com/index.html,590,0,346
+1773768193791,382,04_Add_To_Cart,200,OK,load_150 1-5,text,true,,197,292,20,20,https://api.demoblaze.com/addtocart,382,0,0
+1773768193580,711,02_Login,200,OK,load_150 1-12,text,true,,256,230,20,20,https://api.demoblaze.com/login,711,0,330
+1773768193973,398,04_Add_To_Cart,200,OK,load_150 1-3,text,true,,197,292,20,20,https://api.demoblaze.com/addtocart,398,0,0
+1773768193800,632,04_Add_To_Cart,200,OK,load_150 1-2,text,true,,197,292,20,20,https://api.demoblaze.com/addtocart,632,0,0
+1773768194200,361,03_View_Product,200,OK,load_150 1-9,text,false,Product page missing Add to cart button,5271,167,21,21,https://www.demoblaze.com/prod.html?idp_=1,345,0,0
+1773768193908,739,02_Login,200,OK,load_150 1-13,text,true,,256,230,21,21,https://api.demoblaze.com/login,739,0,341
+1773768193900,753,01_Homepage,200,OK,load_150 1-17,text,true,,4946,161,21,21,https://www.demoblaze.com/index.html,737,0,497
+1773768194439,373,03_View_Product,200,OK,load_150 1-10,text,false,Product page missing Add to cart button,5421,167,21,21,https://www.demoblaze.com/prod.html?idp_=1,363,0,0
+1773768194439,383,04_Add_To_Cart,200,OK,load_150 1-6,text,true,,197,292,21,21,https://api.demoblaze.com/addtocart,383,0,0
+1773768194596,371,04_Add_To_Cart,200,OK,load_150 1-7,text,true,,197,292,22,22,https://api.demoblaze.com/addtocart,371,0,0
+1773768194289,707,02_Login,200,OK,load_150 1-14,text,true,,256,230,22,22,https://api.demoblaze.com/login,707,0,337
+1773768194318,706,01_Homepage,200,OK,load_150 1-18,text,true,,5028,161,22,22,https://www.demoblaze.com/index.html,698,0,330
+1773768194840,377,03_View_Product,200,OK,load_150 1-11,text,false,Product page missing Add to cart button,5413,167,22,22,https://www.demoblaze.com/prod.html?idp_=1,358,0,0
+1773768194905,380,04_Add_To_Cart,200,OK,load_150 1-8,text,true,,197,292,22,22,https://api.demoblaze.com/addtocart,380,0,0
+1773768194705,640,01_Homepage,200,OK,load_150 1-19,text,true,,17517,161,23,23,https://www.demoblaze.com/index.html,560,0,322
+1773768194813,762,02_Login,200,OK,load_150 1-15,text,true,,256,230,23,23,https://api.demoblaze.com/login,762,0,340
+1773768195294,381,03_View_Product,200,OK,load_150 1-12,text,false,Product page missing Add to cart button,5607,167,23,23,https://www.demoblaze.com/prod.html?idp_=1,364,0,0
+1773768195103,592,01_Homepage,200,OK,load_150 1-20,text,true,,5000,161,23,23,https://www.demoblaze.com/index.html,575,0,332
+1773768195073,698,05_Place_Order,200,OK,load_150 1-1,text,true,,206,331,24,24,https://api.demoblaze.com/deletecart,697,0,0
+1773768195114,671,05_Place_Order,200,OK,load_150 1-4,text,true,,206,331,24,24,https://api.demoblaze.com/deletecart,671,0,0
+1773768195175,613,05_Place_Order,200,OK,load_150 1-5,text,true,,206,331,24,24,https://api.demoblaze.com/deletecart,612,0,0
+1773768195375,420,05_Place_Order,200,OK,load_150 1-3,text,true,,206,331,24,24,https://api.demoblaze.com/deletecart,420,0,0
+1773768195438,443,05_Place_Order,200,OK,load_150 1-2,text,true,,206,331,24,24,https://api.demoblaze.com/deletecart,443,0,0
+1773768195649,254,03_View_Product,200,OK,load_150 1-13,text,false,Product page missing Add to cart button,5451,167,24,24,https://www.demoblaze.com/prod.html?idp_=1,236,0,0
+1773768195119,789,02_Login,200,OK,load_150 1-16,text,true,,256,230,24,24,https://api.demoblaze.com/login,789,0,342
+1773768195566,393,04_Add_To_Cart,200,OK,load_150 1-9,text,true,,197,292,24,24,https://api.demoblaze.com/addtocart,393,0,0
+1773768195503,590,01_Homepage,200,OK,load_150 1-21,text,true,,5021,161,24,24,https://www.demoblaze.com/index.html,575,0,337
+1773768195813,398,04_Add_To_Cart,200,OK,load_150 1-10,text,true,,197,292,25,25,https://api.demoblaze.com/addtocart,398,0,0
+1773768195823,406,05_Place_Order,200,OK,load_150 1-6,text,true,,206,331,25,25,https://api.demoblaze.com/deletecart,406,0,0
+1773768195999,375,03_View_Product,200,OK,load_150 1-14,text,false,Product page missing Add to cart button,5530,167,25,25,https://www.demoblaze.com/prod.html?idp_=1,349,0,0
+1773768195968,407,05_Place_Order,200,OK,load_150 1-7,text,true,,206,331,25,25,https://api.demoblaze.com/deletecart,407,0,0
+1773768195655,731,02_Login,200,OK,load_150 1-17,text,true,,256,230,25,25,https://api.demoblaze.com/login,731,0,324
+1773768195911,661,01_Homepage,200,OK,load_150 1-22,text,true,,17517,161,26,26,https://www.demoblaze.com/index.html,576,0,329
+1773768196219,375,04_Add_To_Cart,200,OK,load_150 1-11,text,true,,197,292,26,26,https://api.demoblaze.com/addtocart,375,0,0
+1773768196286,398,05_Place_Order,200,OK,load_150 1-8,text,true,,206,331,26,26,https://api.demoblaze.com/deletecart,398,0,0
+1773768196026,758,02_Login,200,OK,load_150 1-18,text,true,,256,230,26,26,https://api.demoblaze.com/login,758,0,338
+1773768196297,605,01_Homepage,200,OK,load_150 1-23,text,true,,4965,161,27,27,https://www.demoblaze.com/index.html,577,0,336
+1773768196580,324,03_View_Product,200,OK,load_150 1-15,text,false,Product page missing Add to cart button,20674,167,27,27,https://www.demoblaze.com/prod.html?idp_=1,248,0,0
+1773768196787,255,01_Homepage,200,OK,load_150 1-4,text,true,,4946,161,27,27,https://www.demoblaze.com/index.html,237,0,0
+1773768196791,252,01_Homepage,200,OK,load_150 1-5,text,true,,4895,161,27,27,https://www.demoblaze.com/index.html,238,0,0
+1773768196797,260,01_Homepage,200,OK,load_150 1-3,text,true,,5106,161,27,27,https://www.demoblaze.com/index.html,244,0,0
+1773768196359,708,02_Login,200,OK,load_150 1-19,text,true,,256,230,27,27,https://api.demoblaze.com/login,708,0,327
+1773768196678,391,04_Add_To_Cart,200,OK,load_150 1-12,text,true,,201,292,27,27,https://api.demoblaze.com/addtocart,391,0,0
+1773768196883,259,01_Homepage,200,OK,load_150 1-2,text,true,,5055,161,27,27,https://www.demoblaze.com/index.html,255,0,0
+1773768196774,370,01_Homepage,200,OK,load_150 1-1,text,true,,5227,161,27,27,https://www.demoblaze.com/index.html,364,0,0
+1773768196912,257,03_View_Product,200,OK,load_150 1-16,text,false,Product page missing Add to cart button,5466,167,27,27,https://www.demoblaze.com/prod.html?idp_=1,241,0,0
+1773768196907,376,04_Add_To_Cart,200,OK,load_150 1-13,text,true,,197,292,27,27,https://api.demoblaze.com/addtocart,376,0,0
+1773768196704,615,01_Homepage,200,OK,load_150 1-24,text,true,,5039,161,28,28,https://www.demoblaze.com/index.html,599,0,355
+1773768196961,432,05_Place_Order,200,OK,load_150 1-9,text,true,,206,331,28,28,https://api.demoblaze.com/deletecart,432,0,0
+1773768196698,712,02_Login,200,OK,load_150 1-20,text,true,,256,230,28,28,https://api.demoblaze.com/login,712,0,324
+1773768197231,253,01_Homepage,200,OK,load_150 1-6,text,true,,4985,161,28,28,https://www.demoblaze.com/index.html,239,0,0
+1773768197213,374,05_Place_Order,200,OK,load_150 1-10,text,true,,206,331,28,28,https://api.demoblaze.com/deletecart,374,0,0
+1773768197384,250,01_Homepage,200,OK,load_150 1-7,text,true,,5027,161,28,28,https://www.demoblaze.com/index.html,237,0,0
+1773768197108,605,01_Homepage,200,OK,load_150 1-25,text,true,,5047,161,29,29,https://www.demoblaze.com/index.html,575,0,331
+1773768197400,329,03_View_Product,200,OK,load_150 1-17,text,false,Product page missing Add to cart button,20674,167,29,29,https://www.demoblaze.com/prod.html?idp_=1,240,0,0
+1773768197384,371,04_Add_To_Cart,200,OK,load_150 1-14,text,true,,197,292,29,29,https://api.demoblaze.com/addtocart,371,0,0
+1773768197096,715,02_Login,200,OK,load_150 1-21,text,true,,256,230,29,29,https://api.demoblaze.com/login,715,0,330
+1773768197690,253,01_Homepage,200,OK,load_150 1-8,text,true,,4827,161,29,29,https://www.demoblaze.com/index.html,235,0,0
+1773768197607,400,05_Place_Order,200,OK,load_150 1-11,text,true,,206,331,29,29,https://api.demoblaze.com/deletecart,400,0,0
+1773768197785,258,03_View_Product,200,OK,load_150 1-18,text,false,Product page missing Add to cart button,5500,167,29,29,https://www.demoblaze.com/prod.html?idp_=1,240,0,0
+1773768197528,586,01_Homepage,200,OK,load_150 1-26,text,true,,5002,161,30,30,https://www.demoblaze.com/index.html,564,0,324
+1773768197906,379,04_Add_To_Cart,200,OK,load_150 1-15,text,true,,197,292,30,30,https://api.demoblaze.com/addtocart,379,0,0
+1773768197576,711,02_Login,200,OK,load_150 1-22,text,true,,256,230,30,30,https://api.demoblaze.com/login,711,0,327
+1773768198069,316,03_View_Product,200,OK,load_150 1-19,text,false,Product page missing Add to cart button,20674,167,30,30,https://www.demoblaze.com/prod.html?idp_=1,239,0,0
+1773768198044,381,02_Login,200,OK,load_150 1-5,text,true,,256,230,30,30,https://api.demoblaze.com/login,381,0,0
+1773768198042,397,02_Login,200,OK,load_150 1-4,text,true,,256,230,30,30,https://api.demoblaze.com/login,397,0,0
+1773768198058,412,02_Login,200,OK,load_150 1-3,text,true,,256,230,30,30,https://api.demoblaze.com/login,412,0,0
+1773768198069,448,05_Place_Order,200,OK,load_150 1-12,text,true,,206,331,31,31,https://api.demoblaze.com/deletecart,448,0,0
+1773768198148,374,02_Login,200,OK,load_150 1-1,text,true,,256,230,31,31,https://api.demoblaze.com/login,374,0,0
+1773768198148,422,02_Login,200,OK,load_150 1-2,text,true,,256,230,31,31,https://api.demoblaze.com/login,422,0,0
+1773768198180,420,04_Add_To_Cart,200,OK,load_150 1-16,text,true,,197,292,31,31,https://api.demoblaze.com/addtocart,420,0,0
+1773768197904,717,02_Login,200,OK,load_150 1-23,text,true,,256,230,31,31,https://api.demoblaze.com/login,717,0,331
+1773768198399,252,01_Homepage,200,OK,load_150 1-9,text,true,,5088,161,31,31,https://www.demoblaze.com/index.html,240,0,0
+1773768198412,259,03_View_Product,200,OK,load_150 1-20,text,false,Product page missing Add to cart button,5558,167,31,31,https://www.demoblaze.com/prod.html?idp_=1,240,0,0
+1773768198291,427,05_Place_Order,200,OK,load_150 1-13,text,true,,206,331,31,31,https://api.demoblaze.com/deletecart,427,0,0
+1773768198492,422,02_Login,200,OK,load_150 1-6,text,true,,256,230,32,32,https://api.demoblaze.com/login,422,0,0
+1773768198588,422,01_Homepage,200,OK,load_150 1-10,text,true,,17517,161,32,32,https://www.demoblaze.com/index.html,345,0,0
+1773768198636,394,02_Login,200,OK,load_150 1-7,text,true,,256,230,32,32,https://api.demoblaze.com/login,394,0,0
+1773768198321,732,02_Login,200,OK,load_150 1-24,text,true,,256,230,32,32,https://api.demoblaze.com/login,732,0,330
+1773768198812,256,03_View_Product,200,OK,load_150 1-21,text,false,Product page missing Add to cart button,5440,167,32,32,https://www.demoblaze.com/prod.html?idp_=1,241,0,0
+1773768198730,370,04_Add_To_Cart,200,OK,load_150 1-17,text,true,,197,292,32,32,https://api.demoblaze.com/addtocart,370,0,0
+1773768198756,510,05_Place_Order,200,OK,load_150 1-14,text,true,,206,331,32,32,https://api.demoblaze.com/deletecart,509,0,0
+1773768198945,372,02_Login,200,OK,load_150 1-8,text,true,,256,230,33,33,https://api.demoblaze.com/login,372,0,0
+1773768198713,657,01_Homepage,200,OK,load_150 1-29,text,true,,17517,161,33,33,https://www.demoblaze.com/index.html,579,0,332
+1773768199008,370,01_Homepage,200,OK,load_150 1-11,text,true,,4892,161,33,33,https://www.demoblaze.com/index.html,353,0,0
+1773768197901,1502,01_Homepage,200,OK,load_150 1-27,text,true,,5171,161,33,33,https://www.demoblaze.com/index.html,1483,0,1114
+1773768199045,380,04_Add_To_Cart,200,OK,load_150 1-18,text,true,,197,292,33,33,https://api.demoblaze.com/addtocart,380,0,0
+1773768198716,728,02_Login,200,OK,load_150 1-25,text,true,,256,230,33,33,https://api.demoblaze.com/login,728,0,342
+1773768198308,1256,01_Homepage,200,OK,load_150 1-28,text,true,,4881,161,33,33,https://www.demoblaze.com/index.html,1236,0,995
+1773768199288,306,03_View_Product,200,OK,load_150 1-22,text,false,Product page missing Add to cart button,20674,167,33,33,https://www.demoblaze.com/prod.html?idp_=1,243,0,0
+1773768199428,252,03_View_Product,200,OK,load_150 1-5,text,false,Product page missing Add to cart button,5508,167,33,33,https://www.demoblaze.com/prod.html?idp_=1,236,0,0
+1773768199288,414,05_Place_Order,200,OK,load_150 1-15,text,true,,206,331,33,33,https://api.demoblaze.com/deletecart,414,0,0
+1773768199444,263,03_View_Product,200,OK,load_150 1-4,text,false,Product page missing Add to cart button,5304,167,33,33,https://www.demoblaze.com/prod.html?idp_=1,244,0,0
+1773768199476,260,03_View_Product,200,OK,load_150 1-3,text,false,Product page missing Add to cart button,5425,167,34,34,https://www.demoblaze.com/prod.html?idp_=1,240,0,0
+1773768199103,653,01_Homepage,200,OK,load_150 1-30,text,true,,17517,161,34,34,https://www.demoblaze.com/index.html,573,0,334
+1773768199524,249,03_View_Product,200,OK,load_150 1-1,text,false,Product page missing Add to cart button,5457,167,34,34,https://www.demoblaze.com/prod.html?idp_=1,240,0,0
+1773768199391,391,04_Add_To_Cart,200,OK,load_150 1-19,text,true,,197,292,34,34,https://api.demoblaze.com/addtocart,391,0,0
+1773768199524,259,01_Homepage,200,OK,load_150 1-12,text,true,,4913,161,34,34,https://www.demoblaze.com/index.html,243,0,0
+1773768199118,703,02_Login,200,OK,load_150 1-26,text,true,,256,230,34,34,https://api.demoblaze.com/login,703,0,328
+1773768199588,276,03_View_Product,200,OK,load_150 1-2,text,false,Product page missing Add to cart button,5407,167,34,34,https://www.demoblaze.com/prod.html?idp_=1,245,0,0
+1773768199624,331,03_View_Product,200,OK,load_150 1-23,text,false,Product page missing Add to cart button,20674,167,34,34,https://www.demoblaze.com/prod.html?idp_=1,242,0,0
+1773768199604,405,05_Place_Order,200,OK,load_150 1-16,text,true,,206,331,34,34,https://api.demoblaze.com/deletecart,405,0,0
+1773768199719,316,01_Homepage,200,OK,load_150 1-13,text,true,,17517,161,34,34,https://www.demoblaze.com/index.html,241,0,0
+1773768199656,379,02_Login,200,OK,load_150 1-9,text,true,,256,230,34,34,https://api.demoblaze.com/login,379,0,0
+1773768199672,385,04_Add_To_Cart,200,OK,load_150 1-20,text,true,,197,292,34,34,https://api.demoblaze.com/addtocart,385,0,0
+1773768199916,257,03_View_Product,200,OK,load_150 1-6,text,false,Product page missing Add to cart button,5490,167,35,35,https://www.demoblaze.com/prod.html?idp_=1,252,0,0
+1773768199526,691,01_Homepage,200,OK,load_150 1-31,text,true,,5142,161,35,35,https://www.demoblaze.com/index.html,673,0,323
+1773768200031,251,03_View_Product,200,OK,load_150 1-7,text,false,Product page missing Add to cart button,5386,167,35,35,https://www.demoblaze.com/prod.html?idp_=1,239,0,0
+1773768200056,330,03_View_Product,200,OK,load_150 1-24,text,false,Product page missing Add to cart button,20674,167,35,35,https://www.demoblaze.com/prod.html?idp_=1,240,0,0
+1773768200011,378,02_Login,200,OK,load_150 1-10,text,true,,256,230,35,35,https://api.demoblaze.com/login,378,0,0
+1773768200070,390,04_Add_To_Cart,200,OK,load_150 1-21,text,true,,197,292,35,35,https://api.demoblaze.com/addtocart,390,0,0
+1773768200102,473,05_Place_Order,200,OK,load_150 1-17,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,472,0,0
+1773768200319,255,03_View_Product,200,OK,load_150 1-8,text,false,Product page missing Add to cart button,5553,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,235,0,0
+1773768200268,312,01_Homepage,200,OK,load_150 1-14,text,true,,17517,161,36,36,https://www.demoblaze.com/index.html,238,0,0
+1773768199899,713,01_Homepage,200,OK,load_150 1-32,text,true,,4998,161,36,36,https://www.demoblaze.com/index.html,695,0,336
+1773768200456,261,03_View_Product,200,OK,load_150 1-25,text,false,Product page missing Add to cart button,5477,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,243,0,0
+1773768200380,381,02_Login,200,OK,load_150 1-11,text,true,,256,230,36,36,https://api.demoblaze.com/login,381,0,0
+1773768200427,362,05_Place_Order,200,OK,load_150 1-18,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,362,0,0
+1773768200704,250,01_Homepage,200,OK,load_150 1-15,text,true,,4914,161,37,37,https://www.demoblaze.com/index.html,235,0,0
+1773768200599,387,04_Add_To_Cart,200,OK,load_150 1-22,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,387,0,0
+1773768200304,706,01_Homepage,200,OK,load_150 1-33,text,true,,4984,161,37,37,https://www.demoblaze.com/index.html,688,0,443
+1773768200683,375,04_Add_To_Cart,200,OK,load_150 1-5,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,375,0,0
+1773768200822,256,03_View_Product,200,OK,load_150 1-26,text,false,Product page missing Add to cart button,5592,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,236,0,0
+1773768200709,386,04_Add_To_Cart,200,OK,load_150 1-4,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,386,0,0
+1773768200740,386,04_Add_To_Cart,200,OK,load_150 1-3,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,386,0,0
+1773768200381,745,02_Login,200,OK,load_150 1-29,text,true,,256,230,37,37,https://api.demoblaze.com/login,745,0,361
+1773768200408,737,02_Login,200,OK,load_150 1-27,text,true,,256,230,37,37,https://api.demoblaze.com/login,737,0,337
+1773768200775,401,04_Add_To_Cart,200,OK,load_150 1-1,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,401,0,0
+1773768200786,494,02_Login,200,OK,load_150 1-12,text,true,,256,230,37,37,https://api.demoblaze.com/login,494,0,0
+1773768200867,427,04_Add_To_Cart,200,OK,load_150 1-2,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,427,0,0
+1773768201036,258,03_View_Product,200,OK,load_150 1-9,text,false,Product page missing Add to cart button,5568,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,239,0,0
+1773768200568,808,02_Login,200,OK,load_150 1-28,text,true,,256,230,38,38,https://api.demoblaze.com/login,808,0,332
+1773768201011,374,01_Homepage,200,OK,load_150 1-16,text,true,,5042,161,38,38,https://www.demoblaze.com/index.html,357,0,0
+1773768200957,445,04_Add_To_Cart,200,OK,load_150 1-23,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,445,0,0
+1773768200713,746,01_Homepage,200,OK,load_150 1-34,text,true,,5102,161,38,38,https://www.demoblaze.com/index.html,725,0,483
+1773768201036,443,02_Login,200,OK,load_150 1-13,text,true,,256,230,38,38,https://api.demoblaze.com/login,443,0,0
+1773768200759,823,02_Login,200,OK,load_150 1-30,text,true,,256,230,38,38,https://api.demoblaze.com/login,823,0,340
+1773768201176,430,04_Add_To_Cart,200,OK,load_150 1-6,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,430,0,0
+1773768200784,826,05_Place_Order,200,OK,load_150 1-19,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,826,0,0
+1773768201395,257,03_View_Product,200,OK,load_150 1-10,text,false,Product page missing Add to cart button,5454,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,241,0,0
+1773768201283,415,04_Add_To_Cart,200,OK,load_150 1-7,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,415,0,0
+1773768201059,647,05_Place_Order,200,OK,load_150 1-20,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,647,0,0
+1773768201119,607,01_Homepage,200,OK,load_150 1-35,text,true,,5057,161,39,39,https://www.demoblaze.com/index.html,589,0,344
+1773768201395,418,04_Add_To_Cart,200,OK,load_150 1-24,text,true,,197,292,39,39,https://api.demoblaze.com/addtocart,418,0,0
+1773768201587,251,01_Homepage,200,OK,load_150 1-17,text,true,,4912,161,39,39,https://www.demoblaze.com/index.html,235,0,0
+1773768201474,465,05_Place_Order,200,OK,load_150 1-21,text,true,,206,331,39,39,https://api.demoblaze.com/deletecart,465,0,0
+1773768201220,737,02_Login,200,OK,load_150 1-31,text,true,,256,230,39,39,https://api.demoblaze.com/login,737,0,338
+1773768201587,384,02_Login,200,OK,load_150 1-14,text,true,,256,230,39,39,https://api.demoblaze.com/login,384,0,0
+1773768201587,400,04_Add_To_Cart,200,OK,load_150 1-8,text,true,,197,292,39,39,https://api.demoblaze.com/addtocart,400,0,0
+1773768201763,269,03_View_Product,200,OK,load_150 1-11,text,false,Product page missing Add to cart button,5404,167,39,39,https://www.demoblaze.com/prod.html?idp_=1,254,0,0
+1773768201507,591,01_Homepage,200,OK,load_150 1-36,text,true,,5212,161,39,39,https://www.demoblaze.com/index.html,573,0,335
+1773768201719,394,04_Add_To_Cart,200,OK,load_150 1-25,text,true,,197,292,40,40,https://api.demoblaze.com/addtocart,394,0,0
+1773768201791,425,01_Homepage,200,OK,load_150 1-18,text,true,,17517,161,40,40,https://www.demoblaze.com/index.html,355,0,0
+1773768201615,707,02_Login,200,OK,load_150 1-32,text,true,,256,230,40,40,https://api.demoblaze.com/login,707,0,331
+1773768201956,382,02_Login,200,OK,load_150 1-15,text,true,,256,230,40,40,https://api.demoblaze.com/login,382,0,0
+1773768202128,259,03_View_Product,200,OK,load_150 1-29,text,false,Product page missing Add to cart button,5656,167,40,40,https://www.demoblaze.com/prod.html?idp_=1,246,0,0
+1773768202148,267,03_View_Product,200,OK,load_150 1-27,text,false,Product page missing Add to cart button,5675,167,40,40,https://www.demoblaze.com/prod.html?idp_=1,246,0,0
+1773768201987,434,05_Place_Order,200,OK,load_150 1-22,text,true,,206,331,40,40,https://api.demoblaze.com/deletecart,434,0,0
+1773768202060,369,05_Place_Order,200,OK,load_150 1-5,text,true,,206,331,40,40,https://api.demoblaze.com/deletecart,369,0,0
+1773768202080,368,04_Add_To_Cart,200,OK,load_150 1-26,text,true,,197,292,39,39,https://api.demoblaze.com/addtocart,368,0,0
+1773768201909,605,01_Homepage,200,OK,load_150 1-37,text,true,,5033,161,40,40,https://www.demoblaze.com/index.html,582,0,341
+1773768202096,430,05_Place_Order,200,OK,load_150 1-4,text,true,,206,331,40,40,https://api.demoblaze.com/deletecart,430,0,0
+1773768202127,410,05_Place_Order,200,OK,load_150 1-3,text,true,,206,331,39,39,https://api.demoblaze.com/deletecart,409,0,0
+1773768202178,403,05_Place_Order,200,OK,load_150 1-1,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,403,0,0
+1773768202281,376,03_View_Product,200,OK,load_150 1-12,text,false,Product page missing Add to cart button,5649,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,355,0,0
+1773768202295,397,05_Place_Order,200,OK,load_150 1-2,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,397,0,0
+1773768202296,406,04_Add_To_Cart,200,OK,load_150 1-9,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,406,0,0
+1773768202482,251,03_View_Product,200,OK,load_150 1-13,text,false,Product page missing Add to cart button,5318,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,241,0,0
+1773768202377,447,03_View_Product,200,OK,load_150 1-28,text,false,Product page missing Add to cart button,20674,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,362,0,0
+1773768202617,252,01_Homepage,200,OK,load_150 1-19,text,true,,5050,161,36,36,https://www.demoblaze.com/index.html,239,0,0
+1773768202390,498,02_Login,200,OK,load_150 1-16,text,true,,256,230,36,36,https://api.demoblaze.com/login,498,0,0
+1773768202585,318,03_View_Product,200,OK,load_150 1-30,text,false,Product page missing Add to cart button,20674,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,238,0,0
+1773768202405,575,05_Place_Order,200,OK,load_150 1-23,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,575,0,0
+1773768202313,675,01_Homepage,200,OK,load_150 1-38,text,true,,17517,161,37,37,https://www.demoblaze.com/index.html,590,0,335
+1773768202710,315,01_Homepage,200,OK,load_150 1-20,text,true,,17517,161,37,37,https://www.demoblaze.com/index.html,238,0,0
+1773768202617,457,05_Place_Order,200,OK,load_150 1-6,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,457,0,0
+1773768202664,432,04_Add_To_Cart,200,OK,load_150 1-10,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,432,0,0
+1773768202012,1108,02_Login,200,OK,load_150 1-33,text,true,,256,230,36,36,https://api.demoblaze.com/login,1108,0,582
+1773768202944,255,01_Homepage,200,OK,load_150 1-21,text,true,,4841,161,36,36,https://www.demoblaze.com/index.html,238,0,0
+1773768202468,747,02_Login,200,OK,load_150 1-34,text,true,,256,230,36,36,https://api.demoblaze.com/login,747,0,333
+1773768202975,251,03_View_Product,200,OK,load_150 1-14,text,false,Product page missing Add to cart button,5646,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,236,0,0
+1773768202700,529,05_Place_Order,200,OK,load_150 1-7,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,529,0,0
+1773768202816,417,05_Place_Order,200,OK,load_150 1-24,text,true,,206,331,35,35,https://api.demoblaze.com/deletecart,417,0,0
+1773768202723,595,01_Homepage,200,OK,load_150 1-39,text,true,,5125,161,36,36,https://www.demoblaze.com/index.html,574,0,336
+1773768202842,479,02_Login,200,OK,load_150 1-17,text,true,,256,230,36,36,https://api.demoblaze.com/login,479,0,0
+1773768202960,365,03_View_Product,200,OK,load_150 1-31,text,false,Product page missing Add to cart button,5440,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,349,0,0
+1773768202991,405,05_Place_Order,200,OK,load_150 1-8,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,405,0,0
+1773768203037,385,04_Add_To_Cart,200,OK,load_150 1-11,text,true,,197,292,35,35,https://api.demoblaze.com/addtocart,385,0,0
+1773768203117,405,05_Place_Order,200,OK,load_150 1-25,text,true,,206,331,35,35,https://api.demoblaze.com/deletecart,405,0,0
+1773768203341,256,03_View_Product,200,OK,load_150 1-32,text,false,Product page missing Add to cart button,5447,167,35,35,https://www.demoblaze.com/prod.html?idp_=1,239,0,0
+1773768203221,382,02_Login,200,OK,load_150 1-18,text,true,,256,230,35,35,https://api.demoblaze.com/login,382,0,0
+1773768203356,259,03_View_Product,200,OK,load_150 1-15,text,false,Product page missing Add to cart button,5547,167,35,35,https://www.demoblaze.com/prod.html?idp_=1,236,0,0
+1773768203428,253,01_Homepage,200,OK,load_150 1-22,text,true,,4875,161,35,35,https://www.demoblaze.com/index.html,244,0,0
+1773768203117,646,01_Homepage,200,OK,load_150 1-40,text,true,,17517,161,36,36,https://www.demoblaze.com/index.html,564,0,326
+1773768203404,388,04_Add_To_Cart,200,OK,load_150 1-29,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,388,0,0
+1773768203420,394,04_Add_To_Cart,200,OK,load_150 1-27,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,394,0,0
+1773768203105,730,02_Login,200,OK,load_150 1-36,text,true,,256,230,36,36,https://api.demoblaze.com/login,730,0,325
+1773768202730,1183,02_Login,200,OK,load_150 1-35,text,true,,256,230,36,36,https://api.demoblaze.com/login,1183,0,775
+1773768203452,463,05_Place_Order,200,OK,load_150 1-26,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,463,0,0
+1773768203662,383,04_Add_To_Cart,200,OK,load_150 1-12,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,383,0,0
+1773768203736,372,04_Add_To_Cart,200,OK,load_150 1-13,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,372,0,0
+1773768203706,416,05_Place_Order,200,OK,load_150 1-9,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,416,0,0
+1773768203892,255,03_View_Product,200,OK,load_150 1-16,text,false,Product page missing Add to cart button,5487,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,240,0,0
+1773768203829,392,04_Add_To_Cart,200,OK,load_150 1-28,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,392,0,0
+1773768203983,252,01_Homepage,200,OK,load_150 1-23,text,true,,5004,161,36,36,https://www.demoblaze.com/index.html,239,0,0
+1773768203520,717,02_Login,200,OK,load_150 1-37,text,true,,256,230,36,36,https://api.demoblaze.com/login,717,0,335
+1773768203874,396,02_Login,200,OK,load_150 1-19,text,true,,256,230,36,36,https://api.demoblaze.com/login,396,0,0
+1773768203518,769,01_Homepage,200,OK,load_150 1-41,text,true,,17517,161,36,36,https://www.demoblaze.com/index.html,688,0,337
+1773768203906,398,04_Add_To_Cart,200,OK,load_150 1-30,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,398,0,0
+1773768204026,379,02_Login,200,OK,load_150 1-20,text,true,,256,230,36,36,https://api.demoblaze.com/login,379,0,0
+1773768204235,256,01_Homepage,200,OK,load_150 1-24,text,true,,5008,161,36,36,https://www.demoblaze.com/index.html,241,0,0
+1773768204124,384,03_View_Product,200,OK,load_150 1-33,text,false,Product page missing Add to cart button,5343,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,366,0,0
+1773768204100,445,05_Place_Order,200,OK,load_150 1-10,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,445,0,0
+1773768204200,377,02_Login,200,OK,load_150 1-21,text,true,,256,230,36,36,https://api.demoblaze.com/login,377,0,0
+1773768204219,367,03_View_Product,200,OK,load_150 1-34,text,false,Product page missing Add to cart button,5684,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,348,0,0
+1773768204228,381,04_Add_To_Cart,200,OK,load_150 1-14,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,381,0,0
+1773768203911,701,01_Homepage,200,OK,load_150 1-42,text,true,,5133,161,36,36,https://www.demoblaze.com/index.html,681,0,333
+1773768204330,305,03_View_Product,200,OK,load_150 1-17,text,false,Product page missing Add to cart button,20674,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,235,0,0
+1773768204329,382,04_Add_To_Cart,200,OK,load_150 1-31,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,382,0,0
+1773768204525,260,01_Homepage,200,OK,load_150 1-25,text,true,,4818,161,36,36,https://www.demoblaze.com/index.html,241,0,0
+1773768204438,420,05_Place_Order,200,OK,load_150 1-11,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,420,0,0
+1773768204315,590,01_Homepage,200,OK,load_150 1-43,text,true,,5009,161,35,35,https://www.demoblaze.com/index.html,572,0,328
+1773768204607,387,03_View_Product,200,OK,load_150 1-18,text,false,Product page missing Add to cart button,5653,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,373,0,0
+1773768204622,380,04_Add_To_Cart,200,OK,load_150 1-15,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,380,0,0
+1773768204604,398,04_Add_To_Cart,200,OK,load_150 1-32,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,398,0,0
+1773768204685,379,02_Login,200,OK,load_150 1-22,text,true,,256,230,36,36,https://api.demoblaze.com/login,379,0,0
+1773768204330,738,02_Login,200,OK,load_150 1-39,text,true,,256,230,36,36,https://api.demoblaze.com/login,738,0,353
+1773768203993,1175,02_Login,200,OK,load_150 1-38,text,true,,256,230,36,36,https://api.demoblaze.com/login,1175,0,760
+1773768204916,257,01_Homepage,200,OK,load_150 1-26,text,true,,4863,161,36,36,https://www.demoblaze.com/index.html,252,0,0
+1773768204837,371,03_View_Product,200,OK,load_150 1-36,text,false,Product page missing Add to cart button,5340,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,351,0,0
+1773768204793,429,05_Place_Order,200,OK,load_150 1-29,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,428,0,0
+1773768204814,421,05_Place_Order,200,OK,load_150 1-27,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,421,0,0
+1773768204914,334,03_View_Product,200,OK,load_150 1-35,text,false,Product page missing Add to cart button,20674,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,254,0,0
+1773768204718,656,01_Homepage,200,OK,load_150 1-44,text,true,,17517,161,37,37,https://www.demoblaze.com/index.html,574,0,332
+1773768205047,368,05_Place_Order,200,OK,load_150 1-12,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,368,0,0
+1773768205111,367,05_Place_Order,200,OK,load_150 1-13,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,367,0,0
+1773768204766,727,02_Login,200,OK,load_150 1-40,text,true,,256,230,35,35,https://api.demoblaze.com/login,727,0,325
+1773768205148,389,04_Add_To_Cart,200,OK,load_150 1-16,text,true,,197,292,35,35,https://api.demoblaze.com/addtocart,389,0,0
+1773768205239,329,03_View_Product,200,OK,load_150 1-37,text,false,Product page missing Add to cart button,20674,167,35,35,https://www.demoblaze.com/prod.html?idp_=1,238,0,0
+1773768205272,303,03_View_Product,200,OK,load_150 1-19,text,false,Product page missing Add to cart button,20674,167,35,35,https://www.demoblaze.com/prod.html?idp_=1,238,0,0
+1773768205237,391,02_Login,200,OK,load_150 1-23,text,true,,256,230,35,35,https://api.demoblaze.com/login,391,0,0
+1773768205222,412,05_Place_Order,200,OK,load_150 1-28,text,true,,206,331,35,35,https://api.demoblaze.com/deletecart,412,0,0
+1773768205106,598,01_Homepage,200,OK,load_150 1-45,text,true,,4938,161,35,35,https://www.demoblaze.com/index.html,580,0,337
+1773768205320,389,05_Place_Order,200,OK,load_150 1-30,text,true,,206,331,35,35,https://api.demoblaze.com/deletecart,389,0,0
+1773768205416,379,03_View_Product,200,OK,load_150 1-20,text,false,Product page missing Add to cart button,5278,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,361,0,0
+1773768205580,255,03_View_Product,200,OK,load_150 1-21,text,false,Product page missing Add to cart button,5583,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,238,0,0
+1773768205496,382,02_Login,200,OK,load_150 1-24,text,true,,256,230,36,36,https://api.demoblaze.com/login,382,0,0
+1773768205512,401,04_Add_To_Cart,200,OK,load_150 1-33,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,401,0,0
+1773768205593,391,04_Add_To_Cart,200,OK,load_150 1-34,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,391,0,0
+1773768205637,384,04_Add_To_Cart,200,OK,load_150 1-17,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,384,0,0
+1773768205611,416,05_Place_Order,200,OK,load_150 1-14,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,416,0,0
+1773768205290,780,02_Login,200,OK,load_150 1-41,text,true,,256,230,35,35,https://api.demoblaze.com/login,780,0,323
+1773768205513,590,01_Homepage,200,OK,load_150 1-46,text,true,,5008,161,36,36,https://www.demoblaze.com/index.html,572,0,327
+1773768205716,401,05_Place_Order,200,OK,load_150 1-31,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,401,0,0
+1773768205786,414,02_Login,200,OK,load_150 1-25,text,true,,256,230,36,36,https://api.demoblaze.com/login,414,0,0
+1773768206069,258,03_View_Product,200,OK,load_150 1-39,text,false,Product page missing Add to cart button,5383,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,239,0,0
+1773768205615,734,02_Login,200,OK,load_150 1-42,text,true,,256,230,36,36,https://api.demoblaze.com/login,734,0,355
+1773768206066,294,03_View_Product,200,OK,load_150 1-22,text,false,Product page missing Add to cart button,20674,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,235,0,0
+1773768206003,363,05_Place_Order,200,OK,load_150 1-15,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,363,0,0
+1773768206003,366,05_Place_Order,200,OK,load_150 1-32,text,true,,206,331,35,35,https://api.demoblaze.com/deletecart,366,0,0
+1773768205996,376,04_Add_To_Cart,200,OK,load_150 1-18,text,true,,197,292,35,35,https://api.demoblaze.com/addtocart,376,0,0
+1773768206170,262,03_View_Product,200,OK,load_150 1-38,text,false,Product page missing Add to cart button,5643,167,35,35,https://www.demoblaze.com/prod.html?idp_=1,244,0,0
+1773768206223,255,01_Homepage,200,OK,load_150 1-29,text,true,,4839,161,35,35,https://www.demoblaze.com/index.html,239,0,0
+1773768205910,585,01_Homepage,200,OK,load_150 1-47,text,true,,5021,161,35,35,https://www.demoblaze.com/index.html,567,0,325
+1773768206236,265,01_Homepage,200,OK,load_150 1-27,text,true,,5119,161,35,35,https://www.demoblaze.com/index.html,245,0,0
+1773768206175,370,02_Login,200,OK,load_150 1-26,text,true,,256,230,36,36,https://api.demoblaze.com/login,370,0,0
+1773768206210,391,04_Add_To_Cart,200,OK,load_150 1-36,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,391,0,0
+1773768205908,707,02_Login,200,OK,load_150 1-43,text,true,,256,230,36,36,https://api.demoblaze.com/login,707,0,319
+1773768206250,386,04_Add_To_Cart,200,OK,load_150 1-35,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,386,0,0
+1773768206495,372,03_View_Product,200,OK,load_150 1-40,text,false,Product page missing Add to cart button,5607,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,355,0,0
+1773768206633,304,03_View_Product,200,OK,load_150 1-23,text,false,Product page missing Add to cart button,20674,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,238,0,0
+1773768206575,387,04_Add_To_Cart,200,OK,load_150 1-37,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,387,0,0
+1773768206591,373,04_Add_To_Cart,200,OK,load_150 1-19,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,373,0,0
+1773768206308,664,01_Homepage,200,OK,load_150 1-48,text,true,,17517,161,37,37,https://www.demoblaze.com/index.html,583,0,336
+1773768206719,254,01_Homepage,200,OK,load_150 1-30,text,true,,4873,161,37,37,https://www.demoblaze.com/index.html,238,0,0
+1773768206639,368,01_Homepage,200,OK,load_150 1-28,text,true,,5144,161,37,37,https://www.demoblaze.com/index.html,353,0,0
+1773768206543,465,05_Place_Order,200,OK,load_150 1-16,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,465,0,0
+1773768206376,721,02_Login,200,OK,load_150 1-44,text,true,,256,230,36,36,https://api.demoblaze.com/login,721,0,331
+1773768206796,375,04_Add_To_Cart,200,OK,load_150 1-20,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,375,0,0
+1773768206879,313,03_View_Product,200,OK,load_150 1-24,text,false,Product page missing Add to cart button,20674,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,241,0,0
+1773768206836,375,04_Add_To_Cart,200,OK,load_150 1-21,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,375,0,0
+1773768206721,585,01_Homepage,200,OK,load_150 1-49,text,true,,4989,161,36,36,https://www.demoblaze.com/index.html,567,0,326
+1773768206914,469,05_Place_Order,200,OK,load_150 1-33,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,469,0,0
+1773768207119,265,01_Homepage,200,OK,load_150 1-31,text,true,,4907,161,37,37,https://www.demoblaze.com/index.html,247,0,0
+1773768206985,406,05_Place_Order,200,OK,load_150 1-34,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,406,0,0
+1773768207023,381,05_Place_Order,200,OK,load_150 1-17,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,381,0,0
+1773768207071,426,03_View_Product,200,OK,load_150 1-41,text,false,Product page missing Add to cart button,20674,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,350,0,0
+1773768207202,326,03_View_Product,200,OK,load_150 1-25,text,false,Product page missing Add to cart button,20674,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,240,0,0
+1773768206708,897,02_Login,200,OK,load_150 1-45,text,true,,256,230,36,36,https://api.demoblaze.com/login,897,0,493
+1773768207371,264,01_Homepage,200,OK,load_150 1-32,text,true,,5151,161,36,36,https://www.demoblaze.com/index.html,242,0,0
+1773768207351,324,03_View_Product,200,OK,load_150 1-42,text,false,Product page missing Add to cart button,20674,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,233,0,0
+1773768207102,604,01_Homepage,200,OK,load_150 1-50,text,true,,4983,161,36,36,https://www.demoblaze.com/index.html,584,0,337
+1773768207328,389,04_Add_To_Cart,200,OK,load_150 1-39,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,389,0,0
+1773768207361,417,04_Add_To_Cart,200,OK,load_150 1-22,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,417,0,0
+1773768207557,253,03_View_Product,200,OK,load_150 1-26,text,false,Product page missing Add to cart button,5453,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,238,0,0
+1773768207105,706,02_Login,200,OK,load_150 1-46,text,true,,256,230,37,37,https://api.demoblaze.com/login,706,0,324
+1773768207434,455,04_Add_To_Cart,200,OK,load_150 1-38,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,455,0,0
+1773768207373,516,05_Place_Order,200,OK,load_150 1-18,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,516,0,0
+1773768207503,396,02_Login,200,OK,load_150 1-27,text,true,,256,230,36,36,https://api.demoblaze.com/login,396,0,0
+1773768207479,420,02_Login,200,OK,load_150 1-29,text,true,,256,230,36,36,https://api.demoblaze.com/login,420,0,0
+1773768207619,340,03_View_Product,200,OK,load_150 1-43,text,false,Product page missing Add to cart button,20674,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,250,0,0
+1773768207650,458,05_Place_Order,200,OK,load_150 1-35,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,457,0,0
+1773768207527,583,01_Homepage,200,OK,load_150 1-51,text,true,,4930,161,37,37,https://www.demoblaze.com/index.html,566,0,325
+1773768207603,550,05_Place_Order,200,OK,load_150 1-36,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,550,0,0
+1773768207869,385,04_Add_To_Cart,200,OK,load_150 1-40,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,385,0,0
+1773768207498,756,02_Login,200,OK,load_150 1-47,text,true,,256,230,37,37,https://api.demoblaze.com/login,756,0,339
+1773768207938,382,04_Add_To_Cart,200,OK,load_150 1-23,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,382,0,0
+1773768207974,418,02_Login,200,OK,load_150 1-30,text,true,,256,230,37,37,https://api.demoblaze.com/login,418,0,0
+1773768207963,443,05_Place_Order,200,OK,load_150 1-37,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,443,0,0
+1773768207967,439,05_Place_Order,200,OK,load_150 1-19,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,439,0,0
+1773768208100,317,03_View_Product,200,OK,load_150 1-44,text,false,Product page missing Add to cart button,20674,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,243,0,0
+1773768208009,472,02_Login,200,OK,load_150 1-28,text,true,,256,230,36,36,https://api.demoblaze.com/login,472,0,0
+1773768207914,577,01_Homepage,200,OK,load_150 1-52,text,true,,5110,161,36,36,https://www.demoblaze.com/index.html,559,0,323
+1773768208172,374,05_Place_Order,200,OK,load_150 1-20,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,374,0,0
+1773768208213,390,05_Place_Order,200,OK,load_150 1-21,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,390,0,0
+1773768208194,415,04_Add_To_Cart,200,OK,load_150 1-24,text,true,,197,292,35,35,https://api.demoblaze.com/addtocart,415,0,0
+1773768208384,258,01_Homepage,200,OK,load_150 1-33,text,true,,5027,161,35,35,https://www.demoblaze.com/index.html,239,0,0
+1773768208392,255,01_Homepage,200,OK,load_150 1-34,text,true,,5046,161,35,35,https://www.demoblaze.com/index.html,237,0,0
+1773768207975,713,02_Login,200,OK,load_150 1-48,text,true,,256,230,35,35,https://api.demoblaze.com/login,713,0,330
+1773768208386,390,02_Login,200,OK,load_150 1-31,text,true,,256,230,35,35,https://api.demoblaze.com/login,390,0,0
+1773768208500,369,04_Add_To_Cart,200,OK,load_150 1-41,text,true,,197,292,35,35,https://api.demoblaze.com/addtocart,369,0,0
+1773768208618,265,03_View_Product,200,OK,load_150 1-45,text,false,Product page missing Add to cart button,5537,167,35,35,https://www.demoblaze.com/prod.html?idp_=1,245,0,0
+1773768208313,589,01_Homepage,200,OK,load_150 1-53,text,true,,5072,161,36,36,https://www.demoblaze.com/index.html,570,0,333
+1773768208539,371,04_Add_To_Cart,200,OK,load_150 1-25,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,371,0,0
+1773768208310,707,02_Login,200,OK,load_150 1-49,text,true,,256,230,36,36,https://api.demoblaze.com/login,707,0,326
+1773768208650,393,02_Login,200,OK,load_150 1-32,text,true,,256,230,36,36,https://api.demoblaze.com/login,393,0,0
+1773768208681,382,04_Add_To_Cart,200,OK,load_150 1-42,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,382,0,0
+1773768208813,326,03_View_Product,200,OK,load_150 1-46,text,false,Product page missing Add to cart button,20674,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,240,0,0
+1773768208900,258,03_View_Product,200,OK,load_150 1-29,text,false,Product page missing Add to cart button,5379,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,243,0,0
+1773768208900,265,03_View_Product,200,OK,load_150 1-27,text,false,Product page missing Add to cart button,5707,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,245,0,0
+1773768208811,386,04_Add_To_Cart,200,OK,load_150 1-26,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,386,0,0
+1773768208718,510,05_Place_Order,200,OK,load_150 1-39,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,510,0,0
+1773768208779,498,05_Place_Order,200,OK,load_150 1-22,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,498,0,0
+1773768208890,424,05_Place_Order,200,OK,load_150 1-38,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,424,0,0
+1773768208960,371,04_Add_To_Cart,200,OK,load_150 1-43,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,371,0,0
+1773768208714,737,02_Login,200,OK,load_150 1-50,text,true,,256,230,36,36,https://api.demoblaze.com/login,737,0,332
+1773768209153,320,01_Homepage,200,OK,load_150 1-36,text,true,,17517,161,36,36,https://www.demoblaze.com/index.html,236,0,0
+1773768209109,375,01_Homepage,200,OK,load_150 1-35,text,true,,4855,161,36,36,https://www.demoblaze.com/index.html,364,0,0
+1773768209256,259,03_View_Product,200,OK,load_150 1-47,text,false,Product page missing Add to cart button,5475,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,246,0,0
+1773768209393,253,03_View_Product,200,OK,load_150 1-30,text,false,Product page missing Add to cart button,5648,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,240,0,0
+1773768209256,393,05_Place_Order,200,OK,load_150 1-40,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,392,0,0
+1773768209408,253,01_Homepage,200,OK,load_150 1-37,text,true,,4994,161,36,36,https://www.demoblaze.com/index.html,241,0,0
+1773768209321,353,05_Place_Order,200,OK,load_150 1-23,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,353,0,0
+1773768209103,587,01_Homepage,200,OK,load_150 1-55,text,true,,5182,161,35,35,https://www.demoblaze.com/index.html,579,0,332
+1773768209483,251,03_View_Product,200,OK,load_150 1-28,text,false,Product page missing Add to cart button,5517,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,236,0,0
+1773768209418,382,04_Add_To_Cart,200,OK,load_150 1-44,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,382,0,0
+1773768209112,706,02_Login,200,OK,load_150 1-51,text,true,,256,230,36,36,https://api.demoblaze.com/login,706,0,322
+1773768209691,257,03_View_Product,200,OK,load_150 1-48,text,false,Product page missing Add to cart button,5661,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,241,0,0
+1773768209613,404,05_Place_Order,200,OK,load_150 1-24,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,404,0,0
+1773768209643,386,02_Login,200,OK,load_150 1-33,text,true,,256,230,35,35,https://api.demoblaze.com/login,386,0,0
+1773768209659,371,02_Login,200,OK,load_150 1-34,text,true,,256,230,35,35,https://api.demoblaze.com/login,371,0,0
+1773768208714,1327,01_Homepage,200,OK,load_150 1-54,text,true,,4963,161,35,35,https://www.demoblaze.com/index.html,1308,0,1069
+1773768209777,326,03_View_Product,200,OK,load_150 1-31,text,false,Product page missing Add to cart button,20674,167,35,35,https://www.demoblaze.com/prod.html?idp_=1,245,0,0
+1773768209519,586,01_Homepage,200,OK,load_150 1-56,text,true,,5180,161,35,35,https://www.demoblaze.com/index.html,567,0,327
+1773768209495,720,02_Login,200,OK,load_150 1-52,text,true,,256,230,36,36,https://api.demoblaze.com/login,720,0,334
+1773768209885,391,04_Add_To_Cart,200,OK,load_150 1-45,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,391,0,0
+1773768210019,257,03_View_Product,200,OK,load_150 1-49,text,false,Product page missing Add to cart button,5324,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,239,0,0
+1773768209871,416,05_Place_Order,200,OK,load_150 1-41,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,416,0,0
+1773768210045,257,03_View_Product,200,OK,load_150 1-32,text,false,Product page missing Add to cart button,5392,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,242,0,0
+1773768209912,456,05_Place_Order,200,OK,load_150 1-25,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,456,0,0
+1773768210064,385,05_Place_Order,200,OK,load_150 1-42,text,true,,206,331,35,35,https://api.demoblaze.com/deletecart,385,0,0
+1773768210160,388,04_Add_To_Cart,200,OK,load_150 1-29,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,388,0,0
+1773768210166,408,04_Add_To_Cart,200,OK,load_150 1-27,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,408,0,0
+1773768210315,258,01_Homepage,200,OK,load_150 1-38,text,true,,5032,161,36,36,https://www.demoblaze.com/index.html,243,0,0
+1773768210229,369,01_Homepage,200,OK,load_150 1-39,text,true,,5072,161,36,36,https://www.demoblaze.com/index.html,353,0,0
+1773768209901,702,01_Homepage,200,OK,load_150 1-57,text,true,,4881,161,36,36,https://www.demoblaze.com/index.html,682,0,335
+1773768209905,723,02_Login,200,OK,load_150 1-53,text,true,,256,230,36,36,https://api.demoblaze.com/login,723,0,325
+1773768210198,462,05_Place_Order,200,OK,load_150 1-26,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,462,0,0
+1773768210332,369,05_Place_Order,200,OK,load_150 1-43,text,true,,206,331,35,35,https://api.demoblaze.com/deletecart,369,0,0
+1773768210452,264,03_View_Product,200,OK,load_150 1-50,text,false,Product page missing Add to cart button,5437,167,35,35,https://www.demoblaze.com/prod.html?idp_=1,248,0,0
+1773768210140,633,04_Add_To_Cart,200,OK,load_150 1-46,text,true,,197,292,35,35,https://api.demoblaze.com/addtocart,633,0,0
+1773768210474,378,02_Login,200,OK,load_150 1-36,text,true,,256,230,35,35,https://api.demoblaze.com/login,378,0,0
+1773768210300,595,01_Homepage,200,OK,load_150 1-58,text,true,,4787,161,35,35,https://www.demoblaze.com/index.html,575,0,330
+1773768210485,417,02_Login,200,OK,load_150 1-35,text,true,,256,230,35,35,https://api.demoblaze.com/login,417,0,0
+1773768210658,251,01_Homepage,200,OK,load_150 1-40,text,true,,4874,161,35,35,https://www.demoblaze.com/index.html,234,0,0
+1773768210517,402,04_Add_To_Cart,200,OK,load_150 1-47,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,402,0,0
+1773768210658,371,04_Add_To_Cart,200,OK,load_150 1-30,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,371,0,0
+1773768210674,381,02_Login,200,OK,load_150 1-37,text,true,,256,230,36,36,https://api.demoblaze.com/login,381,0,0
+1773768210739,387,04_Add_To_Cart,200,OK,load_150 1-28,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,387,0,0
+1773768210820,377,03_View_Product,200,OK,load_150 1-51,text,false,Product page missing Add to cart button,5538,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,358,0,0
+1773768210707,582,01_Homepage,200,OK,load_150 1-59,text,true,,4915,161,36,36,https://www.demoblaze.com/index.html,565,0,322
+1773768211031,265,03_View_Product,200,OK,load_150 1-34,text,false,Product page missing Add to cart button,5390,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,243,0,0
+1773768210802,496,05_Place_Order,200,OK,load_150 1-44,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,495,0,0
+1773768210952,385,04_Add_To_Cart,200,OK,load_150 1-48,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,385,0,0
+1773768211031,323,03_View_Product,200,OK,load_150 1-33,text,false,Product page missing Add to cart button,20674,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,240,0,0
+1773768210707,717,02_Login,200,OK,load_150 1-55,text,true,,256,230,37,37,https://api.demoblaze.com/login,717,0,328
+1773768211217,257,03_View_Product,200,OK,load_150 1-52,text,false,Product page missing Add to cart button,5423,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,240,0,0
+1773768211105,397,04_Add_To_Cart,200,OK,load_150 1-31,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,397,0,0
+1773768211278,376,04_Add_To_Cart,200,OK,load_150 1-49,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,376,0,0
+1773768211303,376,04_Add_To_Cart,200,OK,load_150 1-32,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,376,0,0
+1773768211288,404,01_Homepage,200,OK,load_150 1-41,text,true,,17517,161,37,37,https://www.demoblaze.com/index.html,345,0,0
+1773768211450,249,01_Homepage,200,OK,load_150 1-42,text,true,,4787,161,37,37,https://www.demoblaze.com/index.html,235,0,0
+1773768211278,442,05_Place_Order,200,OK,load_150 1-45,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,442,0,0
+1773768211118,602,01_Homepage,200,OK,load_150 1-60,text,true,,5125,161,38,38,https://www.demoblaze.com/index.html,578,0,331
+1773768211043,704,02_Login,200,OK,load_150 1-54,text,true,,256,230,38,38,https://api.demoblaze.com/login,704,0,320
+1773768211108,698,02_Login,200,OK,load_150 1-56,text,true,,256,230,38,38,https://api.demoblaze.com/login,698,0,320
+1773768211629,254,03_View_Product,200,OK,load_150 1-53,text,false,Product page missing Add to cart button,5373,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,236,0,0
+1773768211575,372,02_Login,200,OK,load_150 1-38,text,true,,256,230,38,38,https://api.demoblaze.com/login,372,0,0
+1773768211703,259,01_Homepage,200,OK,load_150 1-43,text,true,,5044,161,38,38,https://www.demoblaze.com/index.html,244,0,0
+1773768211550,426,05_Place_Order,200,OK,load_150 1-29,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,426,0,0
+1773768211575,404,05_Place_Order,200,OK,load_150 1-27,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,404,0,0
+1773768211599,410,02_Login,200,OK,load_150 1-39,text,true,,256,230,36,36,https://api.demoblaze.com/login,410,0,0
+1773768211718,385,04_Add_To_Cart,200,OK,load_150 1-50,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,385,0,0
+1773768211854,253,03_View_Product,200,OK,load_150 1-36,text,false,Product page missing Add to cart button,5657,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,235,0,0
+1773768211903,258,03_View_Product,200,OK,load_150 1-35,text,false,Product page missing Add to cart button,5604,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,244,0,0
+1773768211783,400,05_Place_Order,200,OK,load_150 1-46,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,400,0,0
+1773768211920,369,05_Place_Order,200,OK,load_150 1-47,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,369,0,0
+1773768211536,778,01_Homepage,200,OK,load_150 1-61,text,true,,17517,161,37,37,https://www.demoblaze.com/index.html,694,0,332
+1773768211910,414,02_Login,200,OK,load_150 1-40,text,true,,256,230,37,37,https://api.demoblaze.com/login,414,0,0
+1773768212031,371,05_Place_Order,200,OK,load_150 1-30,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,371,0,0
+1773768211605,799,02_Login,200,OK,load_150 1-57,text,true,,256,230,37,37,https://api.demoblaze.com/login,799,0,406
+1773768212057,424,03_View_Product,200,OK,load_150 1-37,text,false,Product page missing Add to cart button,20674,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,362,0,0
+1773768212128,356,05_Place_Order,200,OK,load_150 1-28,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,356,0,0
+1773768211913,647,01_Homepage,200,OK,load_150 1-62,text,true,,17517,161,36,36,https://www.demoblaze.com/index.html,565,0,328
+1773768212199,371,04_Add_To_Cart,200,OK,load_150 1-51,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,371,0,0
+1773768211897,704,02_Login,200,OK,load_150 1-58,text,true,,256,230,36,36,https://api.demoblaze.com/login,704,0,332
+1773768212299,371,01_Homepage,200,OK,load_150 1-44,text,true,,5108,161,36,36,https://www.demoblaze.com/index.html,357,0,0
+1773768212424,247,03_View_Product,200,OK,load_150 1-55,text,false,Product page missing Add to cart button,5456,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,246,0,0
+1773768212297,393,04_Add_To_Cart,200,OK,load_150 1-34,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,393,0,0
+1773768212356,388,04_Add_To_Cart,200,OK,load_150 1-33,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,388,0,0
+1773768212339,428,05_Place_Order,200,OK,load_150 1-48,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,428,0,0
+1773768212475,393,04_Add_To_Cart,200,OK,load_150 1-52,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,393,0,0
+1773768212503,435,05_Place_Order,200,OK,load_150 1-31,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,435,0,0
+1773768212293,707,02_Login,200,OK,load_150 1-59,text,true,,256,230,36,36,https://api.demoblaze.com/login,707,0,329
+1773768212752,260,03_View_Product,200,OK,load_150 1-54,text,false,Product page missing Add to cart button,5579,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,240,0,0
+1773768212310,711,01_Homepage,200,OK,load_150 1-63,text,true,,4930,161,36,36,https://www.demoblaze.com/index.html,693,0,327
+1773768212656,396,05_Place_Order,200,OK,load_150 1-49,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,396,0,0
+1773768212689,363,05_Place_Order,200,OK,load_150 1-32,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,363,0,0
+1773768212704,396,02_Login,200,OK,load_150 1-42,text,true,,256,230,35,35,https://api.demoblaze.com/login,395,0,0
+1773768212721,386,01_Homepage,200,OK,load_150 1-45,text,true,,5057,161,35,35,https://www.demoblaze.com/index.html,363,0,0
+1773768212704,403,02_Login,200,OK,load_150 1-41,text,true,,256,230,35,35,https://api.demoblaze.com/login,403,0,0
+1773768212808,328,03_View_Product,200,OK,load_150 1-56,text,false,Product page missing Add to cart button,20674,167,35,35,https://www.demoblaze.com/prod.html?idp_=1,243,0,0
+1773768212955,259,03_View_Product,200,OK,load_150 1-38,text,false,Product page missing Add to cart button,5525,167,35,35,https://www.demoblaze.com/prod.html?idp_=1,242,0,0
+1773768212883,387,04_Add_To_Cart,200,OK,load_150 1-53,text,true,,197,292,35,35,https://api.demoblaze.com/addtocart,387,0,0
+1773768213019,255,03_View_Product,200,OK,load_150 1-39,text,false,Product page missing Add to cart button,5559,167,35,35,https://www.demoblaze.com/prod.html?idp_=1,235,0,0
+1773768212706,590,01_Homepage,200,OK,load_150 1-64,text,true,,4985,161,35,35,https://www.demoblaze.com/index.html,572,0,331
+1773768212971,400,02_Login,200,OK,load_150 1-43,text,true,,256,230,36,36,https://api.demoblaze.com/login,400,0,0
+1773768213193,253,01_Homepage,200,OK,load_150 1-46,text,true,,5088,161,36,36,https://www.demoblaze.com/index.html,241,0,0
+1773768213114,388,05_Place_Order,200,OK,load_150 1-50,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,388,0,0
+1773768213290,256,01_Homepage,200,OK,load_150 1-47,text,true,,4820,161,36,36,https://www.demoblaze.com/index.html,238,0,0
+1773768213114,460,04_Add_To_Cart,200,OK,load_150 1-36,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,460,0,0
+1773768213162,476,04_Add_To_Cart,200,OK,load_150 1-35,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,476,0,0
+1773768213339,310,03_View_Product,200,OK,load_150 1-40,text,false,Product page missing Add to cart button,20674,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,236,0,0
+1773768213418,260,03_View_Product,200,OK,load_150 1-57,text,false,Product page missing Add to cart button,5397,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,248,0,0
+1773768213115,632,01_Homepage,200,OK,load_150 1-65,text,true,,17517,161,37,37,https://www.demoblaze.com/index.html,556,0,317
+1773768212722,1082,02_Login,200,OK,load_150 1-60,text,true,,256,230,37,37,https://api.demoblaze.com/login,1082,0,620
+1773768213601,263,03_View_Product,200,OK,load_150 1-58,text,false,Product page missing Add to cart button,5359,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,243,0,0
+1773768213481,469,04_Add_To_Cart,200,OK,load_150 1-37,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,469,0,0
+1773768213767,262,01_Homepage,200,OK,load_150 1-48,text,true,,4902,161,37,37,https://www.demoblaze.com/index.html,242,0,0
+1773768213578,551,05_Place_Order,200,OK,load_150 1-51,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,551,0,0
+1773768213515,697,01_Homepage,200,OK,load_150 1-66,text,true,,5184,161,38,38,https://www.demoblaze.com/index.html,679,0,333
+1773768213323,916,02_Login,200,OK,load_150 1-61,text,true,,256,230,38,38,https://api.demoblaze.com/login,916,0,351
+1773768214002,255,03_View_Product,200,OK,load_150 1-59,text,false,Product page missing Add to cart button,5532,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,237,0,0
+1773768213681,599,02_Login,200,OK,load_150 1-44,text,true,,256,230,38,38,https://api.demoblaze.com/login,599,0,0
+1773768213681,626,04_Add_To_Cart,200,OK,load_150 1-55,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,626,0,0
+1773768214064,254,01_Homepage,200,OK,load_150 1-49,text,true,,5009,161,38,38,https://www.demoblaze.com/index.html,237,0,0
+1773768214111,248,03_View_Product,200,OK,load_150 1-41,text,false,Product page missing Add to cart button,5480,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,233,0,0
+1773768213697,744,05_Place_Order,200,OK,load_150 1-34,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,744,0,0
+1773768213745,701,05_Place_Order,200,OK,load_150 1-33,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,701,0,0
+1773768213869,618,05_Place_Order,200,OK,load_150 1-52,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,618,0,0
+1773768214111,376,03_View_Product,200,OK,load_150 1-42,text,false,Product page missing Add to cart button,5556,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,361,0,0
+1773768213563,942,02_Login,200,OK,load_150 1-62,text,true,,256,230,36,36,https://api.demoblaze.com/login,942,0,329
+1773768213909,600,01_Homepage,200,OK,load_150 1-67,text,true,,5149,161,36,36,https://www.demoblaze.com/index.html,587,0,335
+1773768214017,631,04_Add_To_Cart,200,OK,load_150 1-54,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,631,0,0
+1773768214377,317,03_View_Product,200,OK,load_150 1-43,text,false,Product page missing Add to cart button,20674,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,267,0,0
+1773768214111,640,02_Login,200,OK,load_150 1-45,text,true,,256,230,37,37,https://api.demoblaze.com/login,640,0,0
+1773768214503,258,01_Homepage,200,OK,load_150 1-50,text,true,,5077,161,37,37,https://www.demoblaze.com/index.html,240,0,0
+1773768214143,643,04_Add_To_Cart,200,OK,load_150 1-56,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,643,0,0
+1773768214222,594,04_Add_To_Cart,200,OK,load_150 1-38,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,594,0,0
+1773768214270,707,05_Place_Order,200,OK,load_150 1-53,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,707,0,0
+1773768214284,718,04_Add_To_Cart,200,OK,load_150 1-39,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,718,0,0
+1773768214033,1011,02_Login,200,OK,load_150 1-63,text,true,,256,230,38,38,https://api.demoblaze.com/login,1011,0,351
+1773768214456,653,02_Login,200,OK,load_150 1-46,text,true,,256,230,38,38,https://api.demoblaze.com/login,653,0,0
+1773768214807,381,03_View_Product,200,OK,load_150 1-60,text,false,Product page missing Add to cart button,5405,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,364,0,0
+1773768214558,677,02_Login,200,OK,load_150 1-47,text,true,,256,230,38,38,https://api.demoblaze.com/login,677,0,0
+1773768214576,716,05_Place_Order,200,OK,load_150 1-36,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,716,0,0
+1773768214760,582,01_Homepage,200,OK,load_150 1-69,text,true,,5021,161,38,38,https://www.demoblaze.com/index.html,565,0,323
+1773768214302,1077,02_Login,200,OK,load_150 1-64,text,true,,256,230,38,38,https://api.demoblaze.com/login,1077,0,329
+1773768215130,265,01_Homepage,200,OK,load_150 1-51,text,true,,5043,161,38,38,https://www.demoblaze.com/index.html,249,0,0
+1773768214647,750,05_Place_Order,200,OK,load_150 1-35,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,750,0,0
+1773768214663,757,04_Add_To_Cart,200,OK,load_150 1-40,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,757,0,0
+1773768214680,762,04_Add_To_Cart,200,OK,load_150 1-57,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,762,0,0
+1773768214332,1127,01_Homepage,200,OK,load_150 1-68,text,true,,5056,161,37,37,https://www.demoblaze.com/index.html,1109,0,873
+1773768214867,667,04_Add_To_Cart,200,OK,load_150 1-58,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,667,0,0
+1773768215240,322,03_View_Product,200,OK,load_150 1-61,text,false,Product page missing Add to cart button,20674,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,242,0,0
+1773768215281,364,03_View_Product,200,OK,load_150 1-44,text,false,Product page missing Add to cart button,5729,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,349,0,0
+1773768214951,728,05_Place_Order,200,OK,load_150 1-37,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,728,0,0
+1773768215029,679,02_Login,200,OK,load_150 1-48,text,true,,256,230,36,36,https://api.demoblaze.com/login,679,0,0
+1773768214760,993,02_Login,200,OK,load_150 1-65,text,true,,256,230,37,37,https://api.demoblaze.com/login,993,0,332
+1773768215501,263,01_Homepage,200,OK,load_150 1-52,text,true,,4989,161,37,37,https://www.demoblaze.com/index.html,242,0,0
+1773768215122,678,01_Homepage,200,OK,load_150 1-70,text,true,,17517,161,37,37,https://www.demoblaze.com/index.html,599,0,327
+1773768215258,562,04_Add_To_Cart,200,OK,load_150 1-59,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,562,0,0
+1773768215517,311,03_View_Product,200,OK,load_150 1-62,text,false,Product page missing Add to cart button,20674,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,238,0,0
+1773768215309,565,05_Place_Order,200,OK,load_150 1-55,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,565,0,0
+1773768215327,591,02_Login,200,OK,load_150 1-49,text,true,,256,230,37,37,https://api.demoblaze.com/login,591,0,0
+1773768215374,574,04_Add_To_Cart,200,OK,load_150 1-41,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,574,0,0
+1773768215501,520,04_Add_To_Cart,200,OK,load_150 1-42,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,520,0,0
+1773768215753,268,03_View_Product,200,OK,load_150 1-45,text,false,Product page missing Add to cart button,5451,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,253,0,0
+1773768215214,822,02_Login,200,OK,load_150 1-66,text,true,,256,230,37,37,https://api.demoblaze.com/login,822,0,323
+1773768215534,580,01_Homepage,200,OK,load_150 1-71,text,true,,4837,161,37,37,https://www.demoblaze.com/index.html,564,0,323
+1773768215654,488,05_Place_Order,200,OK,load_150 1-54,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,488,0,0
+1773768215701,457,04_Add_To_Cart,200,OK,load_150 1-43,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,457,0,0
+1773768215766,458,02_Login,200,OK,load_150 1-50,text,true,,256,230,38,38,https://api.demoblaze.com/login,458,0,0
+1773768215979,313,01_Homepage,200,OK,load_150 1-53,text,true,,17517,161,38,38,https://www.demoblaze.com/index.html,237,0,0
+1773768215788,512,05_Place_Order,200,OK,load_150 1-56,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,512,0,0
+1773768215819,512,05_Place_Order,200,OK,load_150 1-38,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,512,0,0
+1773768216110,252,03_View_Product,200,OK,load_150 1-46,text,false,Product page missing Add to cart button,5427,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,242,0,0
+1773768215518,846,02_Login,200,OK,load_150 1-67,text,true,,256,230,37,37,https://api.demoblaze.com/login,846,0,330
+1773768216003,416,05_Place_Order,200,OK,load_150 1-39,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,416,0,0
+1773768216046,384,03_View_Product,200,OK,load_150 1-63,text,false,Product page missing Add to cart button,5674,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,362,0,0
+1773768216236,326,03_View_Product,200,OK,load_150 1-47,text,false,Product page missing Add to cart button,20674,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,236,0,0
+1773768216190,424,04_Add_To_Cart,200,OK,load_150 1-60,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,424,0,0
+1773768216381,266,03_View_Product,200,OK,load_150 1-64,text,false,Product page missing Add to cart button,5451,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,256,0,0
+1773768215919,777,01_Homepage,200,OK,load_150 1-72,text,true,,17517,161,37,37,https://www.demoblaze.com/index.html,695,0,340
+1773768216396,486,02_Login,200,OK,load_150 1-51,text,true,,256,230,37,37,https://api.demoblaze.com/login,486,0,0
+1773768216316,593,01_Homepage,200,OK,load_150 1-73,text,true,,5023,161,37,37,https://www.demoblaze.com/index.html,578,0,334
+1773768216424,530,05_Place_Order,200,OK,load_150 1-40,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,530,0,0
+1773768216714,256,03_View_Product,200,OK,load_150 1-48,text,false,Product page missing Add to cart button,5413,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,240,0,0
+1773768216443,533,05_Place_Order,200,OK,load_150 1-57,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,533,0,0
+1773768216762,254,03_View_Product,200,OK,load_150 1-65,text,false,Product page missing Add to cart button,5356,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,236,0,0
+1773768216536,570,05_Place_Order,200,OK,load_150 1-58,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,570,0,0
+1773768216875,245,01_Homepage,200,OK,load_150 1-55,text,true,,5140,161,37,37,https://www.demoblaze.com/index.html,240,0,0
+1773768216767,381,02_Login,200,OK,load_150 1-52,text,true,,256,230,37,37,https://api.demoblaze.com/login,381,0,0
+1773768216563,646,04_Add_To_Cart,200,OK,load_150 1-61,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,646,0,0
+1773768216646,628,04_Add_To_Cart,200,OK,load_150 1-44,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,628,0,0
+1773768217037,255,03_View_Product,200,OK,load_150 1-66,text,false,Product page missing Add to cart button,5554,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,237,0,0
+1773768216461,883,02_Login,200,OK,load_150 1-68,text,true,,256,230,38,38,https://api.demoblaze.com/login,883,0,326
+1773768216919,436,03_View_Product,200,OK,load_150 1-49,text,false,Product page missing Add to cart button,20674,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,349,0,0
+1773768216833,539,04_Add_To_Cart,200,OK,load_150 1-62,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,539,0,0
+1773768217145,257,01_Homepage,200,OK,load_150 1-54,text,true,,4983,161,38,38,https://www.demoblaze.com/index.html,240,0,0
+1773768216748,699,01_Homepage,200,OK,load_150 1-74,text,true,,4817,161,38,38,https://www.demoblaze.com/index.html,680,0,324
+1773768216833,645,05_Place_Order,200,OK,load_150 1-59,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,645,0,0
+1773768217225,258,03_View_Product,200,OK,load_150 1-50,text,false,Product page missing Add to cart button,5359,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,244,0,0
+1773768216949,549,05_Place_Order,200,OK,load_150 1-41,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,549,0,0
+1773768217301,259,01_Homepage,200,OK,load_150 1-56,text,true,,5235,161,37,37,https://www.demoblaze.com/index.html,244,0,0
+1773768217023,594,04_Add_To_Cart,200,OK,load_150 1-45,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,594,0,0
+1773768217023,641,05_Place_Order,200,OK,load_150 1-42,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,641,0,0
+1773768216802,882,02_Login,200,OK,load_150 1-70,text,true,,256,230,36,36,https://api.demoblaze.com/login,882,0,321
+1773768217365,327,03_View_Product,200,OK,load_150 1-67,text,false,Product page missing Add to cart button,20674,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,239,0,0
+1773768217159,542,05_Place_Order,200,OK,load_150 1-43,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,542,0,0
+1773768217128,583,01_Homepage,200,OK,load_150 1-75,text,true,,5222,161,35,35,https://www.demoblaze.com/index.html,564,0,327
+1773768216347,1409,02_Login,200,OK,load_150 1-69,text,true,,256,230,36,36,https://api.demoblaze.com/login,1409,0,916
+1773768217292,501,02_Login,200,OK,load_150 1-53,text,true,,256,230,36,36,https://api.demoblaze.com/login,500,0,0
+1773768217363,561,04_Add_To_Cart,200,OK,load_150 1-46,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,561,0,0
+1773768217432,543,04_Add_To_Cart,200,OK,load_150 1-63,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,543,0,0
+1773768217117,905,02_Login,200,OK,load_150 1-71,text,true,,256,230,36,36,https://api.demoblaze.com/login,905,0,345
+1773768217565,551,04_Add_To_Cart,200,OK,load_150 1-47,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,551,0,0
+1773768217883,336,03_View_Product,200,OK,load_150 1-51,text,false,Product page missing Add to cart button,20674,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,262,0,0
+1773768217616,609,05_Place_Order,200,OK,load_150 1-60,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,609,0,0
+1773768217535,702,01_Homepage,200,OK,load_150 1-76,text,true,,4954,161,37,37,https://www.demoblaze.com/index.html,681,0,325
+1773768217977,262,01_Homepage,200,OK,load_150 1-57,text,true,,5090,161,37,37,https://www.demoblaze.com/index.html,242,0,0
+1773768217658,598,04_Add_To_Cart,200,OK,load_150 1-64,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,598,0,0
+1773768218107,267,01_Homepage,200,OK,load_150 1-58,text,true,,4967,161,37,37,https://www.demoblaze.com/index.html,255,0,0
+1773768218149,258,03_View_Product,200,OK,load_150 1-52,text,false,Product page missing Add to cart button,5420,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,240,0,0
+1773768217972,450,04_Add_To_Cart,200,OK,load_150 1-48,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,450,0,0
+1773768218017,447,04_Add_To_Cart,200,OK,load_150 1-65,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,447,0,0
+1773768217706,796,02_Login,200,OK,load_150 1-72,text,true,,256,230,37,37,https://api.demoblaze.com/login,796,0,334
+1773768217917,646,01_Homepage,200,OK,load_150 1-77,text,true,,17517,161,38,38,https://www.demoblaze.com/index.html,567,0,323
+1773768218122,441,02_Login,200,OK,load_150 1-55,text,true,,256,230,38,38,https://api.demoblaze.com/login,441,0,0
+1773768218345,266,03_View_Product,200,OK,load_150 1-68,text,false,Product page missing Add to cart button,5435,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,240,0,0
+1773768218211,473,05_Place_Order,200,OK,load_150 1-61,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,473,0,0
+1773768217911,808,02_Login,200,OK,load_150 1-73,text,true,,256,230,38,38,https://api.demoblaze.com/login,808,0,325
+1773768218479,253,01_Homepage,200,OK,load_150 1-59,text,true,,5074,161,38,38,https://www.demoblaze.com/index.html,237,0,0
+1773768218276,466,05_Place_Order,200,OK,load_150 1-44,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,466,0,0
+1773768218294,463,04_Add_To_Cart,200,OK,load_150 1-66,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,463,0,0
+1773768218357,448,04_Add_To_Cart,200,OK,load_150 1-49,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,448,0,0
+1773768218373,499,05_Place_Order,200,OK,load_150 1-62,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,499,0,0
+1773768218403,498,02_Login,200,OK,load_150 1-54,text,true,,256,230,37,37,https://api.demoblaze.com/login,498,0,0
+1773768218327,596,01_Homepage,200,OK,load_150 1-78,text,true,,5071,161,37,37,https://www.demoblaze.com/index.html,576,0,332
+1773768218700,252,03_View_Product,200,OK,load_150 1-70,text,false,Product page missing Add to cart button,5286,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,239,0,0
+1773768218485,476,04_Add_To_Cart,200,OK,load_150 1-50,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,476,0,0
+1773768218763,258,03_View_Product,200,OK,load_150 1-69,text,false,Product page missing Add to cart button,5405,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,241,0,0
+1773768218795,265,03_View_Product,200,OK,load_150 1-53,text,false,Product page missing Add to cart button,5327,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,236,0,0
+1773768218572,501,02_Login,200,OK,load_150 1-56,text,true,,256,230,38,38,https://api.demoblaze.com/login,501,0,0
+1773768218621,532,05_Place_Order,200,OK,load_150 1-45,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,532,0,0
+1773768218700,539,04_Add_To_Cart,200,OK,load_150 1-67,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,539,0,0
+1773768218450,826,02_Login,200,OK,load_150 1-74,text,true,,256,230,37,37,https://api.demoblaze.com/login,826,0,324
+1773768219023,257,03_View_Product,200,OK,load_150 1-71,text,false,Product page missing Add to cart button,5483,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,240,0,0
+1773768218733,590,01_Homepage,200,OK,load_150 1-79,text,true,,5061,161,38,38,https://www.demoblaze.com/index.html,570,0,332
+1773768218925,417,05_Place_Order,200,OK,load_150 1-46,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,417,0,0
+1773768218977,403,05_Place_Order,200,OK,load_150 1-63,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,403,0,0
+1773768218717,717,02_Login,200,OK,load_150 1-75,text,true,,256,230,37,37,https://api.demoblaze.com/login,717,0,326
+1773768219118,372,05_Place_Order,200,OK,load_150 1-47,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,372,0,0
+1773768219226,265,01_Homepage,200,OK,load_150 1-60,text,true,,5195,161,37,37,https://www.demoblaze.com/index.html,254,0,0
+1773768219220,399,04_Add_To_Cart,200,OK,load_150 1-51,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,399,0,0
+1773768219239,410,02_Login,200,OK,load_150 1-57,text,true,,256,230,36,36,https://api.demoblaze.com/login,410,0,0
+1773768219259,462,05_Place_Order,200,OK,load_150 1-64,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,462,0,0
+1773768219136,656,01_Homepage,200,OK,load_150 1-80,text,true,,17517,161,37,37,https://www.demoblaze.com/index.html,578,0,328
+1773768219376,424,02_Login,200,OK,load_150 1-58,text,true,,256,230,37,37,https://api.demoblaze.com/login,424,0,0
+1773768219564,248,03_View_Product,200,OK,load_150 1-55,text,false,Product page missing Add to cart button,5615,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,236,0,0
+1773768219408,420,04_Add_To_Cart,200,OK,load_150 1-52,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,420,0,0
+1773768219504,365,03_View_Product,200,OK,load_150 1-72,text,false,Product page missing Add to cart button,5517,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,349,0,0
+1773768219423,451,05_Place_Order,200,OK,load_150 1-48,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,451,0,0
+1773768219465,429,05_Place_Order,200,OK,load_150 1-65,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,429,0,0
+1773768219685,254,01_Homepage,200,OK,load_150 1-61,text,true,,4950,161,36,36,https://www.demoblaze.com/index.html,242,0,0
+1773768219239,733,02_Login,200,OK,load_150 1-76,text,true,,256,230,36,36,https://api.demoblaze.com/login,733,0,318
+1773768219730,265,03_View_Product,200,OK,load_150 1-73,text,false,Product page missing Add to cart button,5298,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,240,0,0
+1773768219613,435,04_Add_To_Cart,200,OK,load_150 1-68,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,435,0,0
+1773768219531,590,01_Homepage,200,OK,load_150 1-81,text,true,,5066,161,36,36,https://www.demoblaze.com/index.html,573,0,332
+1773768219745,395,02_Login,200,OK,load_150 1-59,text,true,,256,230,36,36,https://api.demoblaze.com/login,395,0,0
+1773768219762,415,05_Place_Order,200,OK,load_150 1-66,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,415,0,0
+1773768219885,291,01_Homepage,200,OK,load_150 1-62,text,true,,17517,161,37,37,https://www.demoblaze.com/index.html,233,0,0
+1773768219918,259,03_View_Product,200,OK,load_150 1-54,text,false,Product page missing Add to cart button,5537,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,240,0,0
+1773768219810,404,05_Place_Order,200,OK,load_150 1-49,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,403,0,0
+1773768219565,731,02_Login,200,OK,load_150 1-77,text,true,,256,230,36,36,https://api.demoblaze.com/login,731,0,344
+1773768219953,368,04_Add_To_Cart,200,OK,load_150 1-70,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,368,0,0
+1773768220075,253,03_View_Product,200,OK,load_150 1-56,text,false,Product page missing Add to cart button,5376,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,236,0,0
+1773768219961,441,05_Place_Order,200,OK,load_150 1-50,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,441,0,0
+1773768220022,503,04_Add_To_Cart,200,OK,load_150 1-69,text,true,,197,292,35,35,https://api.demoblaze.com/addtocart,503,0,0
+1773768220278,252,03_View_Product,200,OK,load_150 1-74,text,false,Product page missing Add to cart button,5534,167,35,35,https://www.demoblaze.com/prod.html?idp_=1,237,0,0
+1773768220061,498,04_Add_To_Cart,200,OK,load_150 1-53,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,498,0,0
+1773768219946,650,01_Homepage,200,OK,load_150 1-82,text,true,,17517,161,36,36,https://www.demoblaze.com/index.html,573,0,335
+1773768220434,263,03_View_Product,200,OK,load_150 1-75,text,false,Product page missing Add to cart button,5549,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,240,0,0
+1773768220382,318,01_Homepage,200,OK,load_150 1-63,text,true,,17517,161,36,36,https://www.demoblaze.com/index.html,242,0,0
+1773768220240,500,05_Place_Order,200,OK,load_150 1-67,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,500,0,0
+1773768219925,843,02_Login,200,OK,load_150 1-78,text,true,,256,230,36,36,https://api.demoblaze.com/login,843,0,319
+1773768220282,516,04_Add_To_Cart,200,OK,load_150 1-71,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,516,0,0
+1773768220492,399,02_Login,200,OK,load_150 1-60,text,true,,256,230,36,36,https://api.demoblaze.com/login,399,0,0
+1773768220302,694,01_Homepage,200,OK,load_150 1-83,text,true,,4909,161,37,37,https://www.demoblaze.com/index.html,677,0,325
+1773768220658,342,03_View_Product,200,OK,load_150 1-57,text,false,Product page missing Add to cart button,20674,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,248,0,0
+1773768220626,417,05_Place_Order,200,OK,load_150 1-51,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,417,0,0
+1773768220722,371,01_Homepage,200,OK,load_150 1-64,text,true,,4982,161,36,36,https://www.demoblaze.com/index.html,354,0,0
+1773768220326,783,02_Login,200,OK,load_150 1-79,text,true,,256,230,36,36,https://api.demoblaze.com/login,783,0,329
+1773768220803,382,03_View_Product,200,OK,load_150 1-58,text,false,Product page missing Add to cart button,5398,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,367,0,0
+1773768220825,393,04_Add_To_Cart,200,OK,load_150 1-55,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,393,0,0
+1773768220841,424,05_Place_Order,200,OK,load_150 1-52,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,424,0,0
+1773768220974,320,03_View_Product,200,OK,load_150 1-76,text,false,Product page missing Add to cart button,20674,167,35,35,https://www.demoblaze.com/prod.html?idp_=1,243,0,0
+1773768220873,434,04_Add_To_Cart,200,OK,load_150 1-72,text,true,,197,292,35,35,https://api.demoblaze.com/addtocart,434,0,0
+1773768220905,414,01_Homepage,200,OK,load_150 1-65,text,true,,17517,161,35,35,https://www.demoblaze.com/index.html,354,0,0
+1773768220941,413,02_Login,200,OK,load_150 1-61,text,true,,256,230,36,36,https://api.demoblaze.com/login,413,0,0
+1773768220996,387,04_Add_To_Cart,200,OK,load_150 1-73,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,387,0,0
+1773768220707,691,01_Homepage,200,OK,load_150 1-84,text,true,,5015,161,36,36,https://www.demoblaze.com/index.html,676,0,432
+1773768221142,260,03_View_Product,200,OK,load_150 1-59,text,false,Product page missing Add to cart button,5388,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,244,0,0
+1773768221049,439,05_Place_Order,200,OK,load_150 1-68,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,439,0,0
+1773768221179,314,01_Homepage,200,OK,load_150 1-66,text,true,,17517,161,36,36,https://www.demoblaze.com/index.html,236,0,0
+1773768221297,254,03_View_Product,200,OK,load_150 1-77,text,false,Product page missing Add to cart button,5362,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,238,0,0
+1773768221177,378,02_Login,200,OK,load_150 1-62,text,true,,256,230,36,36,https://api.demoblaze.com/login,378,0,0
+1773768221179,397,04_Add_To_Cart,200,OK,load_150 1-54,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,397,0,0
+1773768221151,591,01_Homepage,200,OK,load_150 1-85,text,true,,4889,161,36,36,https://www.demoblaze.com/index.html,578,0,331
+1773768221322,442,05_Place_Order,200,OK,load_150 1-70,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,442,0,0
+1773768221330,475,04_Add_To_Cart,200,OK,load_150 1-56,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,475,0,0
+1773768220794,1077,02_Login,200,OK,load_150 1-80,text,true,,256,230,37,37,https://api.demoblaze.com/login,1077,0,591
+1773768221123,799,02_Login,200,OK,load_150 1-81,text,true,,256,230,37,37,https://api.demoblaze.com/login,799,0,322
+1773768221745,254,01_Homepage,200,OK,load_150 1-67,text,true,,5046,161,37,37,https://www.demoblaze.com/index.html,240,0,0
+1773768221770,262,03_View_Product,200,OK,load_150 1-78,text,false,Product page missing Add to cart button,5543,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,241,0,0
+1773768221527,516,05_Place_Order,200,OK,load_150 1-69,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,516,0,0
+1773768221531,540,04_Add_To_Cart,200,OK,load_150 1-74,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,540,0,0
+1773768221561,562,05_Place_Order,200,OK,load_150 1-53,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,562,0,0
+1773768221699,466,04_Add_To_Cart,200,OK,load_150 1-75,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,466,0,0
+1773768221714,477,02_Login,200,OK,load_150 1-63,text,true,,256,230,37,37,https://api.demoblaze.com/login,477,0,0
+1773768221803,447,05_Place_Order,200,OK,load_150 1-71,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,447,0,0
+1773768221560,705,01_Homepage,200,OK,load_150 1-86,text,true,,5032,161,37,37,https://www.demoblaze.com/index.html,689,0,327
+1773768221896,370,03_View_Product,200,OK,load_150 1-60,text,false,Product page missing Add to cart button,5493,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,353,0,0
+1773768221606,737,02_Login,200,OK,load_150 1-82,text,true,,256,230,37,37,https://api.demoblaze.com/login,737,0,320
+1773768222111,253,03_View_Product,200,OK,load_150 1-79,text,false,Product page missing Add to cart button,5416,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,233,0,0
+1773768222001,377,04_Add_To_Cart,200,OK,load_150 1-57,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,377,0,0
+1773768222094,395,02_Login,200,OK,load_150 1-64,text,true,,256,230,37,37,https://api.demoblaze.com/login,395,0,0
+1773768222187,379,04_Add_To_Cart,200,OK,load_150 1-58,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,379,0,0
+1773768221951,646,01_Homepage,200,OK,load_150 1-87,text,true,,17517,161,38,38,https://www.demoblaze.com/index.html,563,0,325
+1773768222355,254,03_View_Product,200,OK,load_150 1-61,text,false,Product page missing Add to cart button,5409,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,241,0,0
+1773768222219,431,05_Place_Order,200,OK,load_150 1-55,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,431,0,0
+1773768222296,392,04_Add_To_Cart,200,OK,load_150 1-76,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,392,0,0
+1773768222308,429,05_Place_Order,200,OK,load_150 1-72,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,429,0,0
+1773768221999,773,02_Login,200,OK,load_150 1-83,text,true,,256,230,37,37,https://api.demoblaze.com/login,773,0,319
+1773768222319,472,02_Login,200,OK,load_150 1-65,text,true,,256,230,37,37,https://api.demoblaze.com/login,471,0,0
+1773768222385,416,05_Place_Order,200,OK,load_150 1-73,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,416,0,0
+1773768222557,253,03_View_Product,200,OK,load_150 1-62,text,false,Product page missing Add to cart button,5251,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,240,0,0
+1773768222403,454,04_Add_To_Cart,200,OK,load_150 1-59,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,454,0,0
+1773768222489,374,01_Homepage,200,OK,load_150 1-68,text,true,,4893,161,37,37,https://www.demoblaze.com/index.html,356,0,0
+1773768222494,436,02_Login,200,OK,load_150 1-66,text,true,,256,230,37,37,https://api.demoblaze.com/login,436,0,0
+1773768222356,587,01_Homepage,200,OK,load_150 1-88,text,true,,4828,161,38,38,https://www.demoblaze.com/index.html,569,0,332
+1773768222555,465,04_Add_To_Cart,200,OK,load_150 1-77,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,465,0,0
+1773768222588,520,05_Place_Order,200,OK,load_150 1-54,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,520,0,0
+1773768222400,738,02_Login,200,OK,load_150 1-84,text,true,,256,230,37,37,https://api.demoblaze.com/login,738,0,324
+1773768222766,372,01_Homepage,200,OK,load_150 1-70,text,true,,5066,161,37,37,https://www.demoblaze.com/index.html,361,0,0
+1773768222927,253,03_View_Product,200,OK,load_150 1-81,text,false,Product page missing Add to cart button,5495,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,239,0,0
+1773768222815,381,05_Place_Order,200,OK,load_150 1-56,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,381,0,0
+1773768222879,434,03_View_Product,200,OK,load_150 1-80,text,false,Product page missing Add to cart button,20674,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,361,0,0
+1773768223044,314,01_Homepage,200,OK,load_150 1-69,text,true,,17517,161,37,37,https://www.demoblaze.com/index.html,238,0,0
+1773768222776,585,01_Homepage,200,OK,load_150 1-89,text,true,,5139,161,37,37,https://www.demoblaze.com/index.html,565,0,322
+1773768222999,373,02_Login,200,OK,load_150 1-67,text,true,,256,230,37,37,https://api.demoblaze.com/login,373,0,0
+1773768223033,399,04_Add_To_Cart,200,OK,load_150 1-78,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,399,0,0
+1773768223193,255,03_View_Product,200,OK,load_150 1-63,text,false,Product page missing Add to cart button,5467,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,239,0,0
+1773768222749,715,02_Login,200,OK,load_150 1-85,text,true,,256,230,37,37,https://api.demoblaze.com/login,715,0,315
+1773768223071,447,05_Place_Order,200,OK,load_150 1-74,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,447,0,0
+1773768223346,252,03_View_Product,200,OK,load_150 1-82,text,false,Product page missing Add to cart button,5514,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,235,0,0
+1773768223251,362,01_Homepage,200,OK,load_150 1-71,text,true,,5020,161,37,37,https://www.demoblaze.com/index.html,345,0,0
+1773768223166,475,05_Place_Order,200,OK,load_150 1-75,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,475,0,0
+1773768223267,414,04_Add_To_Cart,200,OK,load_150 1-60,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,414,0,0
+1773768223142,584,01_Homepage,200,OK,load_150 1-90,text,true,,4892,161,37,37,https://www.demoblaze.com/index.html,564,0,325
+1773768223365,408,04_Add_To_Cart,200,OK,load_150 1-79,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,408,0,0
+1773768223491,332,03_View_Product,200,OK,load_150 1-64,text,false,Product page missing Add to cart button,20674,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,245,0,0
+1773768223378,475,05_Place_Order,200,OK,load_150 1-57,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,475,0,0
+1773768223575,390,05_Place_Order,200,OK,load_150 1-58,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,390,0,0
+1773768223741,260,01_Homepage,200,OK,load_150 1-72,text,true,,5198,161,36,36,https://www.demoblaze.com/index.html,247,0,0
+1773768223620,390,04_Add_To_Cart,200,OK,load_150 1-61,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,390,0,0
+1773768223267,761,02_Login,200,OK,load_150 1-86,text,true,,256,230,36,36,https://api.demoblaze.com/login,761,0,341
+1773768223813,264,01_Homepage,200,OK,load_150 1-73,text,true,,4822,161,36,36,https://www.demoblaze.com/index.html,246,0,0
+1773768223697,411,05_Place_Order,200,OK,load_150 1-76,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,411,0,0
+1773768223781,339,03_View_Product,200,OK,load_150 1-83,text,false,Product page missing Add to cart button,20674,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,247,0,0
+1773768223798,373,03_View_Product,200,OK,load_150 1-65,text,false,Product page missing Add to cart button,5612,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,357,0,0
+1773768223813,391,04_Add_To_Cart,200,OK,load_150 1-62,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,391,0,0
+1773768223942,310,03_View_Product,200,OK,load_150 1-66,text,false,Product page missing Add to cart button,20674,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,235,0,0
+1773768223861,412,05_Place_Order,200,OK,load_150 1-59,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,412,0,0
+1773768223878,418,02_Login,200,OK,load_150 1-68,text,true,,256,230,36,36,https://api.demoblaze.com/login,418,0,0
+1773768223599,739,02_Login,200,OK,load_150 1-87,text,true,,256,230,36,36,https://api.demoblaze.com/login,739,0,336
+1773768224022,408,05_Place_Order,200,OK,load_150 1-77,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,408,0,0
+1773768224139,331,03_View_Product,200,OK,load_150 1-84,text,false,Product page missing Add to cart button,20674,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,240,0,0
+1773768224139,379,02_Login,200,OK,load_150 1-70,text,true,,256,230,36,36,https://api.demoblaze.com/login,379,0,0
+1773768223943,598,01_Homepage,200,OK,load_150 1-92,text,true,,5106,161,37,37,https://www.demoblaze.com/index.html,579,0,340
+1773768224181,391,04_Add_To_Cart,200,OK,load_150 1-81,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,391,0,0
+1773768224373,254,03_View_Product,200,OK,load_150 1-67,text,false,Product page missing Add to cart button,5631,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,239,0,0
+1773768223945,738,02_Login,200,OK,load_150 1-88,text,true,,256,230,37,37,https://api.demoblaze.com/login,738,0,343
+1773768224466,256,03_View_Product,200,OK,load_150 1-85,text,false,Product page missing Add to cart button,5543,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,237,0,0
+1773768224315,498,04_Add_To_Cart,200,OK,load_150 1-80,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,498,0,0
+1773768224520,310,01_Homepage,200,OK,load_150 1-74,text,true,,17517,161,37,37,https://www.demoblaze.com/index.html,235,0,0
+1773768223548,1327,01_Homepage,200,OK,load_150 1-91,text,true,,17517,161,37,37,https://www.demoblaze.com/index.html,1248,0,1005
+1773768224359,529,02_Login,200,OK,load_150 1-69,text,true,,256,230,37,37,https://api.demoblaze.com/login,529,0,0
+1773768224337,616,01_Homepage,200,OK,load_150 1-93,text,true,,5153,161,38,38,https://www.demoblaze.com/index.html,600,0,355
+1773768224642,365,01_Homepage,200,OK,load_150 1-75,text,true,,4995,161,38,38,https://www.demoblaze.com/index.html,348,0,0
+1773768224433,576,05_Place_Order,200,OK,load_150 1-78,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,576,0,0
+1773768224449,590,04_Add_To_Cart,200,OK,load_150 1-63,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,590,0,0
+1773768224599,508,04_Add_To_Cart,200,OK,load_150 1-82,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,508,0,0
+1773768224614,520,02_Login,200,OK,load_150 1-71,text,true,,256,230,38,38,https://api.demoblaze.com/login,520,0,0
+1773768224682,556,05_Place_Order,200,OK,load_150 1-60,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,556,0,0
+1773768224364,899,02_Login,200,OK,load_150 1-89,text,true,,256,230,37,37,https://api.demoblaze.com/login,899,0,323
+1773768225030,252,03_View_Product,200,OK,load_150 1-86,text,false,Product page missing Add to cart button,5388,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,237,0,0
+1773768224736,581,01_Homepage,200,OK,load_150 1-94,text,true,,4801,161,37,37,https://www.demoblaze.com/index.html,563,0,322
+1773768224781,539,05_Place_Order,200,OK,load_150 1-79,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,539,0,0
+1773768225110,249,01_Homepage,200,OK,load_150 1-76,text,true,,4958,161,37,37,https://www.demoblaze.com/index.html,237,0,0
+1773768224828,543,04_Add_To_Cart,200,OK,load_150 1-64,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,543,0,0
+1773768225002,527,02_Login,200,OK,load_150 1-72,text,true,,256,230,38,38,https://api.demoblaze.com/login,527,0,0
+1773768225011,558,05_Place_Order,200,OK,load_150 1-61,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,558,0,0
+1773768224728,877,02_Login,200,OK,load_150 1-90,text,true,,256,230,37,37,https://api.demoblaze.com/login,877,0,326
+1773768225078,549,02_Login,200,OK,load_150 1-73,text,true,,256,230,37,37,https://api.demoblaze.com/login,549,0,0
+1773768225298,367,03_View_Product,200,OK,load_150 1-68,text,false,Product page missing Add to cart button,5445,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,350,0,0
+1773768225123,556,04_Add_To_Cart,200,OK,load_150 1-83,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,556,0,0
+1773768225432,255,01_Homepage,200,OK,load_150 1-77,text,true,,4857,161,37,37,https://www.demoblaze.com/index.html,238,0,0
+1773768225339,360,03_View_Product,200,OK,load_150 1-87,text,false,Product page missing Add to cart button,5591,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,344,0,0
+1773768225174,562,04_Add_To_Cart,200,OK,load_150 1-65,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,562,0,0
+1773768225521,305,03_View_Product,200,OK,load_150 1-70,text,false,Product page missing Add to cart button,20674,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,240,0,0
+1773768225205,676,05_Place_Order,200,OK,load_150 1-62,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,676,0,0
+1773768225254,740,04_Add_To_Cart,200,OK,load_150 1-66,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,740,0,0
+1773768225685,325,03_View_Product,200,OK,load_150 1-88,text,false,Product page missing Add to cart button,20674,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,235,0,0
+1773768225893,252,03_View_Product,200,OK,load_150 1-69,text,false,Product page missing Add to cart button,5408,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,239,0,0
+1773768225140,1075,01_Homepage,200,OK,load_150 1-95,text,true,,4949,161,38,38,https://www.demoblaze.com/index.html,1057,0,815
+1773768225472,775,04_Add_To_Cart,200,OK,load_150 1-84,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,775,0,0
+1773768225538,755,01_Homepage,200,OK,load_150 1-96,text,true,,17521,161,38,38,https://www.demoblaze.com/index.html,675,0,328
+1773768226010,317,01_Homepage,200,OK,load_150 1-78,text,true,,17517,161,38,38,https://www.demoblaze.com/index.html,237,0,0
+1773768225574,768,05_Place_Order,200,OK,load_150 1-81,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,768,0,0
+1773768225628,762,04_Add_To_Cart,200,OK,load_150 1-67,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,762,0,0
+1773768225723,765,04_Add_To_Cart,200,OK,load_150 1-85,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,765,0,0
+1773768226135,369,03_View_Product,200,OK,load_150 1-71,text,false,Product page missing Add to cart button,5548,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,350,0,0
+1773768225942,585,01_Homepage,200,OK,load_150 1-97,text,true,,4993,161,38,38,https://www.demoblaze.com/index.html,568,0,329
+1773768226321,252,01_Homepage,200,OK,load_150 1-79,text,true,,4997,161,39,39,https://www.demoblaze.com/index.html,242,0,0
+1773768225815,812,05_Place_Order,200,OK,load_150 1-80,text,true,,206,331,39,39,https://api.demoblaze.com/deletecart,812,0,0
+1773768226264,379,03_View_Product,200,OK,load_150 1-89,text,false,Product page missing Add to cart button,5554,167,39,39,https://www.demoblaze.com/prod.html?idp_=1,360,0,0
+1773768225845,835,02_Login,200,OK,load_150 1-74,text,true,,256,230,39,39,https://api.demoblaze.com/login,835,0,0
+1773768225544,1162,02_Login,200,OK,load_150 1-92,text,true,,256,230,39,39,https://api.demoblaze.com/login,1162,0,340
+1773768226530,261,03_View_Product,200,OK,load_150 1-72,text,false,Product page missing Add to cart button,5528,167,39,39,https://www.demoblaze.com/prod.html?idp_=1,245,0,0
+1773768226009,785,02_Login,200,OK,load_150 1-75,text,true,,256,230,39,39,https://api.demoblaze.com/login,784,0,0
+1773768226040,759,05_Place_Order,200,OK,load_150 1-63,text,true,,206,331,39,39,https://api.demoblaze.com/deletecart,759,0,0
+1773768226109,725,05_Place_Order,200,OK,load_150 1-82,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,725,0,0
+1773768226607,258,03_View_Product,200,OK,load_150 1-90,text,false,Product page missing Add to cart button,5606,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,239,0,0
+1773768226374,585,01_Homepage,200,OK,load_150 1-98,text,true,,4793,161,38,38,https://www.demoblaze.com/index.html,572,0,324
+1773768225878,1113,02_Login,200,OK,load_150 1-91,text,true,,256,230,39,39,https://api.demoblaze.com/login,1113,0,323
+1773768226629,369,03_View_Product,200,OK,load_150 1-73,text,false,Product page missing Add to cart button,5580,167,39,39,https://www.demoblaze.com/prod.html?idp_=1,350,0,0
+1773768225958,1048,02_Login,200,OK,load_150 1-93,text,true,,256,230,39,39,https://api.demoblaze.com/login,1048,0,315
+1773768226283,737,04_Add_To_Cart,200,OK,load_150 1-86,text,true,,197,292,39,39,https://api.demoblaze.com/addtocart,737,0,0
+1773768226360,721,02_Login,200,OK,load_150 1-76,text,true,,256,230,39,39,https://api.demoblaze.com/login,721,0,0
+1773768226372,803,05_Place_Order,200,OK,load_150 1-64,text,true,,206,331,39,39,https://api.demoblaze.com/deletecart,803,0,0
+1773768226321,892,02_Login,200,OK,load_150 1-94,text,true,,256,230,38,38,https://api.demoblaze.com/login,892,0,324
+1773768226665,559,04_Add_To_Cart,200,OK,load_150 1-68,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,559,0,0
+1773768226680,545,05_Place_Order,200,OK,load_150 1-83,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,545,0,0
+1773768226742,576,01_Homepage,200,OK,load_150 1-99,text,true,,5013,161,39,39,https://www.demoblaze.com/index.html,560,0,324
+1773768226688,696,02_Login,200,OK,load_150 1-77,text,true,,256,230,39,39,https://api.demoblaze.com/login,696,0,0
+1773768226700,724,04_Add_To_Cart,200,OK,load_150 1-87,text,true,,197,292,39,39,https://api.demoblaze.com/addtocart,724,0,0
+1773768226737,770,05_Place_Order,200,OK,load_150 1-65,text,true,,206,331,39,39,https://api.demoblaze.com/deletecart,770,0,0
+1773768226831,697,04_Add_To_Cart,200,OK,load_150 1-70,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,697,0,0
+1773768226996,665,05_Place_Order,200,OK,load_150 1-66,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,665,0,0
+1773768227012,677,04_Add_To_Cart,200,OK,load_150 1-88,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,677,0,0
+1773768227128,578,01_Homepage,200,OK,load_150 1-100,text,true,,5047,161,37,37,https://www.demoblaze.com/index.html,561,0,322
+1773768227343,417,01_Homepage,200,OK,load_150 1-81,text,true,,17517,161,38,38,https://www.demoblaze.com/index.html,346,0,0
+1773768227146,714,04_Add_To_Cart,200,OK,load_150 1-69,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,714,0,0
+1773768227628,254,01_Homepage,200,OK,load_150 1-80,text,true,,5005,161,38,38,https://www.demoblaze.com/index.html,238,0,0
+1773768227708,258,03_View_Product,200,OK,load_150 1-92,text,false,Product page missing Add to cart button,5529,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,238,0,0
+1773768227249,759,05_Place_Order,200,OK,load_150 1-84,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,759,0,0
+1773768227682,366,03_View_Product,200,OK,load_150 1-74,text,false,Product page missing Add to cart button,5605,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,352,0,0
+1773768227328,721,02_Login,200,OK,load_150 1-78,text,true,,256,230,38,38,https://api.demoblaze.com/login,721,0,0
+1773768227391,671,05_Place_Order,200,OK,load_150 1-67,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,671,0,0
+1773768227835,249,01_Homepage,200,OK,load_150 1-82,text,true,,4801,161,37,37,https://www.demoblaze.com/index.html,234,0,0
+1773768227571,580,01_Homepage,200,OK,load_150 1-101,text,true,,5071,161,38,38,https://www.demoblaze.com/index.html,560,0,321
+1773768227490,669,05_Place_Order,200,OK,load_150 1-85,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,668,0,0
+1773768227505,695,04_Add_To_Cart,200,OK,load_150 1-71,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,695,0,0
+1773768227795,446,03_View_Product,200,OK,load_150 1-75,text,false,Product page missing Add to cart button,20674,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,358,0,0
+1773768227992,259,03_View_Product,200,OK,load_150 1-91,text,false,Product page missing Add to cart button,5542,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,243,0,0
+1773768227217,1035,02_Login,200,OK,load_150 1-95,text,true,,256,230,38,38,https://api.demoblaze.com/login,1035,0,336
+1773768228008,252,03_View_Product,200,OK,load_150 1-93,text,false,Product page missing Add to cart button,5619,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,233,0,0
+1773768227576,739,02_Login,200,OK,load_150 1-79,text,true,,256,230,38,38,https://api.demoblaze.com/login,739,0,0
+1773768227644,700,04_Add_To_Cart,200,OK,load_150 1-89,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,700,0,0
+1773768228083,303,03_View_Product,200,OK,load_150 1-76,text,false,Product page missing Add to cart button,20674,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,232,0,0
+1773768228022,430,05_Place_Order,200,OK,load_150 1-86,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,430,0,0
+1773768228214,254,03_View_Product,200,OK,load_150 1-94,text,false,Product page missing Add to cart button,5319,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,237,0,0
+1773768227795,728,04_Add_To_Cart,200,OK,load_150 1-72,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,728,0,0
+1773768227869,703,04_Add_To_Cart,200,OK,load_150 1-90,text,true,,197,292,39,39,https://api.demoblaze.com/addtocart,703,0,0
+1773768227529,1072,02_Login,200,OK,load_150 1-97,text,true,,256,230,39,39,https://api.demoblaze.com/login,1072,0,330
+1773768228227,374,01_Homepage,200,OK,load_150 1-83,text,true,,4907,161,39,39,https://www.demoblaze.com/index.html,362,0,0
+1773768228385,255,03_View_Product,200,OK,load_150 1-77,text,false,Product page missing Add to cart button,5447,167,39,39,https://www.demoblaze.com/prod.html?idp_=1,243,0,0
+1773768227999,690,04_Add_To_Cart,200,OK,load_150 1-73,text,true,,197,292,39,39,https://api.demoblaze.com/addtocart,690,0,0
+1773768228226,653,05_Place_Order,200,OK,load_150 1-68,text,true,,206,331,39,39,https://api.demoblaze.com/deletecart,653,0,0
+1773768228311,577,01_Homepage,200,OK,load_150 1-103,text,true,,4923,161,38,38,https://www.demoblaze.com/index.html,560,0,322
+1773768227295,1636,02_Login,200,OK,load_150 1-96,text,true,,256,230,38,38,https://api.demoblaze.com/login,1636,0,956
+1773768228425,615,05_Place_Order,200,OK,load_150 1-87,text,true,,206,331,39,39,https://api.demoblaze.com/deletecart,615,0,0
+1773768227967,1123,02_Login,200,OK,load_150 1-98,text,true,,256,230,39,39,https://api.demoblaze.com/login,1123,0,493
+1773768228529,577,05_Place_Order,200,OK,load_150 1-70,text,true,,206,331,39,39,https://api.demoblaze.com/deletecart,577,0,0
+1773768228320,843,02_Login,200,OK,load_150 1-99,text,true,,256,230,38,38,https://api.demoblaze.com/login,843,0,320
+1773768227984,1220,01_Homepage,200,OK,load_150 1-102,text,true,,17521,161,38,38,https://www.demoblaze.com/index.html,1138,0,891
+1773768228692,523,05_Place_Order,200,OK,load_150 1-88,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,523,0,0
+1773768228762,499,02_Login,200,OK,load_150 1-81,text,true,,256,230,38,38,https://api.demoblaze.com/login,498,0,0
+1773768229009,257,01_Homepage,200,OK,load_150 1-84,text,true,,5171,161,38,38,https://www.demoblaze.com/index.html,241,0,0
+1773768228744,574,01_Homepage,200,OK,load_150 1-104,text,true,,5159,161,39,39,https://www.demoblaze.com/index.html,556,0,321
+1773768229050,317,03_View_Product,200,OK,load_150 1-78,text,false,Product page missing Add to cart button,20674,167,39,39,https://www.demoblaze.com/prod.html?idp_=1,246,0,0
+1773768228868,521,05_Place_Order,200,OK,load_150 1-69,text,true,,206,331,39,39,https://api.demoblaze.com/deletecart,521,0,0
+1773768228883,528,02_Login,200,OK,load_150 1-80,text,true,,256,230,38,38,https://api.demoblaze.com/login,528,0,0
+1773768229161,257,01_Homepage,200,OK,load_150 1-85,text,true,,5023,161,38,38,https://www.demoblaze.com/index.html,243,0,0
+1773768228968,505,04_Add_To_Cart,200,OK,load_150 1-92,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,505,0,0
+1773768229049,516,04_Add_To_Cart,200,OK,load_150 1-74,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,516,0,0
+1773768229317,251,03_View_Product,200,OK,load_150 1-79,text,false,Product page missing Add to cart button,5557,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,233,0,0
+1773768229085,530,02_Login,200,OK,load_150 1-82,text,true,,256,230,38,38,https://api.demoblaze.com/login,530,0,0
+1773768229253,371,03_View_Product,200,OK,load_150 1-95,text,false,Product page missing Add to cart button,5486,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,354,0,0
+1773768229463,252,01_Homepage,200,OK,load_150 1-86,text,true,,4899,161,38,38,https://www.demoblaze.com/index.html,234,0,0
+1773768229202,523,05_Place_Order,200,OK,load_150 1-71,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,523,0,0
+1773768229242,536,04_Add_To_Cart,200,OK,load_150 1-75,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,536,0,0
+1773768229253,601,04_Add_To_Cart,200,OK,load_150 1-91,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,600,0,0
+1773768229262,621,04_Add_To_Cart,200,OK,load_150 1-93,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,621,0,0
+1773768229605,332,03_View_Product,200,OK,load_150 1-97,text,false,Product page missing Add to cart button,20674,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,248,0,0
+1773768229152,803,01_Homepage,200,OK,load_150 1-105,text,true,,17517,161,38,38,https://www.demoblaze.com/index.html,722,0,486
+1773768229351,693,05_Place_Order,200,OK,load_150 1-89,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,693,0,0
+1773768229398,744,04_Add_To_Cart,200,OK,load_150 1-76,text,true,,197,292,39,39,https://api.demoblaze.com/addtocart,744,0,0
+1773768229937,256,03_View_Product,200,OK,load_150 1-96,text,false,Product page missing Add to cart button,5527,167,39,39,https://www.demoblaze.com/prod.html?idp_=1,249,0,0
+1773768229154,1059,02_Login,200,OK,load_150 1-101,text,true,,256,230,39,39,https://api.demoblaze.com/login,1059,0,331
+1773768229560,685,01_Homepage,200,OK,load_150 1-106,text,true,,5061,161,39,39,https://www.demoblaze.com/index.html,669,0,322
+1773768229479,770,04_Add_To_Cart,200,OK,load_150 1-94,text,true,,197,292,39,39,https://api.demoblaze.com/addtocart,770,0,0
+1773768230041,250,01_Homepage,200,OK,load_150 1-87,text,true,,4795,161,39,39,https://www.demoblaze.com/index.html,241,0,0
+1773768229526,790,05_Place_Order,200,OK,load_150 1-72,text,true,,206,331,39,39,https://api.demoblaze.com/deletecart,790,0,0
+1773768229589,762,05_Place_Order,200,OK,load_150 1-90,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,762,0,0
+1773768229605,773,02_Login,200,OK,load_150 1-83,text,true,,256,230,38,38,https://api.demoblaze.com/login,773,0,0
+1773768230091,296,03_View_Product,200,OK,load_150 1-98,text,false,Product page missing Add to cart button,5335,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,279,0,0
+1773768230165,258,03_View_Product,200,OK,load_150 1-99,text,false,Product page missing Add to cart button,5633,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,241,0,0
+1773768229652,777,04_Add_To_Cart,200,OK,load_150 1-77,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,777,0,0
+1773768230217,252,01_Homepage,200,OK,load_150 1-88,text,true,,5087,161,38,38,https://www.demoblaze.com/index.html,240,0,0
+1773768228709,1770,02_Login,200,OK,load_150 1-100,text,true,,256,230,38,38,https://api.demoblaze.com/login,1770,0,936
+1773768230262,251,03_View_Product,200,OK,load_150 1-81,text,false,Product page missing Add to cart button,5618,167,39,39,https://www.demoblaze.com/prod.html?idp_=1,235,0,0
+1773768229938,605,01_Homepage,200,OK,load_150 1-107,text,true,,4855,161,39,39,https://www.demoblaze.com/index.html,585,0,338
+1773768229700,859,05_Place_Order,200,OK,load_150 1-73,text,true,,206,331,39,39,https://api.demoblaze.com/deletecart,859,0,0
+1773768230420,254,03_View_Product,200,OK,load_150 1-80,text,false,Product page missing Add to cart button,5401,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,242,0,0
+1773768229892,878,02_Login,200,OK,load_150 1-103,text,true,,256,230,38,38,https://api.demoblaze.com/login,878,0,336
+1773768230267,562,02_Login,200,OK,load_150 1-84,text,true,,256,230,38,38,https://api.demoblaze.com/login,562,0,0
+1773768230313,584,01_Homepage,200,OK,load_150 1-108,text,true,,4904,161,38,38,https://www.demoblaze.com/index.html,564,0,323
+1773768230374,546,04_Add_To_Cart,200,OK,load_150 1-78,text,true,,197,292,39,39,https://api.demoblaze.com/addtocart,546,0,0
+1773768230621,313,03_View_Product,200,OK,load_150 1-82,text,false,Product page missing Add to cart button,20674,167,39,39,https://www.demoblaze.com/prod.html?idp_=1,239,0,0
+1773768230420,539,02_Login,200,OK,load_150 1-85,text,true,,256,230,39,39,https://api.demoblaze.com/login,539,0,0
+1773768230483,544,05_Place_Order,200,OK,load_150 1-92,text,true,,206,331,39,39,https://api.demoblaze.com/deletecart,544,0,0
+1773768230207,839,02_Login,200,OK,load_150 1-102,text,true,,256,230,39,39,https://api.demoblaze.com/login,839,0,328
+1773768230574,531,05_Place_Order,200,OK,load_150 1-74,text,true,,206,331,39,39,https://api.demoblaze.com/deletecart,531,0,0
+1773768230574,554,04_Add_To_Cart,200,OK,load_150 1-79,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,554,0,0
+1773768230636,532,04_Add_To_Cart,200,OK,load_150 1-95,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,532,0,0
+1773768230329,865,02_Login,200,OK,load_150 1-104,text,true,,256,230,38,38,https://api.demoblaze.com/login,865,0,327
+1773768230716,511,02_Login,200,OK,load_150 1-86,text,true,,256,230,38,38,https://api.demoblaze.com/login,511,0,0
+1773768230781,551,05_Place_Order,200,OK,load_150 1-75,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,551,0,0
+1773768231046,313,01_Homepage,200,OK,load_150 1-89,text,true,,17521,161,38,38,https://www.demoblaze.com/index.html,240,0,0
+1773768230794,585,01_Homepage,200,OK,load_150 1-109,text,true,,4852,161,38,38,https://www.demoblaze.com/index.html,567,0,324
+1773768230855,611,05_Place_Order,200,OK,load_150 1-91,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,610,0,0
+1773768231213,258,03_View_Product,200,OK,load_150 1-101,text,false,Product page missing Add to cart button,5728,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,239,0,0
+1773768230885,632,05_Place_Order,200,OK,load_150 1-93,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,631,0,0
+1773768230938,631,04_Add_To_Cart,200,OK,load_150 1-97,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,631,0,0
+1773768231351,257,01_Homepage,200,OK,load_150 1-90,text,true,,5029,161,38,38,https://www.demoblaze.com/index.html,238,0,0
+1773768231380,260,03_View_Product,200,OK,load_150 1-83,text,false,Product page missing Add to cart button,5277,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,240,0,0
+1773768231143,508,05_Place_Order,200,OK,load_150 1-76,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,508,0,0
+1773768231194,514,04_Add_To_Cart,200,OK,load_150 1-96,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,514,0,0
+1773768231480,259,03_View_Product,200,OK,load_150 1-100,text,false,Product page missing Add to cart button,5331,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,240,0,0
+1773768231249,522,05_Place_Order,200,OK,load_150 1-94,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,522,0,0
+1773768231292,524,02_Login,200,OK,load_150 1-87,text,true,,256,230,38,38,https://api.demoblaze.com/login,524,0,0
+1773768231143,760,01_Homepage,200,OK,load_150 1-110,text,true,,17517,161,38,38,https://www.demoblaze.com/index.html,679,0,325
+1773768231388,532,04_Add_To_Cart,200,OK,load_150 1-98,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,532,0,0
+1773768231424,538,04_Add_To_Cart,200,OK,load_150 1-99,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,538,0,0
+1773768231775,327,03_View_Product,200,OK,load_150 1-103,text,false,Product page missing Add to cart button,20674,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,236,0,0
+1773768231509,653,01_Homepage,200,OK,load_150 1-111,text,true,,17521,161,39,39,https://www.demoblaze.com/index.html,578,0,337
+1773768231837,369,03_View_Product,200,OK,load_150 1-84,text,false,Product page missing Add to cart button,5543,167,39,39,https://www.demoblaze.com/prod.html?idp_=1,358,0,0
+1773768232035,258,01_Homepage,200,OK,load_150 1-92,text,true,,5043,161,39,39,https://www.demoblaze.com/index.html,247,0,0
+1773768231969,331,03_View_Product,200,OK,load_150 1-85,text,false,Product page missing Add to cart button,20674,167,39,39,https://www.demoblaze.com/prod.html?idp_=1,241,0,0
+1773768231430,880,05_Place_Order,200,OK,load_150 1-77,text,true,,206,331,39,39,https://api.demoblaze.com/deletecart,880,0,0
+1773768230957,1397,02_Login,200,OK,load_150 1-105,text,true,,256,230,38,38,https://api.demoblaze.com/login,1397,0,491
+1773768231470,895,02_Login,200,OK,load_150 1-88,text,true,,256,230,38,38,https://api.demoblaze.com/login,895,0,0
+1773768232054,325,03_View_Product,200,OK,load_150 1-102,text,false,Product page missing Add to cart button,20674,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,247,0,0
+1773768231514,904,04_Add_To_Cart,200,OK,load_150 1-81,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,904,0,0
+1773768232196,256,03_View_Product,200,OK,load_150 1-104,text,false,Product page missing Add to cart button,5478,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,237,0,0
+1773768232229,259,03_View_Product,200,OK,load_150 1-86,text,false,Product page missing Add to cart button,5624,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,238,0,0
+1773768231248,1241,02_Login,200,OK,load_150 1-106,text,true,,256,230,38,38,https://api.demoblaze.com/login,1241,0,329
+1773768231918,587,01_Homepage,200,OK,load_150 1-112,text,true,,5023,161,38,38,https://www.demoblaze.com/index.html,569,0,330
+1773768231675,934,04_Add_To_Cart,200,OK,load_150 1-80,text,true,,197,292,39,39,https://api.demoblaze.com/addtocart,934,0,0
+1773768231546,1179,02_Login,200,OK,load_150 1-107,text,true,,256,230,39,39,https://api.demoblaze.com/login,1179,0,330
+1773768231937,831,04_Add_To_Cart,200,OK,load_150 1-82,text,true,,197,292,39,39,https://api.demoblaze.com/addtocart,831,0,0
+1773768232523,253,01_Homepage,200,OK,load_150 1-93,text,true,,4924,161,39,39,https://www.demoblaze.com/index.html,235,0,0
+1773768231921,859,05_Place_Order,200,OK,load_150 1-78,text,true,,206,331,39,39,https://api.demoblaze.com/deletecart,858,0,0
+1773768232476,308,01_Homepage,200,OK,load_150 1-91,text,true,,17517,161,39,39,https://www.demoblaze.com/index.html,245,0,0
+1773768232133,764,05_Place_Order,200,OK,load_150 1-79,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,764,0,0
+1773768232180,742,05_Place_Order,200,OK,load_150 1-95,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,742,0,0
+1773768231901,1071,02_Login,200,OK,load_150 1-108,text,true,,256,230,38,38,https://api.demoblaze.com/login,1071,0,338
+1773768232349,646,01_Homepage,200,OK,load_150 1-113,text,true,,17517,161,38,38,https://www.demoblaze.com/index.html,566,0,330
+1773768232364,632,02_Login,200,OK,load_150 1-89,text,true,,256,230,38,38,https://api.demoblaze.com/login,632,0,0
+1773768232476,553,04_Add_To_Cart,200,OK,load_150 1-101,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,553,0,0
+1773768232785,258,01_Homepage,200,OK,load_150 1-94,text,true,,4931,161,38,38,https://www.demoblaze.com/index.html,245,0,0
+1773768232617,494,02_Login,200,OK,load_150 1-90,text,true,,256,230,38,38,https://api.demoblaze.com/login,493,0,0
+1773768232585,528,05_Place_Order,200,OK,load_150 1-97,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,528,0,0
+1773768232825,314,03_View_Product,200,OK,load_150 1-87,text,false,Product page missing Add to cart button,20674,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,237,0,0
+1773768232649,496,04_Add_To_Cart,200,OK,load_150 1-83,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,496,0,0
+1773768232711,489,05_Place_Order,200,OK,load_150 1-96,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,489,0,0
+1773768232381,828,02_Login,200,OK,load_150 1-109,text,true,,256,230,38,38,https://api.demoblaze.com/login,828,0,331
+1773768232754,477,04_Add_To_Cart,200,OK,load_150 1-100,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,477,0,0
+1773768232928,446,05_Place_Order,200,OK,load_150 1-98,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,446,0,0
+1773768232968,432,05_Place_Order,200,OK,load_150 1-99,text,true,,206,331,39,39,https://api.demoblaze.com/deletecart,432,0,0
+1773768232756,724,01_Homepage,200,OK,load_150 1-114,text,true,,5091,161,39,39,https://www.demoblaze.com/index.html,709,0,340
+1773768233110,378,04_Add_To_Cart,200,OK,load_150 1-103,text,true,,197,292,39,39,https://api.demoblaze.com/addtocart,378,0,0
+1773768233218,378,04_Add_To_Cart,200,OK,load_150 1-84,text,true,,197,292,39,39,https://api.demoblaze.com/addtocart,378,0,0
+1773768233359,253,03_View_Product,200,OK,load_150 1-105,text,false,Product page missing Add to cart button,5427,167,39,39,https://www.demoblaze.com/prod.html?idp_=1,238,0,0
+1773768233371,257,03_View_Product,200,OK,load_150 1-88,text,false,Product page missing Add to cart button,5616,167,39,39,https://www.demoblaze.com/prod.html?idp_=1,239,0,0
+1773768232920,708,02_Login,200,OK,load_150 1-110,text,true,,256,230,39,39,https://api.demoblaze.com/login,708,0,321
+1773768233298,389,02_Login,200,OK,load_150 1-92,text,true,,256,230,39,39,https://api.demoblaze.com/login,389,0,0
+1773768233309,388,04_Add_To_Cart,200,OK,load_150 1-85,text,true,,197,292,39,39,https://api.demoblaze.com/addtocart,388,0,0
+1773768233499,259,03_View_Product,200,OK,load_150 1-106,text,false,Product page missing Add to cart button,5404,167,40,40,https://www.demoblaze.com/prod.html?idp_=1,242,0,0
+1773768233387,391,04_Add_To_Cart,200,OK,load_150 1-102,text,true,,197,292,40,40,https://api.demoblaze.com/addtocart,391,0,0
+1773768233157,692,01_Homepage,200,OK,load_150 1-115,text,true,,4883,161,40,40,https://www.demoblaze.com/index.html,677,0,326
+1773768233466,389,04_Add_To_Cart,200,OK,load_150 1-104,text,true,,197,292,40,40,https://api.demoblaze.com/addtocart,389,0,0
+1773768233172,718,02_Login,200,OK,load_150 1-111,text,true,,256,230,40,40,https://api.demoblaze.com/login,718,0,320
+1773768233500,426,04_Add_To_Cart,200,OK,load_150 1-86,text,true,,197,292,40,40,https://api.demoblaze.com/addtocart,426,0,0
+1773768233435,492,05_Place_Order,200,OK,load_150 1-81,text,true,,206,331,40,40,https://api.demoblaze.com/deletecart,492,0,0
+1773768233728,262,03_View_Product,200,OK,load_150 1-107,text,false,Product page missing Add to cart button,5524,167,39,39,https://www.demoblaze.com/prod.html?idp_=1,242,0,0
+1773768233620,453,05_Place_Order,200,OK,load_150 1-80,text,true,,206,331,39,39,https://api.demoblaze.com/deletecart,453,0,0
+1773768233777,367,05_Place_Order,200,OK,load_150 1-82,text,true,,206,331,39,39,https://api.demoblaze.com/deletecart,367,0,0
+1773768233785,377,02_Login,200,OK,load_150 1-93,text,true,,256,230,38,38,https://api.demoblaze.com/login,377,0,0
+1773768233593,593,01_Homepage,200,OK,load_150 1-116,text,true,,5131,161,38,38,https://www.demoblaze.com/index.html,576,0,330
+1773768233793,412,02_Login,200,OK,load_150 1-91,text,true,,256,230,38,38,https://api.demoblaze.com/login,412,0,0
+1773768233933,317,01_Homepage,200,OK,load_150 1-95,text,true,,17517,161,38,38,https://www.demoblaze.com/index.html,239,0,0
+1773768233999,253,03_View_Product,200,OK,load_150 1-89,text,false,Product page missing Add to cart button,5587,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,235,0,0
+1773768233974,371,03_View_Product,200,OK,load_150 1-108,text,false,Product page missing Add to cart button,5646,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,359,0,0
+1773768234122,249,01_Homepage,200,OK,load_150 1-97,text,true,,4862,161,38,38,https://www.demoblaze.com/index.html,234,0,0
+1773768234113,260,03_View_Product,200,OK,load_150 1-90,text,false,Product page missing Add to cart button,5399,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,239,0,0
+1773768234039,370,05_Place_Order,200,OK,load_150 1-101,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,370,0,0
+1773768234056,378,02_Login,200,OK,load_150 1-94,text,true,,256,230,38,38,https://api.demoblaze.com/login,377,0,0
+1773768234212,263,03_View_Product,200,OK,load_150 1-109,text,false,Product page missing Add to cart button,5451,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,244,0,0
+1773768234203,307,01_Homepage,200,OK,load_150 1-96,text,true,,17517,161,38,38,https://www.demoblaze.com/index.html,239,0,0
+1773768234154,365,05_Place_Order,200,OK,load_150 1-83,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,365,0,0
+1773768234145,381,04_Add_To_Cart,200,OK,load_150 1-87,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,381,0,0
+1773768234236,402,05_Place_Order,200,OK,load_150 1-100,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,402,0,0
+1773768234408,260,01_Homepage,200,OK,load_150 1-99,text,true,,5192,161,38,38,https://www.demoblaze.com/index.html,239,0,0
+1773768234376,313,01_Homepage,200,OK,load_150 1-98,text,true,,17517,161,38,38,https://www.demoblaze.com/index.html,235,0,0
+1773768234000,707,02_Login,200,OK,load_150 1-113,text,true,,256,230,38,38,https://api.demoblaze.com/login,707,0,330
+1773768233975,764,01_Homepage,200,OK,load_150 1-117,text,true,,5069,161,38,38,https://www.demoblaze.com/index.html,748,0,388
+1773768233515,1307,02_Login,200,OK,load_150 1-112,text,true,,256,230,38,38,https://api.demoblaze.com/login,1307,0,920
+1773768234491,370,05_Place_Order,200,OK,load_150 1-103,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,370,0,0
+1773768234689,256,03_View_Product,200,OK,load_150 1-92,text,false,Product page missing Add to cart button,5373,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,238,0,0
+1773768234631,315,03_View_Product,200,OK,load_150 1-110,text,false,Product page missing Add to cart button,20674,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,243,0,0
+1773768234598,366,05_Place_Order,200,OK,load_150 1-84,text,true,,206,331,39,39,https://api.demoblaze.com/deletecart,366,0,0
+1773768234385,579,01_Homepage,200,OK,load_150 1-118,text,true,,5084,161,39,39,https://www.demoblaze.com/index.html,559,0,325
+1773768234614,379,04_Add_To_Cart,200,OK,load_150 1-105,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,379,0,0
+1773768234631,378,04_Add_To_Cart,200,OK,load_150 1-88,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,378,0,0
+1773768234764,370,04_Add_To_Cart,200,OK,load_150 1-106,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,370,0,0
+1773768234706,433,05_Place_Order,200,OK,load_150 1-85,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,433,0,0
+1773768234902,257,03_View_Product,200,OK,load_150 1-111,text,false,Product page missing Add to cart button,5660,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,240,0,0
+1773768234781,393,05_Place_Order,200,OK,load_150 1-102,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,393,0,0
+1773768234484,699,02_Login,200,OK,load_150 1-114,text,true,,256,230,37,37,https://api.demoblaze.com/login,699,0,326
+1773768234861,379,05_Place_Order,200,OK,load_150 1-104,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,378,0,0
+1773768234929,377,05_Place_Order,200,OK,load_150 1-86,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,377,0,0
+1773768235001,378,04_Add_To_Cart,200,OK,load_150 1-107,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,378,0,0
+1773768234748,698,01_Homepage,200,OK,load_150 1-119,text,true,,5131,161,37,37,https://www.demoblaze.com/index.html,675,0,323
+1773768235215,255,03_View_Product,200,OK,load_150 1-91,text,false,Product page missing Add to cart button,5635,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,240,0,0
+1773768235166,379,03_View_Product,200,OK,load_150 1-93,text,false,Product page missing Add to cart button,5458,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,361,0,0
+1773768234854,700,02_Login,200,OK,load_150 1-115,text,true,,256,230,37,37,https://api.demoblaze.com/login,700,0,329
+1773768235263,376,04_Add_To_Cart,200,OK,load_150 1-89,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,376,0,0
+1773768235263,411,02_Login,200,OK,load_150 1-95,text,true,,256,230,37,37,https://api.demoblaze.com/login,411,0,0
+1773768235423,260,01_Homepage,200,OK,load_150 1-101,text,true,,5041,161,37,37,https://www.demoblaze.com/index.html,238,0,0
+1773768235439,262,03_View_Product,200,OK,load_150 1-94,text,false,Product page missing Add to cart button,5631,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,244,0,0
+1773768235359,379,04_Add_To_Cart,200,OK,load_150 1-108,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,379,0,0
+1773768235375,384,02_Login,200,OK,load_150 1-97,text,true,,256,230,38,38,https://api.demoblaze.com/login,384,0,0
+1773768235375,390,04_Add_To_Cart,200,OK,load_150 1-90,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,390,0,0
+1773768235110,655,01_Homepage,200,OK,load_150 1-120,text,true,,17521,161,38,38,https://www.demoblaze.com/index.html,573,0,329
+1773768235518,373,02_Login,200,OK,load_150 1-96,text,true,,256,230,38,38,https://api.demoblaze.com/login,373,0,0
+1773768235645,252,01_Homepage,200,OK,load_150 1-100,text,true,,4918,161,38,38,https://www.demoblaze.com/index.html,238,0,0
+1773768235486,422,04_Add_To_Cart,200,OK,load_150 1-109,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,422,0,0
+1773768235192,756,02_Login,200,OK,load_150 1-116,text,true,,256,230,38,38,https://api.demoblaze.com/login,756,0,329
+1773768235709,256,03_View_Product,200,OK,load_150 1-113,text,false,Product page missing Add to cart button,5468,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,239,0,0
+1773768235677,371,02_Login,200,OK,load_150 1-99,text,true,,256,230,38,38,https://api.demoblaze.com/login,371,0,0
+1773768235534,568,05_Place_Order,200,OK,load_150 1-87,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,568,0,0
+1773768235693,413,02_Login,200,OK,load_150 1-98,text,true,,256,230,37,37,https://api.demoblaze.com/login,413,0,0
+1773768235868,256,01_Homepage,200,OK,load_150 1-103,text,true,,5022,161,38,38,https://www.demoblaze.com/index.html,243,0,0
+1773768235836,433,03_View_Product,200,OK,load_150 1-112,text,false,Product page missing Add to cart button,20674,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,344,0,0
+1773768235950,382,04_Add_To_Cart,200,OK,load_150 1-110,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,382,0,0
+1773768235949,393,04_Add_To_Cart,200,OK,load_150 1-92,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,393,0,0
+1773768236014,404,05_Place_Order,200,OK,load_150 1-88,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,404,0,0
+1773768235998,427,05_Place_Order,200,OK,load_150 1-105,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,427,0,0
+1773768236177,259,01_Homepage,200,OK,load_150 1-102,text,true,,5150,161,37,37,https://www.demoblaze.com/index.html,244,0,0
+1773768235743,704,02_Login,200,OK,load_150 1-117,text,true,,256,230,37,37,https://api.demoblaze.com/login,704,0,323
+1773768236137,374,05_Place_Order,200,OK,load_150 1-106,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,374,0,0
+1773768236185,331,03_View_Product,200,OK,load_150 1-114,text,false,Product page missing Add to cart button,20674,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,245,0,0
+1773768236160,380,04_Add_To_Cart,200,OK,load_150 1-111,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,380,0,0
+1773768235967,707,01_Homepage,200,OK,load_150 1-122,text,true,,5033,161,38,38,https://www.demoblaze.com/index.html,691,0,335
+1773768236251,427,01_Homepage,200,OK,load_150 1-104,text,true,,17517,161,38,38,https://www.demoblaze.com/index.html,352,0,0
+1773768235983,726,02_Login,200,OK,load_150 1-118,text,true,,256,230,38,38,https://api.demoblaze.com/login,726,0,340
+1773768236390,419,05_Place_Order,200,OK,load_150 1-107,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,419,0,0
+1773768235551,1299,01_Homepage,200,OK,load_150 1-121,text,true,,5027,161,38,38,https://www.demoblaze.com/index.html,1280,0,1036
+1773768236483,371,04_Add_To_Cart,200,OK,load_150 1-91,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,371,0,0
+1773768236563,333,03_View_Product,200,OK,load_150 1-115,text,false,Product page missing Add to cart button,20674,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,247,0,0
+1773768236317,587,01_Homepage,200,OK,load_150 1-123,text,true,,4881,161,38,38,https://www.demoblaze.com/index.html,582,0,343
+1773768236548,380,04_Add_To_Cart,200,OK,load_150 1-93,text,true,,197,292,39,39,https://api.demoblaze.com/addtocart,380,0,0
+1773768236691,303,03_View_Product,200,OK,load_150 1-95,text,false,Product page missing Add to cart button,5709,167,39,39,https://www.demoblaze.com/prod.html?idp_=1,281,0,0
+1773768236762,249,03_View_Product,200,OK,load_150 1-97,text,false,Product page missing Add to cart button,5467,167,39,39,https://www.demoblaze.com/prod.html?idp_=1,239,0,0
+1773768236643,423,05_Place_Order,200,OK,load_150 1-89,text,true,,206,331,39,39,https://api.demoblaze.com/deletecart,423,0,0
+1773768236691,388,02_Login,200,OK,load_150 1-101,text,true,,256,230,38,38,https://api.demoblaze.com/login,388,0,0
+1773768236707,381,04_Add_To_Cart,200,OK,load_150 1-94,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,381,0,0
+1773768236745,390,05_Place_Order,200,OK,load_150 1-108,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,390,0,0
+1773768236770,411,05_Place_Order,200,OK,load_150 1-90,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,411,0,0
+1773768236453,752,02_Login,200,OK,load_150 1-119,text,true,,256,230,37,37,https://api.demoblaze.com/login,752,0,341
+1773768236906,313,03_View_Product,200,OK,load_150 1-96,text,false,Product page missing Add to cart button,20674,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,240,0,0
+1773768236906,386,02_Login,200,OK,load_150 1-100,text,true,,256,230,37,37,https://api.demoblaze.com/login,386,0,0
+1773768236922,379,05_Place_Order,200,OK,load_150 1-109,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,379,0,0
+1773768237050,256,03_View_Product,200,OK,load_150 1-99,text,false,Product page missing Add to cart button,5422,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,239,0,0
+1773768236724,598,01_Homepage,200,OK,load_150 1-124,text,true,,4921,161,38,38,https://www.demoblaze.com/index.html,579,0,334
+1773768236954,373,03_View_Product,200,OK,load_150 1-116,text,false,Product page missing Add to cart button,5489,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,354,0,0
+1773768236970,394,04_Add_To_Cart,200,OK,load_150 1-113,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,394,0,0
+1773768237113,372,03_View_Product,200,OK,load_150 1-98,text,false,Product page missing Add to cart button,5335,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,355,0,0
+1773768236772,718,02_Login,200,OK,load_150 1-120,text,true,,256,230,38,38,https://api.demoblaze.com/login,718,0,332
+1773768237129,381,02_Login,200,OK,load_150 1-103,text,true,,256,230,38,38,https://api.demoblaze.com/login,381,0,0
+1773768237285,398,04_Add_To_Cart,200,OK,load_150 1-112,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,398,0,0
+1773768237433,256,01_Homepage,200,OK,load_150 1-105,text,true,,5054,161,38,38,https://www.demoblaze.com/index.html,242,0,0
+1773768237450,258,03_View_Product,200,OK,load_150 1-117,text,false,Product page missing Add to cart button,5415,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,240,0,0
+1773768237520,261,01_Homepage,200,OK,load_150 1-106,text,true,,5045,161,39,39,https://www.demoblaze.com/index.html,242,0,0
+1773768237130,665,01_Homepage,200,OK,load_150 1-125,text,true,,17517,161,39,39,https://www.demoblaze.com/index.html,576,0,334
+1773768237337,473,05_Place_Order,200,OK,load_150 1-110,text,true,,206,331,39,39,https://api.demoblaze.com/deletecart,473,0,0
+1773768237351,459,05_Place_Order,200,OK,load_150 1-92,text,true,,206,331,39,39,https://api.demoblaze.com/deletecart,459,0,0
+1773768237450,380,02_Login,200,OK,load_150 1-102,text,true,,256,230,38,38,https://api.demoblaze.com/login,380,0,0
+1773768237520,383,04_Add_To_Cart,200,OK,load_150 1-114,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,383,0,0
+1773768237550,404,05_Place_Order,200,OK,load_150 1-111,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,404,0,0
+1773768237713,253,03_View_Product,200,OK,load_150 1-118,text,false,Product page missing Add to cart button,5657,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,235,0,0
+1773768237680,400,02_Login,200,OK,load_150 1-104,text,true,,256,230,38,38,https://api.demoblaze.com/login,400,0,0
+1773768237819,263,01_Homepage,200,OK,load_150 1-107,text,true,,5023,161,38,38,https://www.demoblaze.com/index.html,246,0,0
+1773768237552,580,01_Homepage,200,OK,load_150 1-126,text,true,,5104,161,39,39,https://www.demoblaze.com/index.html,565,0,325
+1773768237856,356,05_Place_Order,200,OK,load_150 1-91,text,true,,206,331,39,39,https://api.demoblaze.com/deletecart,356,0,0
+1773768237904,391,04_Add_To_Cart,200,OK,load_150 1-115,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,391,0,0
+1773768237935,368,05_Place_Order,200,OK,load_150 1-93,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,368,0,0
+1773768238080,261,03_View_Product,200,OK,load_150 1-101,text,false,Product page missing Add to cart button,5443,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,255,0,0
+1773768237997,386,04_Add_To_Cart,200,OK,load_150 1-95,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,386,0,0
+1773768237681,711,02_Login,200,OK,load_150 1-122,text,true,,256,230,37,37,https://api.demoblaze.com/login,711,0,324
+1773768238143,255,01_Homepage,200,OK,load_150 1-108,text,true,,5076,161,37,37,https://www.demoblaze.com/index.html,240,0,0
+1773768238016,400,04_Add_To_Cart,200,OK,load_150 1-97,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,400,0,0
+1773768238211,324,03_View_Product,200,OK,load_150 1-119,text,false,Product page missing Add to cart button,20674,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,238,0,0
+1773768238096,450,05_Place_Order,200,OK,load_150 1-94,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,450,0,0
+1773768237857,748,02_Login,200,OK,load_150 1-121,text,true,,256,230,37,37,https://api.demoblaze.com/login,748,0,324
+1773768238219,387,04_Add_To_Cart,200,OK,load_150 1-96,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,387,0,0
+1773768238303,319,01_Homepage,200,OK,load_150 1-109,text,true,,17517,161,37,37,https://www.demoblaze.com/index.html,243,0,0
+1773768238318,373,04_Add_To_Cart,200,OK,load_150 1-99,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,373,0,0
+1773768238334,365,04_Add_To_Cart,200,OK,load_150 1-116,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,365,0,0
+1773768238294,444,03_View_Product,200,OK,load_150 1-100,text,false,Product page missing Add to cart button,20674,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,355,0,0
+1773768238495,253,03_View_Product,200,OK,load_150 1-120,text,false,Product page missing Add to cart button,5299,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,238,0,0
+1773768238511,306,03_View_Product,200,OK,load_150 1-103,text,false,Product page missing Add to cart button,20674,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,233,0,0
+1773768238372,448,05_Place_Order,200,OK,load_150 1-113,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,447,0,0
+1773768238485,386,04_Add_To_Cart,200,OK,load_150 1-98,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,386,0,0
+1773768237936,935,01_Homepage,200,OK,load_150 1-127,text,true,,17517,161,37,37,https://www.demoblaze.com/index.html,856,0,620
+1773768238335,707,02_Login,200,OK,load_150 1-124,text,true,,256,230,38,38,https://api.demoblaze.com/login,707,0,328
+1773768238684,387,05_Place_Order,200,OK,load_150 1-112,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,387,0,0
+1773768238815,256,01_Homepage,200,OK,load_150 1-110,text,true,,4937,161,38,38,https://www.demoblaze.com/index.html,241,0,0
+1773768238692,382,02_Login,200,OK,load_150 1-105,text,true,,256,230,38,38,https://api.demoblaze.com/login,382,0,0
+1773768238709,374,04_Add_To_Cart,200,OK,load_150 1-117,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,374,0,0
+1773768238834,268,03_View_Product,200,OK,load_150 1-102,text,false,Product page missing Add to cart button,5473,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,244,0,0
+1773768238335,770,01_Homepage,200,OK,load_150 1-128,text,true,,5117,161,38,38,https://www.demoblaze.com/index.html,750,0,510
+1773768238782,386,02_Login,200,OK,load_150 1-106,text,true,,256,230,38,38,https://api.demoblaze.com/login,386,0,0
+1773768238955,252,01_Homepage,200,OK,load_150 1-111,text,true,,4996,161,38,38,https://www.demoblaze.com/index.html,240,0,0
+1773768238904,407,05_Place_Order,200,OK,load_150 1-114,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,407,0,0
+1773768238735,576,01_Homepage,200,OK,load_150 1-129,text,true,,5108,161,38,38,https://www.demoblaze.com/index.html,561,0,325
+1773768237909,1436,02_Login,200,OK,load_150 1-123,text,true,,256,230,39,39,https://api.demoblaze.com/login,1436,0,1053
+1773768238979,371,04_Add_To_Cart,200,OK,load_150 1-118,text,true,,197,292,39,39,https://api.demoblaze.com/addtocart,371,0,0
+1773768239086,311,03_View_Product,200,OK,load_150 1-104,text,false,Product page missing Add to cart button,20674,167,39,39,https://www.demoblaze.com/prod.html?idp_=1,234,0,0
+1773768239086,388,02_Login,200,OK,load_150 1-107,text,true,,256,230,39,39,https://api.demoblaze.com/login,388,0,0
+1773768238800,723,02_Login,200,OK,load_150 1-125,text,true,,256,230,39,39,https://api.demoblaze.com/login,723,0,337
+1773768239299,410,05_Place_Order,200,OK,load_150 1-115,text,true,,206,331,40,40,https://api.demoblaze.com/deletecart,410,0,0
+1773768239346,375,04_Add_To_Cart,200,OK,load_150 1-101,text,true,,197,292,40,40,https://api.demoblaze.com/addtocart,375,0,0
+1773768239394,371,03_View_Product,200,OK,load_150 1-122,text,false,Product page missing Add to cart button,5625,167,40,40,https://www.demoblaze.com/prod.html?idp_=1,352,0,0
+1773768239135,651,01_Homepage,200,OK,load_150 1-130,text,true,,17517,161,40,40,https://www.demoblaze.com/index.html,569,0,330
+1773768239403,385,02_Login,200,OK,load_150 1-108,text,true,,256,230,40,40,https://api.demoblaze.com/login,384,0,0
+1773768239419,370,05_Place_Order,200,OK,load_150 1-97,text,true,,206,331,40,40,https://api.demoblaze.com/deletecart,370,0,0
+1773768239386,404,05_Place_Order,200,OK,load_150 1-95,text,true,,206,331,40,40,https://api.demoblaze.com/deletecart,404,0,0
+1773768239617,260,03_View_Product,200,OK,load_150 1-121,text,false,Product page missing Add to cart button,5436,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,241,0,0
+1773768239545,391,04_Add_To_Cart,200,OK,load_150 1-119,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,391,0,0
+1773768239625,379,02_Login,200,OK,load_150 1-109,text,true,,256,230,38,38,https://api.demoblaze.com/login,379,0,0
+1773768239617,397,05_Place_Order,200,OK,load_150 1-96,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,397,0,0
+1773768239695,373,05_Place_Order,200,OK,load_150 1-99,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,373,0,0
+1773768239708,366,05_Place_Order,200,OK,load_150 1-116,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,366,0,0
+1773768239741,441,04_Add_To_Cart,200,OK,load_150 1-100,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,441,0,0
+1773768239749,433,04_Add_To_Cart,200,OK,load_150 1-120,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,433,0,0
+1773768239832,366,01_Homepage,200,OK,load_150 1-113,text,true,,5056,161,37,37,https://www.demoblaze.com/index.html,353,0,0
+1773768239832,396,04_Add_To_Cart,200,OK,load_150 1-103,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,396,0,0
+1773768239530,710,01_Homepage,200,OK,load_150 1-131,text,true,,4993,161,37,37,https://www.demoblaze.com/index.html,695,0,335
+1773768240077,298,01_Homepage,200,OK,load_150 1-112,text,true,,17517,161,37,37,https://www.demoblaze.com/index.html,238,0,0
+1773768240077,315,03_View_Product,200,OK,load_150 1-105,text,false,Product page missing Add to cart button,20674,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,240,0,0
+1773768239881,537,05_Place_Order,200,OK,load_150 1-98,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,537,0,0
+1773768240050,370,03_View_Product,200,OK,load_150 1-124,text,false,Product page missing Add to cart button,5573,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,349,0,0
+1773768240169,260,03_View_Product,200,OK,load_150 1-106,text,false,Product page missing Add to cart button,5281,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,241,0,0
+1773768240085,373,05_Place_Order,200,OK,load_150 1-117,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,373,0,0
+1773768240077,382,02_Login,200,OK,load_150 1-110,text,true,,256,230,36,36,https://api.demoblaze.com/login,382,0,0
+1773768240118,380,04_Add_To_Cart,200,OK,load_150 1-102,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,380,0,0
+1773768239135,1434,02_Login,200,OK,load_150 1-126,text,true,,256,230,37,37,https://api.demoblaze.com/login,1434,0,1049
+1773768240315,256,01_Homepage,200,OK,load_150 1-114,text,true,,5020,161,37,37,https://www.demoblaze.com/index.html,244,0,0
+1773768240210,372,02_Login,200,OK,load_150 1-111,text,true,,256,230,37,37,https://api.demoblaze.com/login,372,0,0
+1773768240346,246,03_View_Product,200,OK,load_150 1-123,text,false,Product page missing Add to cart button,5620,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,235,0,0
+1773768239882,714,02_Login,200,OK,load_150 1-127,text,true,,256,230,37,37,https://api.demoblaze.com/login,713,0,330
+1773768239937,674,01_Homepage,200,OK,load_150 1-132,text,true,,17517,161,37,37,https://www.demoblaze.com/index.html,590,0,346
+1773768240362,385,05_Place_Order,200,OK,load_150 1-118,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,385,0,0
+1773768240403,375,04_Add_To_Cart,200,OK,load_150 1-104,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,375,0,0
+1773768240528,254,03_View_Product,200,OK,load_150 1-125,text,false,Product page missing Add to cart button,5445,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,245,0,0
+1773768240119,713,02_Login,200,OK,load_150 1-128,text,true,,256,230,37,37,https://api.demoblaze.com/login,713,0,336
+1773768240478,370,03_View_Product,200,OK,load_150 1-107,text,false,Product page missing Add to cart button,5503,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,347,0,0
+1773768240331,643,01_Homepage,200,OK,load_150 1-133,text,true,,17517,161,38,38,https://www.demoblaze.com/index.html,561,0,325
+1773768240717,290,01_Homepage,200,OK,load_150 1-115,text,true,,17517,161,38,38,https://www.demoblaze.com/index.html,234,0,0
+1773768240316,699,02_Login,200,OK,load_150 1-129,text,true,,256,230,38,38,https://api.demoblaze.com/login,699,0,319
+1773768240798,270,03_View_Product,200,OK,load_150 1-108,text,false,Product page missing Add to cart button,5428,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,243,0,0
+1773768240733,397,05_Place_Order,200,OK,load_150 1-101,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,397,0,0
+1773768240773,391,04_Add_To_Cart,200,OK,load_150 1-122,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,391,0,0
+1773768240886,387,04_Add_To_Cart,200,OK,load_150 1-121,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,387,0,0
+1773768240717,578,01_Homepage,200,OK,load_150 1-134,text,true,,5032,161,37,37,https://www.demoblaze.com/index.html,560,0,325
+1773768241018,324,03_View_Product,200,OK,load_150 1-109,text,false,Product page missing Add to cart button,20674,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,251,0,0
+1773768240951,433,05_Place_Order,200,OK,load_150 1-119,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,433,0,0
+1773768241084,424,01_Homepage,200,OK,load_150 1-116,text,true,,17517,161,38,38,https://www.demoblaze.com/index.html,350,0,0
+1773768240798,722,02_Login,200,OK,load_150 1-130,text,true,,256,230,38,38,https://api.demoblaze.com/login,722,0,335
+1773768241184,407,05_Place_Order,200,OK,load_150 1-120,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,407,0,0
+1773768241184,413,05_Place_Order,200,OK,load_150 1-100,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,413,0,0
+1773768241233,446,05_Place_Order,200,OK,load_150 1-103,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,446,0,0
+1773768241205,475,02_Login,200,OK,load_150 1-113,text,true,,256,230,37,37,https://api.demoblaze.com/login,475,0,0
+1773768241460,258,01_Homepage,200,OK,load_150 1-117,text,true,,5066,161,37,37,https://www.demoblaze.com/index.html,239,0,0
+1773768241460,309,03_View_Product,200,OK,load_150 1-110,text,false,Product page missing Add to cart button,20674,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,239,0,0
+1773768241385,423,02_Login,200,OK,load_150 1-112,text,true,,256,230,37,37,https://api.demoblaze.com/login,423,0,0
+1773768241571,256,03_View_Product,200,OK,load_150 1-126,text,false,Product page missing Add to cart button,5346,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,241,0,0
+1773768241138,706,01_Homepage,200,OK,load_150 1-135,text,true,,5124,161,37,37,https://www.demoblaze.com/index.html,688,0,334
+1773768241590,255,03_View_Product,200,OK,load_150 1-111,text,false,Product page missing Add to cart button,5348,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,238,0,0
+1773768241598,251,03_View_Product,200,OK,load_150 1-127,text,false,Product page missing Add to cart button,5471,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,238,0,0
+1773768241393,490,04_Add_To_Cart,200,OK,load_150 1-105,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,490,0,0
+1773768241433,474,04_Add_To_Cart,200,OK,load_150 1-106,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,474,0,0
+1773768241433,475,04_Add_To_Cart,200,OK,load_150 1-124,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,475,0,0
+1773768241250,748,02_Login,200,OK,load_150 1-131,text,true,,256,230,37,37,https://api.demoblaze.com/login,748,0,328
+1773768241581,419,02_Login,200,OK,load_150 1-114,text,true,,256,230,37,37,https://api.demoblaze.com/login,419,0,0
+1773768241599,434,04_Add_To_Cart,200,OK,load_150 1-123,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,434,0,0
+1773768241751,311,01_Homepage,200,OK,load_150 1-118,text,true,,17517,161,37,37,https://www.demoblaze.com/index.html,238,0,0
+1773768241504,604,05_Place_Order,200,OK,load_150 1-102,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,604,0,0
+1773768241836,327,03_View_Product,200,OK,load_150 1-128,text,false,Product page missing Add to cart button,20674,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,237,0,0
+1773768241514,702,01_Homepage,200,OK,load_150 1-136,text,true,,4808,161,37,37,https://www.demoblaze.com/index.html,685,0,329
+1773768241785,436,05_Place_Order,200,OK,load_150 1-104,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,436,0,0
+1773768241785,461,04_Add_To_Cart,200,OK,load_150 1-125,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,461,0,0
+1773768242023,255,03_View_Product,200,OK,load_150 1-129,text,false,Product page missing Add to cart button,5276,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,237,0,0
+1773768241860,422,04_Add_To_Cart,200,OK,load_150 1-107,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,422,0,0
+1773768241628,745,02_Login,200,OK,load_150 1-132,text,true,,256,230,36,36,https://api.demoblaze.com/login,745,0,335
+1773768242014,381,02_Login,200,OK,load_150 1-115,text,true,,256,230,36,36,https://api.demoblaze.com/login,381,0,0
+1773768242079,419,04_Add_To_Cart,200,OK,load_150 1-108,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,419,0,0
+1773768241967,640,01_Homepage,200,OK,load_150 1-137,text,true,,17517,161,37,37,https://www.demoblaze.com/index.html,562,0,326
+1773768242174,459,05_Place_Order,200,OK,load_150 1-122,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,459,0,0
+1773768242396,257,01_Homepage,200,OK,load_150 1-119,text,true,,5125,161,37,37,https://www.demoblaze.com/index.html,238,0,0
+1773768242285,375,05_Place_Order,200,OK,load_150 1-121,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,374,0,0
+1773768241983,711,02_Login,200,OK,load_150 1-133,text,true,,256,230,37,37,https://api.demoblaze.com/login,711,0,333
+1773768242348,406,04_Add_To_Cart,200,OK,load_150 1-109,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,406,0,0
+1773768242522,249,03_View_Product,200,OK,load_150 1-130,text,false,Product page missing Add to cart button,5432,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,234,0,0
+1773768242603,257,01_Homepage,200,OK,load_150 1-120,text,true,,4977,161,37,37,https://www.demoblaze.com/index.html,239,0,0
+1773768242301,599,01_Homepage,200,OK,load_150 1-138,text,true,,4937,161,37,37,https://www.demoblaze.com/index.html,582,0,340
+1773768242683,251,03_View_Product,200,OK,load_150 1-113,text,false,Product page missing Add to cart button,5642,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,237,0,0
+1773768242522,459,02_Login,200,OK,load_150 1-116,text,true,,256,230,38,38,https://api.demoblaze.com/login,459,0,0
+1773768242811,255,03_View_Product,200,OK,load_150 1-112,text,false,Product page missing Add to cart button,5264,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,242,0,0
+1773768242301,790,02_Login,200,OK,load_150 1-134,text,true,,256,230,38,38,https://api.demoblaze.com/login,790,0,322
+1773768242731,444,02_Login,200,OK,load_150 1-117,text,true,,256,230,38,38,https://api.demoblaze.com/login,444,0,0
+1773768242779,517,04_Add_To_Cart,200,OK,load_150 1-110,text,true,,197,292,38,38,https://api.demoblaze.com/addtocart,517,0,0
+1773768243002,305,03_View_Product,200,OK,load_150 1-131,text,false,Product page missing Add to cart button,5478,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,283,0,0
+1773768243002,308,03_View_Product,200,OK,load_150 1-114,text,false,Product page missing Add to cart button,20674,167,38,38,https://www.demoblaze.com/prod.html?idp_=1,246,0,0
+1773768242716,596,01_Homepage,200,OK,load_150 1-139,text,true,,5085,161,38,38,https://www.demoblaze.com/index.html,577,0,335
+1773768242843,513,04_Add_To_Cart,200,OK,load_150 1-126,text,true,,197,292,39,39,https://api.demoblaze.com/addtocart,513,0,0
+1773768242859,518,04_Add_To_Cart,200,OK,load_150 1-111,text,true,,197,292,39,39,https://api.demoblaze.com/addtocart,518,0,0
+1773768242859,546,04_Add_To_Cart,200,OK,load_150 1-127,text,true,,197,292,39,39,https://api.demoblaze.com/addtocart,546,0,0
+1773768242891,666,05_Place_Order,200,OK,load_150 1-105,text,true,,206,331,39,39,https://api.demoblaze.com/deletecart,666,0,0
+1773768242923,634,05_Place_Order,200,OK,load_150 1-106,text,true,,206,331,39,39,https://api.demoblaze.com/deletecart,634,0,0
+1773768243044,533,05_Place_Order,200,OK,load_150 1-123,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,533,0,0
+1773768242923,667,05_Place_Order,200,OK,load_150 1-124,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,667,0,0
+1773768243069,540,02_Login,200,OK,load_150 1-118,text,true,,256,230,37,37,https://api.demoblaze.com/login,540,0,0
+1773768243401,253,03_View_Product,200,OK,load_150 1-115,text,false,Product page missing Add to cart button,5560,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,238,0,0
+1773768243165,508,04_Add_To_Cart,200,OK,load_150 1-128,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,508,0,0
+1773768242862,862,02_Login,200,OK,load_150 1-135,text,true,,256,230,37,37,https://api.demoblaze.com/login,862,0,339
+1773768243385,377,03_View_Product,200,OK,load_150 1-132,text,false,Product page missing Add to cart button,5561,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,358,0,0
+1773768243261,556,05_Place_Order,200,OK,load_150 1-125,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,556,0,0
+1773768243293,529,05_Place_Order,200,OK,load_150 1-107,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,529,0,0
+1773768243293,554,04_Add_To_Cart,200,OK,load_150 1-129,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,554,0,0
+1773768243151,709,01_Homepage,200,OK,load_150 1-140,text,true,,5084,161,37,37,https://www.demoblaze.com/index.html,700,0,348
+1773768243647,257,01_Homepage,200,OK,load_150 1-122,text,true,,4918,161,37,37,https://www.demoblaze.com/index.html,241,0,0
+1773768243703,252,03_View_Product,200,OK,load_150 1-133,text,false,Product page missing Add to cart button,5466,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,240,0,0
+1773768243230,785,02_Login,200,OK,load_150 1-136,text,true,,256,230,37,37,https://api.demoblaze.com/login,785,0,321
+1773768243506,513,05_Place_Order,200,OK,load_150 1-108,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,513,0,0
+1773768243663,384,02_Login,200,OK,load_150 1-119,text,true,,256,230,36,36,https://api.demoblaze.com/login,384,0,0
+1773768243663,436,01_Homepage,200,OK,load_150 1-121,text,true,,17517,161,36,36,https://www.demoblaze.com/index.html,360,0,0
+1773768243775,366,05_Place_Order,200,OK,load_150 1-109,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,366,0,0
+1773768243552,589,01_Homepage,200,OK,load_150 1-141,text,true,,4942,161,37,37,https://www.demoblaze.com/index.html,572,0,329
+1773768243775,388,04_Add_To_Cart,200,OK,load_150 1-130,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,388,0,0
+1773768243867,374,02_Login,200,OK,load_150 1-120,text,true,,256,230,36,36,https://api.demoblaze.com/login,374,0,0
+1773768243935,377,04_Add_To_Cart,200,OK,load_150 1-113,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,377,0,0
+1773768243616,728,02_Login,200,OK,load_150 1-137,text,true,,256,230,36,36,https://api.demoblaze.com/login,728,0,339
+1773768243990,383,03_View_Product,200,OK,load_150 1-116,text,false,Product page missing Add to cart button,5589,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,359,0,0
+1773768244097,328,03_View_Product,200,OK,load_150 1-134,text,false,Product page missing Add to cart button,20674,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,242,0,0
+1773768244081,370,04_Add_To_Cart,200,OK,load_150 1-112,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,370,0,0
+1773768244180,320,03_View_Product,200,OK,load_150 1-117,text,false,Product page missing Add to cart button,20674,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,234,0,0
+1773768243943,654,01_Homepage,200,OK,load_150 1-142,text,true,,17517,161,37,37,https://www.demoblaze.com/index.html,574,0,334
+1773768243916,716,02_Login,200,OK,load_150 1-138,text,true,,256,230,37,37,https://api.demoblaze.com/login,716,0,324
+1773768244307,465,05_Place_Order,200,OK,load_150 1-110,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,465,0,0
+1773768244319,469,04_Add_To_Cart,200,OK,load_150 1-131,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,469,0,0
+1773768244319,497,04_Add_To_Cart,200,OK,load_150 1-114,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,497,0,0
+1773768244579,249,01_Homepage,200,OK,load_150 1-123,text,true,,5078,161,36,36,https://www.demoblaze.com/index.html,241,0,0
+1773768244595,265,01_Homepage,200,OK,load_150 1-124,text,true,,5003,161,36,36,https://www.demoblaze.com/index.html,244,0,0
+1773768244611,257,03_View_Product,200,OK,load_150 1-118,text,false,Product page missing Add to cart button,5452,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,238,0,0
+1773768244359,531,05_Place_Order,200,OK,load_150 1-126,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,531,0,0
+1773768244739,251,03_View_Product,200,OK,load_150 1-135,text,false,Product page missing Add to cart button,5476,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,234,0,0
+1773768244391,629,05_Place_Order,200,OK,load_150 1-111,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,629,0,0
+1773768244360,666,01_Homepage,200,OK,load_150 1-143,text,true,,17517,161,36,36,https://www.demoblaze.com/index.html,584,0,336
+1773768244412,627,05_Place_Order,200,OK,load_150 1-127,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,627,0,0
+1773768244833,297,01_Homepage,200,OK,load_150 1-125,text,true,,17517,161,36,36,https://www.demoblaze.com/index.html,241,0,0
+1773768244659,472,04_Add_To_Cart,200,OK,load_150 1-115,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,472,0,0
+1773768244320,836,02_Login,200,OK,load_150 1-139,text,true,,256,230,36,36,https://api.demoblaze.com/login,836,0,333
+1773768244675,534,05_Place_Order,200,OK,load_150 1-128,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,534,0,0
+1773768244770,498,04_Add_To_Cart,200,OK,load_150 1-132,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,498,0,0
+1773768245026,265,03_View_Product,200,OK,load_150 1-136,text,false,Product page missing Add to cart button,5588,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,243,0,0
+1773768245058,249,03_View_Product,200,OK,load_150 1-119,text,false,Product page missing Add to cart button,5349,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,236,0,0
+1773768244849,510,05_Place_Order,200,OK,load_150 1-129,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,510,0,0
+1773768244914,502,02_Login,200,OK,load_150 1-122,text,true,,256,230,37,37,https://api.demoblaze.com/login,502,0,0
+1773768244962,515,04_Add_To_Cart,200,OK,load_150 1-133,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,515,0,0
+1773768245248,255,03_View_Product,200,OK,load_150 1-120,text,false,Product page missing Add to cart button,5405,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,239,0,0
+1773768244787,807,01_Homepage,200,OK,load_150 1-144,text,true,,5132,161,37,37,https://www.demoblaze.com/index.html,789,0,336
+1773768245105,496,02_Login,200,OK,load_150 1-121,text,true,,256,230,37,37,https://api.demoblaze.com/login,496,0,0
+1773768245169,530,05_Place_Order,200,OK,load_150 1-130,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,530,0,0
+1773768245360,356,03_View_Product,200,OK,load_150 1-137,text,false,Product page missing Add to cart button,5296,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,350,0,0
+1773768245138,584,01_Homepage,200,OK,load_150 1-145,text,true,,5114,161,37,37,https://www.demoblaze.com/index.html,569,0,326
+1773768244866,871,02_Login,200,OK,load_150 1-140,text,true,,256,230,37,37,https://api.demoblaze.com/login,871,0,327
+1773768245328,452,05_Place_Order,200,OK,load_150 1-113,text,true,,206,331,38,38,https://api.demoblaze.com/deletecart,452,0,0
+1773768245376,481,04_Add_To_Cart,200,OK,load_150 1-116,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,481,0,0
+1773768245427,454,04_Add_To_Cart,200,OK,load_150 1-134,text,true,,197,292,37,37,https://api.demoblaze.com/addtocart,454,0,0
+1773768245635,258,03_View_Product,200,OK,load_150 1-138,text,false,Product page missing Add to cart button,5370,167,37,37,https://www.demoblaze.com/prod.html?idp_=1,242,0,0
+1773768245458,530,05_Place_Order,200,OK,load_150 1-112,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,530,0,0
+1773768245154,865,02_Login,200,OK,load_150 1-141,text,true,,256,230,36,36,https://api.demoblaze.com/login,865,0,318
+1773768245505,545,04_Add_To_Cart,200,OK,load_150 1-117,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,545,0,0
+1773768245569,573,01_Homepage,200,OK,load_150 1-146,text,true,,4904,161,36,36,https://www.demoblaze.com/index.html,556,0,321
+1773768245795,403,05_Place_Order,200,OK,load_150 1-131,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,403,0,0
+1773768245907,312,01_Homepage,200,OK,load_150 1-126,text,true,,17517,161,37,37,https://www.demoblaze.com/index.html,234,0,0
+1773768245827,410,05_Place_Order,200,OK,load_150 1-114,text,true,,206,331,37,37,https://api.demoblaze.com/deletecart,410,0,0
+1773768245843,429,02_Login,200,OK,load_150 1-123,text,true,,256,230,36,36,https://api.demoblaze.com/login,429,0,0
+1773768245875,424,02_Login,200,OK,load_150 1-124,text,true,,256,230,36,36,https://api.demoblaze.com/login,424,0,0
+1773768246051,250,01_Homepage,200,OK,load_150 1-127,text,true,,5030,161,36,36,https://www.demoblaze.com/index.html,235,0,0
+1773768245875,477,04_Add_To_Cart,200,OK,load_150 1-118,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,477,0,0
+1773768245602,810,02_Login,200,OK,load_150 1-142,text,true,,256,230,36,36,https://api.demoblaze.com/login,810,0,334
+1773768245997,469,04_Add_To_Cart,200,OK,load_150 1-135,text,true,,197,292,36,36,https://api.demoblaze.com/addtocart,469,0,0
+1773768246214,252,01_Homepage,200,OK,load_150 1-128,text,true,,5022,161,36,36,https://www.demoblaze.com/index.html,241,0,0
+1773768246166,375,03_View_Product,200,OK,load_150 1-139,text,false,Product page missing Add to cart button,5503,167,36,36,https://www.demoblaze.com/prod.html?idp_=1,357,0,0
+1773768246136,480,05_Place_Order,200,OK,load_150 1-115,text,true,,206,331,36,36,https://api.demoblaze.com/deletecart,480,0,0
+1773768246373,254,01_Homepage,200,OK,load_150 1-129,text,true,,5019,161,35,35,https://www.demoblaze.com/index.html,235,0,0
+1773768245973,657,01_Homepage,200,OK,load_150 1-147,text,true,,17517,161,35,35,https://www.demoblaze.com/index.html,577,0,332
+1773768246136,512,02_Login,200,OK,load_150 1-125,text,true,,256,230,35,35,https://api.demoblaze.com/login,512,0,0
+1773768246417,256,03_View_Product,200,OK,load_150 1-122,text,false,Product page missing Add to cart button,5411,167,35,35,https://www.demoblaze.com/prod.html?idp_=1,238,0,0
+1773768246277,509,05_Place_Order,200,OK,load_150 1-132,text,true,,206,331,35,35,https://api.demoblaze.com/deletecart,509,0,0
+1773768246293,535,04_Add_To_Cart,200,OK,load_150 1-136,text,true,,197,292,35,35,https://api.demoblaze.com/addtocart,535,0,0
+1773768246309,547,04_Add_To_Cart,200,OK,load_150 1-119,text,true,,197,292,35,35,https://api.demoblaze.com/addtocart,547,0,0
+1773768246615,262,03_View_Product,200,OK,load_150 1-121,text,false,Product page missing Add to cart button,5533,167,35,35,https://www.demoblaze.com/prod.html?idp_=1,241,0,0
+1773768246031,868,02_Login,200,OK,load_150 1-143,text,true,,256,230,35,35,https://api.demoblaze.com/login,868,0,346
+1773768246484,516,05_Place_Order,200,OK,load_150 1-133,text,true,,206,331,35,35,https://api.demoblaze.com/deletecart,516,0,0
+1773768246711,299,01_Homepage,200,OK,load_150 1-130,text,true,,17517,161,35,35,https://www.demoblaze.com/index.html,234,0,0
+1773768246518,506,04_Add_To_Cart,200,OK,load_150 1-120,text,true,,197,292,35,35,https://api.demoblaze.com/addtocart,506,0,0
+1773768246375,662,01_Homepage,200,OK,load_150 1-148,text,true,,17517,161,35,35,https://www.demoblaze.com/index.html,579,0,340
+1773768246730,439,04_Add_To_Cart,200,OK,load_150 1-137,text,true,,197,292,35,35,https://api.demoblaze.com/addtocart,439,0,0
+1773768246751,424,03_View_Product,200,OK,load_150 1-140,text,false,Product page missing Add to cart button,20674,167,35,35,https://www.demoblaze.com/prod.html?idp_=1,351,0,0
+1773768247022,265,03_View_Product,200,OK,load_150 1-141,text,false,Product page missing Add to cart button,5446,167,35,35,https://www.demoblaze.com/prod.html?idp_=1,244,0,0
+1773768246861,507,05_Place_Order,200,OK,load_150 1-116,text,true,,206,331,35,35,https://api.demoblaze.com/deletecart,507,0,0
+1773768246776,595,01_Homepage,200,OK,load_150 1-149,text,true,,5004,161,34,34,https://www.demoblaze.com/index.html,573,0,332
+1773768246894,518,05_Place_Order,200,OK,load_150 1-134,text,true,,206,331,34,34,https://api.demoblaze.com/deletecart,518,0,0
+1773768246910,532,04_Add_To_Cart,200,OK,load_150 1-138,text,true,,197,292,34,34,https://api.demoblaze.com/addtocart,532,0,0
+1773768247206,258,01_Homepage,200,OK,load_150 1-131,text,true,,5057,161,34,34,https://www.demoblaze.com/index.html,244,0,0
+1773768246600,866,02_Login,200,OK,load_150 1-144,text,true,,256,230,34,34,https://api.demoblaze.com/login,866,0,323
+1773768247278,279,03_View_Product,200,OK,load_150 1-123,text,false,Product page missing Add to cart button,20674,167,34,34,https://www.demoblaze.com/prod.html?idp_=1,241,0,0
+1773768247053,509,05_Place_Order,200,OK,load_150 1-117,text,true,,206,331,34,34,https://api.demoblaze.com/deletecart,509,0,0
+1773768247302,264,03_View_Product,200,OK,load_150 1-124,text,false,Product page missing Add to cart button,5558,167,33,33,https://www.demoblaze.com/prod.html?idp_=1,242,0,0
+1773768246731,861,02_Login,200,OK,load_150 1-145,text,true,,256,230,33,33,https://api.demoblaze.com/login,861,0,325
+1773768247222,423,02_Login,200,OK,load_150 1-126,text,true,,256,230,33,33,https://api.demoblaze.com/login,423,0,0
+1773768247422,260,03_View_Product,200,OK,load_150 1-142,text,false,Product page missing Add to cart button,5512,167,33,33,https://www.demoblaze.com/prod.html?idp_=1,244,0,0
+1773768247319,391,02_Login,200,OK,load_150 1-127,text,true,,256,230,33,33,https://api.demoblaze.com/login,391,0,0
+1773768247358,380,05_Place_Order,200,OK,load_150 1-118,text,true,,206,331,33,33,https://api.demoblaze.com/deletecart,380,0,0
+1773768247175,583,01_Homepage,200,OK,load_150 1-150,text,true,,5101,161,32,32,https://www.demoblaze.com/index.html,565,0,331
+1773768247470,406,05_Place_Order,200,OK,load_150 1-135,text,true,,206,331,32,32,https://api.demoblaze.com/deletecart,406,0,0
+1773768247470,406,02_Login,200,OK,load_150 1-128,text,true,,256,230,32,32,https://api.demoblaze.com/login,406,0,0
+1773768247159,754,02_Login,200,OK,load_150 1-146,text,true,,256,230,32,32,https://api.demoblaze.com/login,754,0,325
+1773768247662,306,03_View_Product,200,OK,load_150 1-125,text,false,Product page missing Add to cart button,20674,167,32,32,https://www.demoblaze.com/prod.html?idp_=1,242,0,0
+1773768247550,439,04_Add_To_Cart,200,OK,load_150 1-139,text,true,,197,292,32,32,https://api.demoblaze.com/addtocart,439,0,0
+1773768247789,265,01_Homepage,200,OK,load_150 1-132,text,true,,5151,161,32,32,https://www.demoblaze.com/index.html,251,0,0
+1773768247630,437,02_Login,200,OK,load_150 1-129,text,true,,256,230,32,32,https://api.demoblaze.com/login,437,0,0
+1773768247678,438,04_Add_To_Cart,200,OK,load_150 1-122,text,true,,197,292,32,32,https://api.demoblaze.com/addtocart,438,0,0
+1773768247907,324,03_View_Product,200,OK,load_150 1-143,text,false,Product page missing Add to cart button,20674,167,32,32,https://www.demoblaze.com/prod.html?idp_=1,241,0,0
+1773768248003,253,01_Homepage,200,OK,load_150 1-133,text,true,,5142,161,32,32,https://www.demoblaze.com/index.html,245,0,0
+1773768247835,446,05_Place_Order,200,OK,load_150 1-136,text,true,,206,331,32,32,https://api.demoblaze.com/deletecart,446,0,0
+1773768247859,434,05_Place_Order,200,OK,load_150 1-119,text,true,,206,331,32,32,https://api.demoblaze.com/deletecart,434,0,0
+1773768247891,438,04_Add_To_Cart,200,OK,load_150 1-121,text,true,,197,292,31,31,https://api.demoblaze.com/addtocart,438,0,0
+1773768247646,724,02_Login,200,OK,load_150 1-147,text,true,,256,230,31,31,https://api.demoblaze.com/login,724,0,323
+1773768248019,420,02_Login,200,OK,load_150 1-130,text,true,,256,230,31,31,https://api.demoblaze.com/login,420,0,0
+1773768248035,447,05_Place_Order,200,OK,load_150 1-120,text,true,,206,331,31,31,https://api.demoblaze.com/deletecart,447,0,0
+1773768248184,431,05_Place_Order,200,OK,load_150 1-137,text,true,,206,331,30,30,https://api.demoblaze.com/deletecart,431,0,0
+1773768248184,480,04_Add_To_Cart,200,OK,load_150 1-140,text,true,,197,292,30,30,https://api.demoblaze.com/addtocart,480,0,0
+1773768248470,265,03_View_Product,200,OK,load_150 1-144,text,false,Product page missing Add to cart button,5458,167,30,30,https://www.demoblaze.com/prod.html?idp_=1,243,0,0
+1773768248295,457,04_Add_To_Cart,200,OK,load_150 1-141,text,true,,197,292,30,30,https://api.demoblaze.com/addtocart,457,0,0
+1773768248422,360,01_Homepage,200,OK,load_150 1-134,text,true,,5151,161,30,30,https://www.demoblaze.com/index.html,345,0,0
+1773768248052,751,02_Login,200,OK,load_150 1-148,text,true,,256,230,30,30,https://api.demoblaze.com/login,751,0,332
+1773768248454,439,05_Place_Order,200,OK,load_150 1-138,text,true,,206,331,30,30,https://api.demoblaze.com/deletecart,439,0,0
+1773768248647,254,03_View_Product,200,OK,load_150 1-126,text,false,Product page missing Add to cart button,5599,167,30,30,https://www.demoblaze.com/prod.html?idp_=1,236,0,0
+1773768248470,450,02_Login,200,OK,load_150 1-131,text,true,,256,230,30,30,https://api.demoblaze.com/login,450,0,0
+1773768248560,405,04_Add_To_Cart,200,OK,load_150 1-123,text,true,,197,292,30,30,https://api.demoblaze.com/addtocart,405,0,0
+1773768248718,252,03_View_Product,200,OK,load_150 1-127,text,false,Product page missing Add to cart button,5581,167,30,30,https://www.demoblaze.com/prod.html?idp_=1,235,0,0
+1773768248600,379,03_View_Product,200,OK,load_150 1-145,text,false,Product page missing Add to cart button,5578,167,30,30,https://www.demoblaze.com/prod.html?idp_=1,360,0,0
+1773768248575,418,04_Add_To_Cart,200,OK,load_150 1-124,text,true,,197,292,30,30,https://api.demoblaze.com/addtocart,418,0,0
+1773768248694,393,04_Add_To_Cart,200,OK,load_150 1-142,text,true,,197,292,30,30,https://api.demoblaze.com/addtocart,393,0,0
+1773768248375,736,02_Login,200,OK,load_150 1-149,text,true,,256,230,30,30,https://api.demoblaze.com/login,736,0,316
+1773768248879,256,01_Homepage,200,OK,load_150 1-135,text,true,,5094,161,30,30,https://www.demoblaze.com/index.html,238,0,0
+1773768248879,257,03_View_Product,200,OK,load_150 1-128,text,false,Product page missing Add to cart button,5695,167,30,30,https://www.demoblaze.com/prod.html?idp_=1,239,0,0
+1773768248919,256,03_View_Product,200,OK,load_150 1-146,text,false,Product page missing Add to cart button,5459,167,30,30,https://www.demoblaze.com/prod.html?idp_=1,238,0,0
+1773768249077,253,03_View_Product,200,OK,load_150 1-129,text,false,Product page missing Add to cart button,5434,167,30,30,https://www.demoblaze.com/prod.html?idp_=1,234,0,0
+1773768248983,389,04_Add_To_Cart,200,OK,load_150 1-125,text,true,,197,292,30,30,https://api.demoblaze.com/addtocart,389,0,0
+1773768248998,499,05_Place_Order,200,OK,load_150 1-139,text,true,,206,331,30,30,https://api.demoblaze.com/deletecart,499,0,0
+1773768249286,258,01_Homepage,200,OK,load_150 1-136,text,true,,5183,161,30,30,https://www.demoblaze.com/index.html,240,0,0
+1773768249062,487,02_Login,200,OK,load_150 1-132,text,true,,256,230,30,30,https://api.demoblaze.com/login,487,0,0
+1773768248768,844,02_Login,200,OK,load_150 1-150,text,true,,256,230,30,30,https://api.demoblaze.com/login,843,0,331
+1773768249384,259,03_View_Product,200,OK,load_150 1-147,text,false,Product page missing Add to cart button,5412,167,30,30,https://www.demoblaze.com/prod.html?idp_=1,244,0,0
+1773768249119,632,05_Place_Order,200,OK,load_150 1-122,text,true,,206,331,30,30,https://api.demoblaze.com/deletecart,632,0,0
+1773768249448,373,03_View_Product,200,OK,load_150 1-130,text,false,Product page missing Add to cart button,5482,167,29,29,https://www.demoblaze.com/prod.html?idp_=1,354,0,0
+1773768249239,592,04_Add_To_Cart,200,OK,load_150 1-143,text,true,,197,292,29,29,https://api.demoblaze.com/addtocart,592,0,0
+1773768249624,241,01_Homepage,200,OK,load_150 1-137,text,true,,5019,161,29,29,https://www.demoblaze.com/index.html,235,0,0
+1773768249336,579,05_Place_Order,200,OK,load_150 1-121,text,true,,206,331,29,29,https://api.demoblaze.com/deletecart,579,0,0
+1773768249269,670,02_Login,200,OK,load_150 1-133,text,true,,256,230,28,28,https://api.demoblaze.com/login,669,0,0
+1773768249672,377,05_Place_Order,200,OK,load_150 1-140,text,true,,206,331,28,28,https://api.demoblaze.com/deletecart,377,0,0
+1773768249816,259,03_View_Product,200,OK,load_150 1-148,text,false,Product page missing Add to cart button,5449,167,28,28,https://www.demoblaze.com/prod.html?idp_=1,241,0,0
+1773768249736,393,04_Add_To_Cart,200,OK,load_150 1-144,text,true,,197,292,28,28,https://api.demoblaze.com/addtocart,393,0,0
+1773768249784,373,02_Login,200,OK,load_150 1-134,text,true,,256,230,28,28,https://api.demoblaze.com/login,373,0,0
+1773768249768,398,05_Place_Order,200,OK,load_150 1-141,text,true,,206,331,28,28,https://api.demoblaze.com/deletecart,398,0,0
+1773768249909,376,01_Homepage,200,OK,load_150 1-138,text,true,,5100,161,28,28,https://www.demoblaze.com/index.html,361,0,0
+1773768249909,382,04_Add_To_Cart,200,OK,load_150 1-126,text,true,,197,292,28,28,https://api.demoblaze.com/addtocart,382,0,0
+1773768249925,372,03_View_Product,200,OK,load_150 1-131,text,false,Product page missing Add to cart button,5616,167,28,28,https://www.demoblaze.com/prod.html?idp_=1,349,0,0
+1773768249974,379,04_Add_To_Cart,200,OK,load_150 1-127,text,true,,197,292,28,28,https://api.demoblaze.com/addtocart,379,0,0
+1773768249989,385,04_Add_To_Cart,200,OK,load_150 1-145,text,true,,197,292,28,28,https://api.demoblaze.com/addtocart,385,0,0
+1773768249974,411,05_Place_Order,200,OK,load_150 1-123,text,true,,206,331,28,28,https://api.demoblaze.com/deletecart,411,0,0
+1773768250005,452,05_Place_Order,200,OK,load_150 1-124,text,true,,206,331,27,27,https://api.demoblaze.com/deletecart,452,0,0
+1773768250102,378,05_Place_Order,200,OK,load_150 1-142,text,true,,206,331,26,26,https://api.demoblaze.com/deletecart,378,0,0
+1773768250150,384,02_Login,200,OK,load_150 1-135,text,true,,256,230,26,26,https://api.demoblaze.com/login,384,0,0
+1773768250150,385,04_Add_To_Cart,200,OK,load_150 1-128,text,true,,197,292,26,26,https://api.demoblaze.com/addtocart,385,0,0
+1773768250118,435,03_View_Product,200,OK,load_150 1-149,text,false,Product page missing Add to cart button,20674,167,26,26,https://www.demoblaze.com/prod.html?idp_=1,351,0,0
+1773768250182,398,04_Add_To_Cart,200,OK,load_150 1-146,text,true,,197,292,26,26,https://api.demoblaze.com/addtocart,398,0,0
+1773768250338,388,04_Add_To_Cart,200,OK,load_150 1-129,text,true,,197,292,26,26,https://api.demoblaze.com/addtocart,388,0,0
+1773768250498,264,01_Homepage,200,OK,load_150 1-139,text,true,,5132,161,26,26,https://www.demoblaze.com/index.html,243,0,0
+1773768250563,260,03_View_Product,200,OK,load_150 1-132,text,false,Product page missing Add to cart button,5411,167,26,26,https://www.demoblaze.com/prod.html?idp_=1,244,0,0
+1773768250387,459,05_Place_Order,200,OK,load_150 1-125,text,true,,206,331,26,26,https://api.demoblaze.com/deletecart,459,0,0
+1773768250627,259,03_View_Product,200,OK,load_150 1-150,text,false,Product page missing Add to cart button,5472,167,25,25,https://www.demoblaze.com/prod.html?idp_=1,242,0,0
+1773768250546,376,02_Login,200,OK,load_150 1-136,text,true,,256,230,25,25,https://api.demoblaze.com/login,376,0,0
+1773768250659,370,04_Add_To_Cart,200,OK,load_150 1-147,text,true,,197,292,25,25,https://api.demoblaze.com/addtocart,370,0,0
+1773768250939,252,03_View_Product,200,OK,load_150 1-133,text,false,Product page missing Add to cart button,5438,167,25,25,https://www.demoblaze.com/prod.html?idp_=1,237,0,0
+1773768250834,380,04_Add_To_Cart,200,OK,load_150 1-130,text,true,,197,292,25,25,https://api.demoblaze.com/addtocart,380,0,0
+1773768250866,406,02_Login,200,OK,load_150 1-137,text,true,,256,230,25,25,https://api.demoblaze.com/login,406,0,0
+1773768250834,449,05_Place_Order,200,OK,load_150 1-143,text,true,,206,331,25,25,https://api.demoblaze.com/deletecart,449,0,0
+1773768251051,393,01_Homepage,200,OK,load_150 1-140,text,true,,17517,161,25,25,https://www.demoblaze.com/index.html,356,0,0
+1773768251083,416,04_Add_To_Cart,200,OK,load_150 1-148,text,true,,197,292,25,25,https://api.demoblaze.com/addtocart,416,0,0
+1773768251163,368,03_View_Product,200,OK,load_150 1-134,text,false,Product page missing Add to cart button,5562,167,25,25,https://www.demoblaze.com/prod.html?idp_=1,353,0,0
+1773768251139,407,05_Place_Order,200,OK,load_150 1-144,text,true,,206,331,25,25,https://api.demoblaze.com/deletecart,407,0,0
+1773768251179,370,01_Homepage,200,OK,load_150 1-141,text,true,,4954,161,25,25,https://www.demoblaze.com/index.html,347,0,0
+1773768251291,388,02_Login,200,OK,load_150 1-138,text,true,,256,230,25,25,https://api.demoblaze.com/login,388,0,0
+1773768251307,387,04_Add_To_Cart,200,OK,load_150 1-131,text,true,,197,292,25,25,https://api.demoblaze.com/addtocart,387,0,0
+1773768251307,413,05_Place_Order,200,OK,load_150 1-126,text,true,,206,331,25,25,https://api.demoblaze.com/deletecart,413,0,0
+1773768251356,376,05_Place_Order,200,OK,load_150 1-127,text,true,,206,331,24,24,https://api.demoblaze.com/deletecart,376,0,0
+1773768251387,391,05_Place_Order,200,OK,load_150 1-145,text,true,,206,331,23,23,https://api.demoblaze.com/deletecart,390,0,0
+1773768251547,257,03_View_Product,200,OK,load_150 1-135,text,false,Product page missing Add to cart button,5349,167,23,23,https://www.demoblaze.com/prod.html?idp_=1,237,0,0
+1773768251483,363,01_Homepage,200,OK,load_150 1-142,text,true,,5011,161,23,23,https://www.demoblaze.com/index.html,349,0,0
+1773768251547,379,05_Place_Order,200,OK,load_150 1-128,text,true,,206,331,23,23,https://api.demoblaze.com/deletecart,379,0,0
+1773768251564,386,04_Add_To_Cart,200,OK,load_150 1-149,text,true,,197,292,22,22,https://api.demoblaze.com/addtocart,386,0,0
+1773768251595,399,05_Place_Order,200,OK,load_150 1-146,text,true,,206,331,22,22,https://api.demoblaze.com/deletecart,399,0,0
+1773768251727,381,05_Place_Order,200,OK,load_150 1-129,text,true,,206,331,22,22,https://api.demoblaze.com/deletecart,381,0,0
+1773768251767,396,02_Login,200,OK,load_150 1-139,text,true,,256,230,21,21,https://api.demoblaze.com/login,396,0,0
+1773768251830,385,04_Add_To_Cart,200,OK,load_150 1-132,text,true,,197,292,21,21,https://api.demoblaze.com/addtocart,385,0,0
+1773768251927,324,03_View_Product,200,OK,load_150 1-136,text,false,Product page missing Add to cart button,20674,167,21,21,https://www.demoblaze.com/prod.html?idp_=1,241,0,0
+1773768251895,400,04_Add_To_Cart,200,OK,load_150 1-150,text,true,,197,292,21,21,https://api.demoblaze.com/addtocart,400,0,0
+1773768252038,437,05_Place_Order,200,OK,load_150 1-147,text,true,,206,331,21,21,https://api.demoblaze.com/deletecart,437,0,0
+1773768252276,268,03_View_Product,200,OK,load_150 1-137,text,false,Product page missing Add to cart button,20674,167,21,21,https://www.demoblaze.com/prod.html?idp_=1,237,0,0
+1773768252198,397,04_Add_To_Cart,200,OK,load_150 1-133,text,true,,197,292,21,21,https://api.demoblaze.com/addtocart,397,0,0
+1773768252292,379,01_Homepage,200,OK,load_150 1-143,text,true,,4911,161,21,21,https://www.demoblaze.com/index.html,364,0,0
+1773768252221,459,05_Place_Order,200,OK,load_150 1-130,text,true,,206,331,21,21,https://api.demoblaze.com/deletecart,459,0,0
+1773768252452,381,02_Login,200,OK,load_150 1-140,text,true,,256,230,20,20,https://api.demoblaze.com/login,381,0,0
+1773768252547,324,01_Homepage,200,OK,load_150 1-144,text,true,,17517,161,20,20,https://www.demoblaze.com/index.html,252,0,0
+1773768252516,360,05_Place_Order,200,OK,load_150 1-148,text,true,,206,331,20,20,https://api.demoblaze.com/deletecart,360,0,0
+1773768252547,381,04_Add_To_Cart,200,OK,load_150 1-134,text,true,,197,292,20,20,https://api.demoblaze.com/addtocart,381,0,0
+1773768252564,378,02_Login,200,OK,load_150 1-141,text,true,,256,230,20,20,https://api.demoblaze.com/login,378,0,0
+1773768252692,258,03_View_Product,200,OK,load_150 1-138,text,false,Product page missing Add to cart button,5468,167,20,20,https://www.demoblaze.com/prod.html?idp_=1,239,0,0
+1773768252783,260,01_Homepage,200,OK,load_150 1-145,text,true,,5043,161,20,20,https://www.demoblaze.com/index.html,242,0,0
+1773768252708,402,05_Place_Order,200,OK,load_150 1-131,text,true,,206,331,20,20,https://api.demoblaze.com/deletecart,402,0,0
+1773768252807,386,04_Add_To_Cart,200,OK,load_150 1-135,text,true,,197,292,19,19,https://api.demoblaze.com/addtocart,386,0,0
+1773768252855,386,02_Login,200,OK,load_150 1-142,text,true,,256,230,19,19,https://api.demoblaze.com/login,386,0,0
+1773768252999,366,01_Homepage,200,OK,load_150 1-146,text,true,,4899,161,19,19,https://www.demoblaze.com/index.html,352,0,0
+1773768252966,412,05_Place_Order,200,OK,load_150 1-149,text,true,,206,331,19,19,https://api.demoblaze.com/deletecart,412,0,0
+1773768253174,340,03_View_Product,200,OK,load_150 1-139,text,false,Product page missing Add to cart button,20674,167,19,19,https://www.demoblaze.com/prod.html?idp_=1,247,0,0
+1773768253221,406,05_Place_Order,200,OK,load_150 1-132,text,true,,206,331,19,19,https://api.demoblaze.com/deletecart,406,0,0
+1773768253253,374,04_Add_To_Cart,200,OK,load_150 1-136,text,true,,197,292,19,19,https://api.demoblaze.com/addtocart,374,0,0
+1773768253300,422,05_Place_Order,200,OK,load_150 1-150,text,true,,206,331,18,18,https://api.demoblaze.com/deletecart,422,0,0
+1773768253478,263,01_Homepage,200,OK,load_150 1-147,text,true,,5020,161,18,18,https://www.demoblaze.com/index.html,245,0,0
+1773768253559,385,04_Add_To_Cart,200,OK,load_150 1-137,text,true,,197,292,18,18,https://api.demoblaze.com/addtocart,385,0,0
+1773768253607,392,05_Place_Order,200,OK,load_150 1-133,text,true,,206,331,18,18,https://api.demoblaze.com/deletecart,392,0,0
+1773768253686,368,02_Login,200,OK,load_150 1-143,text,true,,256,230,17,17,https://api.demoblaze.com/login,368,0,0
+1773768253884,253,01_Homepage,200,OK,load_150 1-148,text,true,,4988,161,17,17,https://www.demoblaze.com/index.html,237,0,0
+1773768253844,359,03_View_Product,200,OK,load_150 1-140,text,false,Product page missing Add to cart button,5454,167,17,17,https://www.demoblaze.com/prod.html?idp_=1,349,0,0
+1773768253949,256,03_View_Product,200,OK,load_150 1-141,text,false,Product page missing Add to cart button,5477,167,17,17,https://www.demoblaze.com/prod.html?idp_=1,240,0,0
+1773768253884,367,02_Login,200,OK,load_150 1-144,text,true,,256,230,17,17,https://api.demoblaze.com/login,367,0,0
+1773768253933,366,05_Place_Order,200,OK,load_150 1-134,text,true,,206,331,17,17,https://api.demoblaze.com/deletecart,365,0,0
+1773768253965,373,04_Add_To_Cart,200,OK,load_150 1-138,text,true,,197,292,16,16,https://api.demoblaze.com/addtocart,373,0,0
+1773768254045,398,02_Login,200,OK,load_150 1-145,text,true,,256,230,16,16,https://api.demoblaze.com/login,398,0,0
+1773768254256,251,03_View_Product,200,OK,load_150 1-142,text,false,Product page missing Add to cart button,5468,167,16,16,https://www.demoblaze.com/prod.html?idp_=1,234,0,0
+1773768254205,392,05_Place_Order,200,OK,load_150 1-135,text,true,,206,331,16,16,https://api.demoblaze.com/deletecart,392,0,0
+1773768254385,251,01_Homepage,200,OK,load_150 1-149,text,true,,5038,161,15,15,https://www.demoblaze.com/index.html,238,0,0
+1773768254377,371,02_Login,200,OK,load_150 1-146,text,true,,256,230,15,15,https://api.demoblaze.com/login,371,0,0
+1773768254529,371,04_Add_To_Cart,200,OK,load_150 1-139,text,true,,197,292,15,15,https://api.demoblaze.com/addtocart,371,0,0
+1773768254737,254,01_Homepage,200,OK,load_150 1-150,text,true,,4992,161,15,15,https://www.demoblaze.com/index.html,242,0,0
+1773768254641,379,05_Place_Order,200,OK,load_150 1-136,text,true,,206,331,15,15,https://api.demoblaze.com/deletecart,379,0,0
+1773768254752,380,02_Login,200,OK,load_150 1-147,text,true,,256,230,14,14,https://api.demoblaze.com/login,380,0,0
+1773768254945,363,05_Place_Order,200,OK,load_150 1-137,text,true,,206,331,14,14,https://api.demoblaze.com/deletecart,363,0,0
+1773768255056,255,03_View_Product,200,OK,load_150 1-143,text,false,Product page missing Add to cart button,5433,167,13,13,https://www.demoblaze.com/prod.html?idp_=1,242,0,0
+1773768255151,385,02_Login,200,OK,load_150 1-148,text,true,,256,230,13,13,https://api.demoblaze.com/login,385,0,0
+1773768255262,315,03_View_Product,200,OK,load_150 1-144,text,false,Product page missing Add to cart button,20674,167,13,13,https://www.demoblaze.com/prod.html?idp_=1,240,0,0
+1773768255214,377,04_Add_To_Cart,200,OK,load_150 1-140,text,true,,197,292,13,13,https://api.demoblaze.com/addtocart,377,0,0
+1773768255214,384,04_Add_To_Cart,200,OK,load_150 1-141,text,true,,197,292,13,13,https://api.demoblaze.com/addtocart,384,0,0
+1773768255342,433,05_Place_Order,200,OK,load_150 1-138,text,true,,206,331,13,13,https://api.demoblaze.com/deletecart,433,0,0
+1773768255453,364,03_View_Product,200,OK,load_150 1-145,text,false,Product page missing Add to cart button,5476,167,12,12,https://www.demoblaze.com/prod.html?idp_=1,350,0,0
+1773768255517,390,04_Add_To_Cart,200,OK,load_150 1-142,text,true,,197,292,12,12,https://api.demoblaze.com/addtocart,390,0,0
+1773768255644,364,02_Login,200,OK,load_150 1-149,text,true,,256,230,12,12,https://api.demoblaze.com/login,364,0,0
+1773768255756,256,03_View_Product,200,OK,load_150 1-146,text,false,Product page missing Add to cart button,5450,167,12,12,https://www.demoblaze.com/prod.html?idp_=1,243,0,0
+1773768255914,405,05_Place_Order,200,OK,load_150 1-139,text,true,,206,331,12,12,https://api.demoblaze.com/deletecart,405,0,0
+1773768255995,385,02_Login,200,OK,load_150 1-150,text,true,,256,230,11,11,https://api.demoblaze.com/login,385,0,0
+1773768256139,365,03_View_Product,200,OK,load_150 1-147,text,false,Product page missing Add to cart button,5451,167,11,11,https://www.demoblaze.com/prod.html?idp_=1,349,0,0
+1773768256314,377,04_Add_To_Cart,200,OK,load_150 1-143,text,true,,197,292,11,11,https://api.demoblaze.com/addtocart,377,0,0
+1773768256549,258,03_View_Product,200,OK,load_150 1-148,text,false,Product page missing Add to cart button,5506,167,11,11,https://www.demoblaze.com/prod.html?idp_=1,241,0,0
+1773768256581,381,04_Add_To_Cart,200,OK,load_150 1-144,text,true,,197,292,11,11,https://api.demoblaze.com/addtocart,381,0,0
+1773768256597,414,05_Place_Order,200,OK,load_150 1-140,text,true,,206,331,11,11,https://api.demoblaze.com/deletecart,414,0,0
+1773768256613,407,05_Place_Order,200,OK,load_150 1-141,text,true,,206,331,10,10,https://api.demoblaze.com/deletecart,407,0,0
+1773768256822,402,04_Add_To_Cart,200,OK,load_150 1-145,text,true,,197,292,9,9,https://api.demoblaze.com/addtocart,402,0,0
+1773768257022,250,03_View_Product,200,OK,load_150 1-149,text,false,Product page missing Add to cart button,5514,167,9,9,https://www.demoblaze.com/prod.html?idp_=1,242,0,0
+1773768256910,420,05_Place_Order,200,OK,load_150 1-142,text,true,,210,331,9,9,https://api.demoblaze.com/deletecart,420,0,0
+1773768257022,380,04_Add_To_Cart,200,OK,load_150 1-146,text,true,,197,292,8,8,https://api.demoblaze.com/addtocart,380,0,0
+1773768257385,327,03_View_Product,200,OK,load_150 1-150,text,false,Product page missing Add to cart button,20674,167,8,8,https://www.demoblaze.com/prod.html?idp_=1,234,0,0
+1773768257514,382,04_Add_To_Cart,200,OK,load_150 1-147,text,true,,197,292,8,8,https://api.demoblaze.com/addtocart,382,0,0
+1773768257696,429,05_Place_Order,200,OK,load_150 1-143,text,true,,206,331,8,8,https://api.demoblaze.com/deletecart,429,0,0
+1773768257809,391,04_Add_To_Cart,200,OK,load_150 1-148,text,true,,197,292,7,7,https://api.demoblaze.com/addtocart,391,0,0
+1773768257964,408,05_Place_Order,200,OK,load_150 1-144,text,true,,206,331,7,7,https://api.demoblaze.com/deletecart,408,0,0
+1773768258236,383,05_Place_Order,200,OK,load_150 1-145,text,true,,206,331,6,6,https://api.demoblaze.com/deletecart,383,0,0
+1773768258283,390,04_Add_To_Cart,200,OK,load_150 1-149,text,true,,197,292,5,5,https://api.demoblaze.com/addtocart,390,0,0
+1773768258418,408,05_Place_Order,200,OK,load_150 1-146,text,true,,206,331,5,5,https://api.demoblaze.com/deletecart,408,0,0
+1773768258723,382,04_Add_To_Cart,200,OK,load_150 1-150,text,true,,197,292,4,4,https://api.demoblaze.com/addtocart,382,0,0
+1773768258908,394,05_Place_Order,200,OK,load_150 1-147,text,true,,206,331,4,4,https://api.demoblaze.com/deletecart,394,0,0
+1773768259206,438,05_Place_Order,200,OK,load_150 1-148,text,true,,206,331,3,3,https://api.demoblaze.com/deletecart,438,0,0
+1773768259675,438,05_Place_Order,200,OK,load_150 1-149,text,true,,206,331,2,2,https://api.demoblaze.com/deletecart,438,0,0
+1773768260107,457,05_Place_Order,200,OK,load_150 1-150,text,true,,206,331,1,1,https://api.demoblaze.com/deletecart,457,0,0
