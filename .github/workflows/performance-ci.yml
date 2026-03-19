@@ -2,9 +2,9 @@ name: Performance Testing CI
 
 on:
   push:
-    branches: [ "main", "master" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "main", "master" ]
+    branches: [ "main" ]
   workflow_dispatch:
 
 permissions:
@@ -15,9 +15,6 @@ permissions:
 jobs:
   jmeter-tests:
     runs-on: ubuntu-latest
-    # Total runtime: ~55 min
-    # baseline ~3min | load ~8min | peak ~14min | stress ~18min | endurance ~10min
-    # Do NOT cancel early — endurance requires the full scheduler duration.
 
     steps:
       - name: Checkout Repository
@@ -40,13 +37,10 @@ jobs:
         run: |
           cat > switch_tg.py << 'PYEOF'
           import sys, re
-
           jmx_path  = sys.argv[1]
-          target_tg = sys.argv[2]   # exact value of testname="..." attribute
-
+          target_tg = sys.argv[2]
           with open(jmx_path, "r", encoding="utf-8") as f:
               content = f.read()
-
           def replace_tg(match):
               tag = match.group(0)
               name_match = re.search(r'testname="([^"]+)"', tag)
@@ -58,22 +52,14 @@ jobs:
               else:
                   tag = re.sub(r'enabled="(true|false)"', 'enabled="false"', tag)
               return tag
-
-          # Match ANY ThreadGroup opening tag regardless of testname pattern
-          content = re.sub(
-              r'<ThreadGroup[^>]+>',
-              replace_tg,
-              content
-          )
-
+          content = re.sub(r'<ThreadGroup[^>]+>', replace_tg, content)
           with open(jmx_path, "w", encoding="utf-8") as f:
               f.write(content)
-
           print(f"Enabled thread group: {target_tg}")
           PYEOF
 
       # ════════════════════════════════════════════════════════════════════
-      # PHASE 1 — BASELINE  (50 users, 1 loop, ramp 50 s)
+      # PHASE 1 — BASELINE  (50 users · 1 loop · ramp 50s)
       # ════════════════════════════════════════════════════════════════════
       - name: "Phase 1 — Baseline Test (50 Users)"
         run: |
@@ -85,44 +71,56 @@ jobs:
             -t  test-plan/DemoBlaze_Performance_Test_fixed.jmx \
             -l  results_baseline.jtl \
             -e -o ./reports/baseline/
-          echo "BASELINE_EXIT=$?" >> $GITHUB_ENV
 
       # ════════════════════════════════════════════════════════════════════
-      # PHASE 2 — LOAD TEST  (150 users, 5 loops, ramp 60 s)
+      # PHASE 2 — LIGHT LOAD  (75 users · 3 loops · ramp 50s)
       # ════════════════════════════════════════════════════════════════════
-      - name: "Phase 2 — Load Test (150 Users)"
+      - name: "Phase 2 — Light Load Test (75 Users)"
         if: always()
         run: |
           python3 switch_tg.py \
             test-plan/DemoBlaze_Performance_Test_fixed.jmx \
-            "load_150"
-          rm -rf reports/load && mkdir -p reports/load
+            "light_load - 75 Users"
+          rm -rf reports/light && mkdir -p reports/light
           jmeter -n \
             -t  test-plan/DemoBlaze_Performance_Test_fixed.jmx \
-            -l  results_load.jtl \
-            -e -o ./reports/load/
-          echo "LOAD_EXIT=$?" >> $GITHUB_ENV
+            -l  results_light.jtl \
+            -e -o ./reports/light/
 
       # ════════════════════════════════════════════════════════════════════
-      # PHASE 3 — PEAK LOAD TEST  (500 users, 8 loops, ramp 90 s)
+      # PHASE 3 — MEDIUM LOAD  (200 users · 5 loops · ramp 60s)
       # ════════════════════════════════════════════════════════════════════
-      - name: "Phase 3 — Peak Load Test (500 Users)"
+      - name: "Phase 3 — Medium Load Test (200 Users)"
         if: always()
         run: |
           python3 switch_tg.py \
             test-plan/DemoBlaze_Performance_Test_fixed.jmx \
-            "load_300"
+            "medium_load - 200 Users"
+          rm -rf reports/medium && mkdir -p reports/medium
+          jmeter -n \
+            -t  test-plan/DemoBlaze_Performance_Test_fixed.jmx \
+            -l  results_medium.jtl \
+            -e -o ./reports/medium/
+
+      # ════════════════════════════════════════════════════════════════════
+      # PHASE 4 — PEAK LOAD  (500 users · 8 loops · ramp 90s)
+      # ════════════════════════════════════════════════════════════════════
+      - name: "Phase 4 — Peak Load Test (500 Users)"
+        if: always()
+        run: |
+          python3 switch_tg.py \
+            test-plan/DemoBlaze_Performance_Test_fixed.jmx \
+            "peak_500"
           rm -rf reports/peak && mkdir -p reports/peak
           jmeter -n \
             -t  test-plan/DemoBlaze_Performance_Test_fixed.jmx \
             -l  results_peak.jtl \
             -e -o ./reports/peak/
-          echo "PEAK_EXIT=$?" >> $GITHUB_ENV
 
       # ════════════════════════════════════════════════════════════════════
-      # PHASE 4 — STRESS TEST  (1000 users, 10 loops, ramp 100 s)
+      # PHASE 5 — STRESS TEST  (1000 users · 10 loops · ramp 100s)
       # ════════════════════════════════════════════════════════════════════
-      - name: "Phase 4 — Stress Test (1000 Users)"
+      - name: "Phase 5 — Stress Test (1000 Users)"
         if: always()
         run: |
           python3 switch_tg.py \
@@ -133,12 +131,11 @@ jobs:
             -t  test-plan/DemoBlaze_Performance_Test_fixed.jmx \
             -l  results_stress.jtl \
             -e -o ./reports/stress/
-          echo "STRESS_EXIT=$?" >> $GITHUB_ENV
 
       # ════════════════════════════════════════════════════════════════════
-      # PHASE 5 — ENDURANCE TEST  (300 users, scheduler 600 s, ramp 100 s)
+      # PHASE 6 — ENDURANCE  (300 users · scheduler 600s · ramp 100s)
       # ════════════════════════════════════════════════════════════════════
-      - name: "Phase 5 — Endurance Test (300 Users, 10 min)"
+      - name: "Phase 6 — Endurance Test (300 Users, 10 min)"
         if: always()
         run: |
           python3 switch_tg.py \
@@ -149,10 +146,9 @@ jobs:
             -t  test-plan/DemoBlaze_Performance_Test_fixed.jmx \
             -l  results_endurance.jtl \
             -e -o ./reports/endurance/
-          echo "ENDURANCE_EXIT=$?" >> $GITHUB_ENV
 
       # ════════════════════════════════════════════════════════════════════
-      # BUILD LANDING PAGE + PARSE ALL 5 JTL FILES
+      # PARSE ALL 6 JTL FILES + BUILD LANDING PAGE
       # ════════════════════════════════════════════════════════════════════
       - name: Parse all JTL results and build index page
         if: always()
@@ -162,12 +158,14 @@ jobs:
           from collections import defaultdict
 
           PHASES = [
-              ("baseline",  "Baseline Test",   "50 users · 1 loop · ramp 50s",    "#2563eb", "50"),
-              ("load",      "Load Test",        "150 users · 5 loops · ramp 60s",  "#7c3aed", "150"),
-              ("peak",      "Peak Load Test",   "500 users · 8 loops · ramp 90s",  "#d97706", "500"),
-              ("stress",    "Stress Test",      "1000 users · 10 loops · ramp 100s","#dc2626","1000"),
-              ("endurance", "Endurance Test",   "300 users · 10 min · ramp 100s",  "#059669", "300"),
+              ("baseline",  "Baseline Test",    "50 users · 1 loop · ramp 50s",     "#2563eb", "50"),
+              ("light",     "Light Load Test",  "75 users · 3 loops · ramp 50s",    "#0891b2", "75"),
+              ("medium",    "Medium Load Test", "200 users · 5 loops · ramp 60s",   "#9333ea", "200"),
+              ("peak",      "Peak Load Test",   "500 users · 8 loops · ramp 90s",   "#d97706", "500"),
+              ("stress",    "Stress Test",      "1000 users · 10 loops · ramp 100s","#dc2626", "1000"),
+              ("endurance", "Endurance Test",   "300 users · 10 min · ramp 100s",   "#059669", "300"),
           ]
+          LABEL_ORDER = ["01_Homepage","02_Login","03_View_Product","04_Add_To_Cart","05_Place_Order"]
 
           def parse_jtl(path):
               stats = defaultdict(lambda: {"total":0,"pass":0,"fail":0,"times":[]})
@@ -202,222 +200,97 @@ jobs:
               p95  = pct(all_times, 95)
               p99  = pct(all_times, 99)
               err  = round(grand_fail/grand_total*100, 2) if grand_total else 0
-              # per-label breakdown
               per_label = {}
               for lbl, v in stats.items():
                   lt = v["times"]
                   per_label[lbl] = {
                       "total": v["total"], "pass": v["pass"], "fail": v["fail"],
                       "avg": int(sum(lt)/len(lt)) if lt else 0,
-                      "min": min(lt) if lt else 0,
-                      "max": max(lt) if lt else 0,
+                      "min": min(lt) if lt else 0, "max": max(lt) if lt else 0,
                       "p90": pct(lt,90), "p95": pct(lt,95),
                       "err": round(v["fail"]/v["total"]*100,2) if v["total"] else 0,
                   }
               sla_rt  = avg <= 2000
               sla_err = err <= 1.0
-              ok = sla_rt and sla_err
               return dict(total=grand_total, passed=grand_pass, failed=grand_fail,
                           avg=avg, min=mn, max=mx, p90=p90, p95=p95, p99=p99,
-                          error_rate=err, ok=ok, sla_rt=sla_rt, sla_err=sla_err,
-                          per_label=per_label)
+                          error_rate=err, ok=sla_rt and sla_err,
+                          sla_rt=sla_rt, sla_err=sla_err, per_label=per_label)
 
-          cards_html    = ""
+          cards_html     = ""
           all_phase_data = {}
-
-          LABEL_ORDER = ["01_Homepage","02_Login","03_View_Product","04_Add_To_Cart","05_Place_Order"]
 
           for phase_id, phase_name, config, color, users in PHASES:
               stats = parse_jtl(f"results_{phase_id}.jtl")
               s     = summarise(stats)
               all_phase_data[phase_id] = {**s, "name": phase_name, "config": config,
                                            "color": color, "users": users}
-
               verdict     = "PASS" if s["ok"] else "FAIL"
               verdict_bg  = "#dcfce7" if s["ok"] else "#fee2e2"
               verdict_col = "#16a34a" if s["ok"] else "#dc2626"
               border_col  = "#bbf7d0" if s["ok"] else "#fecaca"
 
-              # per-label rows
               label_rows = ""
               for lbl in LABEL_ORDER:
                   d = s["per_label"].get(lbl)
                   if not d: continue
                   rc = "#fee2e2" if d["fail"] > 0 else "#f0fdf4"
                   tc = "#dc2626" if d["fail"] > 0 else "#16a34a"
-                  label_rows += f"""
-                  <tr style="background:{rc};">
-                    <td style="padding:5px 8px;font-size:12px;font-weight:600;color:#374151;">{lbl}</td>
-                    <td style="padding:5px 8px;font-size:12px;text-align:right;">{d['total']}</td>
-                    <td style="padding:5px 8px;font-size:12px;text-align:right;color:#16a34a;">{d['pass']}</td>
-                    <td style="padding:5px 8px;font-size:12px;text-align:right;color:{tc};font-weight:700;">{d['fail']}</td>
-                    <td style="padding:5px 8px;font-size:12px;text-align:right;">{d['avg']}ms</td>
-                    <td style="padding:5px 8px;font-size:12px;text-align:right;">{d['p90']}ms</td>
-                    <td style="padding:5px 8px;font-size:12px;text-align:right;">{d['p95']}ms</td>
-                    <td style="padding:5px 8px;font-size:12px;text-align:right;color:{tc};">{d['err']}%</td>
-                  </tr>"""
+                  label_rows += f"""<tr style="background:{rc};"><td style="padding:5px 8px;font-size:12px;font-weight:600;color:#374151;">{lbl}</td><td style="padding:5px 8px;font-size:12px;text-align:right;">{d['total']}</td><td style="padding:5px 8px;font-size:12px;text-align:right;color:#16a34a;">{d['pass']}</td><td style="padding:5px 8px;font-size:12px;text-align:right;color:{tc};font-weight:700;">{d['fail']}</td><td style="padding:5px 8px;font-size:12px;text-align:right;">{d['avg']}ms</td><td style="padding:5px 8px;font-size:12px;text-align:right;">{d['p90']}ms</td><td style="padding:5px 8px;font-size:12px;text-align:right;">{d['p95']}ms</td><td style="padding:5px 8px;font-size:12px;text-align:right;color:{tc};">{d['err']}%</td></tr>"""
 
               cards_html += f"""
               <div style="border:1px solid {border_col};border-radius:12px;overflow:hidden;background:white;box-shadow:0 1px 4px rgba(0,0,0,0.07);margin-bottom:20px;">
                 <div style="background:{color};padding:16px 20px;display:flex;justify-content:space-between;align-items:center;">
-                  <div>
-                    <div style="color:white;font-size:17px;font-weight:700;">{phase_name}</div>
-                    <div style="color:rgba(255,255,255,0.8);font-size:12px;margin-top:2px;">{config}</div>
-                  </div>
+                  <div><div style="color:white;font-size:17px;font-weight:700;">{phase_name}</div><div style="color:rgba(255,255,255,0.8);font-size:12px;margin-top:2px;">{config}</div></div>
                   <span style="background:{verdict_bg};color:{verdict_col};padding:4px 14px;border-radius:20px;font-size:12px;font-weight:700;">{verdict}</span>
                 </div>
                 <div style="padding:16px 20px;">
                   <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:16px;">
-                    <div style="text-align:center;background:#f9fafb;border-radius:8px;padding:10px;">
-                      <div style="font-size:20px;font-weight:700;color:#16a34a;">{s['passed']}</div>
-                      <div style="font-size:11px;color:#6b7280;margin-top:2px;">PASSED</div>
-                    </div>
-                    <div style="text-align:center;background:#f9fafb;border-radius:8px;padding:10px;">
-                      <div style="font-size:20px;font-weight:700;color:#dc2626;">{s['failed']}</div>
-                      <div style="font-size:11px;color:#6b7280;margin-top:2px;">FAILED</div>
-                    </div>
-                    <div style="text-align:center;background:#f9fafb;border-radius:8px;padding:10px;">
-                      <div style="font-size:20px;font-weight:700;color:#374151;">{s['total']}</div>
-                      <div style="font-size:11px;color:#6b7280;margin-top:2px;">TOTAL</div>
-                    </div>
-                    <div style="text-align:center;background:#f9fafb;border-radius:8px;padding:10px;">
-                      <div style="font-size:20px;font-weight:700;color:#374151;">{s['error_rate']}%</div>
-                      <div style="font-size:11px;color:#6b7280;margin-top:2px;">ERROR RATE</div>
-                    </div>
+                    <div style="text-align:center;background:#f9fafb;border-radius:8px;padding:10px;"><div style="font-size:20px;font-weight:700;color:#16a34a;">{s['passed']}</div><div style="font-size:11px;color:#6b7280;margin-top:2px;">PASSED</div></div>
+                    <div style="text-align:center;background:#f9fafb;border-radius:8px;padding:10px;"><div style="font-size:20px;font-weight:700;color:#dc2626;">{s['failed']}</div><div style="font-size:11px;color:#6b7280;margin-top:2px;">FAILED</div></div>
+                    <div style="text-align:center;background:#f9fafb;border-radius:8px;padding:10px;"><div style="font-size:20px;font-weight:700;color:#374151;">{s['total']}</div><div style="font-size:11px;color:#6b7280;margin-top:2px;">TOTAL</div></div>
+                    <div style="text-align:center;background:#f9fafb;border-radius:8px;padding:10px;"><div style="font-size:20px;font-weight:700;color:#374151;">{s['error_rate']}%</div><div style="font-size:11px;color:#6b7280;margin-top:2px;">ERROR RATE</div></div>
                   </div>
                   <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:16px;font-size:12px;">
-                    <div style="text-align:center;background:#eff6ff;border-radius:6px;padding:8px;">
-                      <div style="font-weight:700;color:#1d4ed8;">{s['avg']}ms</div>
-                      <div style="color:#93c5fd;font-size:10px;margin-top:2px;">AVG</div>
-                    </div>
-                    <div style="text-align:center;background:#eff6ff;border-radius:6px;padding:8px;">
-                      <div style="font-weight:700;color:#1d4ed8;">{s['min']}ms</div>
-                      <div style="color:#93c5fd;font-size:10px;margin-top:2px;">MIN</div>
-                    </div>
-                    <div style="text-align:center;background:#eff6ff;border-radius:6px;padding:8px;">
-                      <div style="font-weight:700;color:#1d4ed8;">{s['max']}ms</div>
-                      <div style="color:#93c5fd;font-size:10px;margin-top:2px;">MAX</div>
-                    </div>
-                    <div style="text-align:center;background:#eff6ff;border-radius:6px;padding:8px;">
-                      <div style="font-weight:700;color:#1d4ed8;">{s['p90']}ms</div>
-                      <div style="color:#93c5fd;font-size:10px;margin-top:2px;">P90</div>
-                    </div>
-                    <div style="text-align:center;background:#eff6ff;border-radius:6px;padding:8px;">
-                      <div style="font-weight:700;color:#1d4ed8;">{s['p95']}ms</div>
-                      <div style="color:#93c5fd;font-size:10px;margin-top:2px;">P95</div>
-                    </div>
+                    <div style="text-align:center;background:#eff6ff;border-radius:6px;padding:8px;"><div style="font-weight:700;color:#1d4ed8;">{s['avg']}ms</div><div style="color:#93c5fd;font-size:10px;margin-top:2px;">AVG</div></div>
+                    <div style="text-align:center;background:#eff6ff;border-radius:6px;padding:8px;"><div style="font-weight:700;color:#1d4ed8;">{s['min']}ms</div><div style="color:#93c5fd;font-size:10px;margin-top:2px;">MIN</div></div>
+                    <div style="text-align:center;background:#eff6ff;border-radius:6px;padding:8px;"><div style="font-weight:700;color:#1d4ed8;">{s['max']}ms</div><div style="color:#93c5fd;font-size:10px;margin-top:2px;">MAX</div></div>
+                    <div style="text-align:center;background:#eff6ff;border-radius:6px;padding:8px;"><div style="font-weight:700;color:#1d4ed8;">{s['p90']}ms</div><div style="color:#93c5fd;font-size:10px;margin-top:2px;">P90</div></div>
+                    <div style="text-align:center;background:#eff6ff;border-radius:6px;padding:8px;"><div style="font-weight:700;color:#1d4ed8;">{s['p95']}ms</div><div style="color:#93c5fd;font-size:10px;margin-top:2px;">P95</div></div>
                   </div>
-                  <div style="margin-bottom:12px;">
-                    <div style="font-size:12px;font-weight:700;color:#374151;margin-bottom:6px;">SLA Status</div>
-                    <div style="display:flex;gap:8px;">
-                      <span style="padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;background:{'#dcfce7' if s['sla_rt'] else '#fee2e2'};color:{'#16a34a' if s['sla_rt'] else '#dc2626'};">
-                        {'✓' if s['sla_rt'] else '✗'} Avg RT &lt; 2000ms ({s['avg']}ms)
-                      </span>
-                      <span style="padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;background:{'#dcfce7' if s['sla_err'] else '#fee2e2'};color:{'#16a34a' if s['sla_err'] else '#dc2626'};">
-                        {'✓' if s['sla_err'] else '✗'} Error Rate &le; 1% ({s['error_rate']}%)
-                      </span>
-                    </div>
+                  <div style="display:flex;gap:8px;margin-bottom:12px;">
+                    <span style="padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;background:{'#dcfce7' if s['sla_rt'] else '#fee2e2'};color:{'#16a34a' if s['sla_rt'] else '#dc2626'};">{'checkmark' if s['sla_rt'] else 'x'} Avg RT &lt; 2000ms ({s['avg']}ms)</span>
+                    <span style="padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;background:{'#dcfce7' if s['sla_err'] else '#fee2e2'};color:{'#16a34a' if s['sla_err'] else '#dc2626'};">{'checkmark' if s['sla_err'] else 'x'} Error Rate &le;1% ({s['error_rate']}%)</span>
                   </div>
                   <table style="width:100%;border-collapse:collapse;font-size:12px;margin-bottom:14px;">
-                    <thead>
-                      <tr style="background:#f1f5f9;">
-                        <th style="padding:6px 8px;text-align:left;font-size:11px;color:#64748b;">TRANSACTION</th>
-                        <th style="padding:6px 8px;text-align:right;font-size:11px;color:#64748b;">TOTAL</th>
-                        <th style="padding:6px 8px;text-align:right;font-size:11px;color:#64748b;">PASS</th>
-                        <th style="padding:6px 8px;text-align:right;font-size:11px;color:#64748b;">FAIL</th>
-                        <th style="padding:6px 8px;text-align:right;font-size:11px;color:#64748b;">AVG</th>
-                        <th style="padding:6px 8px;text-align:right;font-size:11px;color:#64748b;">P90</th>
-                        <th style="padding:6px 8px;text-align:right;font-size:11px;color:#64748b;">P95</th>
-                        <th style="padding:6px 8px;text-align:right;font-size:11px;color:#64748b;">ERR%</th>
-                      </tr>
-                    </thead>
+                    <thead><tr style="background:#f1f5f9;"><th style="padding:6px 8px;text-align:left;font-size:11px;color:#64748b;">TRANSACTION</th><th style="padding:6px 8px;text-align:right;font-size:11px;color:#64748b;">TOTAL</th><th style="padding:6px 8px;text-align:right;font-size:11px;color:#64748b;">PASS</th><th style="padding:6px 8px;text-align:right;font-size:11px;color:#64748b;">FAIL</th><th style="padding:6px 8px;text-align:right;font-size:11px;color:#64748b;">AVG</th><th style="padding:6px 8px;text-align:right;font-size:11px;color:#64748b;">P90</th><th style="padding:6px 8px;text-align:right;font-size:11px;color:#64748b;">P95</th><th style="padding:6px 8px;text-align:right;font-size:11px;color:#64748b;">ERR%</th></tr></thead>
                     <tbody>{label_rows}</tbody>
                   </table>
-                  <a href="./{phase_id}/"
-                     style="display:block;text-align:center;background:{color};color:white;padding:9px;border-radius:6px;text-decoration:none;font-size:13px;font-weight:600;">
-                    View Full JMeter Dashboard &rarr;
-                  </a>
+                  <a href="./{phase_id}/" style="display:block;text-align:center;background:{color};color:white;padding:9px;border-radius:6px;text-decoration:none;font-size:13px;font-weight:600;">View Full JMeter Dashboard &rarr;</a>
                 </div>
               </div>"""
 
-          all_ok      = all(d["ok"] for d in all_phase_data.values())
-          banner_bg   = "#16a34a" if all_ok else "#dc2626"
-          banner_txt  = "All SLAs Met" if all_ok else "SLA Violations Detected"
-          banner_icon = "✅" if all_ok else "❌"
-
+          all_ok     = all(d["ok"] for d in all_phase_data.values())
+          banner_bg  = "#16a34a" if all_ok else "#dc2626"
+          banner_txt = "All SLAs Met" if all_ok else "SLA Violations Detected"
           total_pass = sum(d["passed"] for d in all_phase_data.values())
           total_fail = sum(d["failed"] for d in all_phase_data.values())
           total_all  = sum(d["total"]  for d in all_phase_data.values())
 
-          index_html = f"""<!DOCTYPE html>
-          <html lang="en">
-          <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width,initial-scale=1">
-            <title>DemoBlaze Performance Report</title>
-            <style>
-              *{{box-sizing:border-box;margin:0;padding:0;}}
-              body{{font-family:Arial,sans-serif;background:#f1f5f9;color:#1e293b;}}
-              .header{{background:{banner_bg};color:white;padding:32px;text-align:center;}}
-              .header h1{{font-size:26px;margin-bottom:6px;}}
-              .meta{{background:white;border-bottom:1px solid #e2e8f0;padding:14px 32px;display:flex;gap:32px;flex-wrap:wrap;}}
-              .meta span{{font-size:13px;color:#64748b;}}
-              .sla-bar{{background:#fffbeb;border-bottom:1px solid #fde68a;padding:10px 32px;font-size:13px;color:#92400e;text-align:center;}}
-              .summary-bar{{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:20px 32px;max-width:1200px;margin:0 auto;}}
-              .summary-card{{background:white;border-radius:10px;padding:16px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,0.07);}}
-              .grid{{display:grid;grid-template-columns:repeat(auto-fit,minmax(520px,1fr));gap:20px;padding:0 32px 28px;max-width:1200px;margin:0 auto;}}
-              .footer{{text-align:center;padding:20px;font-size:12px;color:#94a3b8;border-top:1px solid #e2e8f0;background:white;margin-top:12px;}}
-            </style>
-          </head>
-          <body>
-            <div class="header">
-              <div style="font-size:40px;margin-bottom:10px;">{banner_icon}</div>
-              <h1>DemoBlaze Performance Test Report</h1>
-              <p>{banner_txt} &nbsp;|&nbsp; Apache JMeter 5.6.3 &nbsp;|&nbsp; Java 21 &nbsp;|&nbsp; 5 Phases</p>
-            </div>
-            <div class="meta">
-              <span><strong>Prepared by:</strong> Divine GIHOZO BAYINGANA</span>
-              <span><strong>Organisation:</strong> AmaliTech Training Academy</span>
-              <span><strong>Target:</strong> https://www.demoblaze.com</span>
-              <span><strong>Tool:</strong> Apache JMeter 5.6.3 / Java 21</span>
-            </div>
-            <div class="sla-bar">
-              SLA Targets &nbsp;|&nbsp; Avg Response &lt; 2,000ms &nbsp;|&nbsp; Error Rate &le; 1%
-            </div>
-            <div class="summary-bar">
-              <div class="summary-card">
-                <div style="font-size:32px;font-weight:700;color:#16a34a;">{total_pass}</div>
-                <div style="font-size:13px;color:#6b7280;margin-top:4px;">Total Passed</div>
-              </div>
-              <div class="summary-card">
-                <div style="font-size:32px;font-weight:700;color:#dc2626;">{total_fail}</div>
-                <div style="font-size:13px;color:#6b7280;margin-top:4px;">Total Failed</div>
-              </div>
-              <div class="summary-card">
-                <div style="font-size:32px;font-weight:700;color:#374151;">{total_all}</div>
-                <div style="font-size:13px;color:#6b7280;margin-top:4px;">Total Samples</div>
-              </div>
-            </div>
-            <div class="grid">{cards_html}</div>
-            <div class="footer">
-              AmaliTech Training Academy &nbsp;|&nbsp; Divine GIHOZO BAYINGANA &nbsp;|&nbsp;
-              Generated by GitHub Actions CI/CD
-            </div>
-          </body>
-          </html>"""
+          index_html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DemoBlaze Performance Report</title><style>*{{box-sizing:border-box;margin:0;padding:0;}}body{{font-family:Arial,sans-serif;background:#f1f5f9;color:#1e293b;}}.header{{background:{banner_bg};color:white;padding:32px;text-align:center;}}.meta{{background:white;border-bottom:1px solid #e2e8f0;padding:14px 32px;display:flex;gap:32px;flex-wrap:wrap;}}.meta span{{font-size:13px;color:#64748b;}}.sla-bar{{background:#fffbeb;border-bottom:1px solid #fde68a;padding:10px 32px;font-size:13px;color:#92400e;text-align:center;}}.summary{{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:20px 32px;max-width:1200px;margin:0 auto;}}.summary-card{{background:white;border-radius:10px;padding:16px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,0.07);}}.grid{{display:grid;grid-template-columns:repeat(auto-fit,minmax(520px,1fr));gap:20px;padding:0 32px 28px;max-width:1200px;margin:0 auto;}}.footer{{text-align:center;padding:20px;font-size:12px;color:#94a3b8;border-top:1px solid #e2e8f0;background:white;margin-top:12px;}}</style></head><body><div class="header"><div style="font-size:40px;margin-bottom:10px;">{'&#x2705;' if all_ok else '&#x274C;'}</div><h1>DemoBlaze Performance Test Report</h1><p>{banner_txt} &nbsp;|&nbsp; Apache JMeter 5.6.3 &nbsp;|&nbsp; Java 21 &nbsp;|&nbsp; 6 Phases</p></div><div class="meta"><span><strong>Prepared by:</strong> Divine GIHOZO BAYINGANA</span><span><strong>Organisation:</strong> AmaliTech Training Academy</span><span><strong>Target:</strong> https://www.demoblaze.com</span><span><strong>Tool:</strong> Apache JMeter 5.6.3 / Java 21</span></div><div class="sla-bar">SLA Targets &nbsp;|&nbsp; Avg Response &lt; 2,000ms &nbsp;|&nbsp; Error Rate &le; 1%</div><div class="summary"><div class="summary-card"><div style="font-size:32px;font-weight:700;color:#16a34a;">{total_pass}</div><div style="font-size:13px;color:#6b7280;margin-top:4px;">Total Passed</div></div><div class="summary-card"><div style="font-size:32px;font-weight:700;color:#dc2626;">{total_fail}</div><div style="font-size:13px;color:#6b7280;margin-top:4px;">Total Failed</div></div><div class="summary-card"><div style="font-size:32px;font-weight:700;color:#374151;">{total_all}</div><div style="font-size:13px;color:#6b7280;margin-top:4px;">Total Samples</div></div></div><div class="grid">{cards_html}</div><div class="footer">AmaliTech Training Academy &nbsp;|&nbsp; Divine GIHOZO BAYINGANA &nbsp;|&nbsp; Generated by GitHub Actions CI/CD</div></body></html>"""
 
           os.makedirs("reports", exist_ok=True)
           with open("reports/index.html", "w") as f:
               f.write(index_html)
-
           with open("phase_summary.json", "w") as f:
               json.dump(all_phase_data, f)
-
-          print("Index page written.")
+          print("Index page and summary written.")
           EOF
 
-      # ── Build detailed email ──────────────────────────────────────────────
-      - name: Build Email Body
+      # ════════════════════════════════════════════════════════════════════
+      # BUILD EMAIL + SLACK PAYLOADS
+      # ════════════════════════════════════════════════════════════════════
+      - name: Build Email and Slack Notification Bodies
         if: always()
         run: |
           python3 << 'EOF'
@@ -440,57 +313,40 @@ jobs:
           SERVER     = os.environ.get("GITHUB_SERVER_URL","https://github.com")
           REPO_FULL  = os.environ.get("GITHUB_REPOSITORY","")
 
-          PAGES_URL = f"https://{REPO_OWNER}.github.io/{REPO_NAME}/"
-          RUN_URL   = f"{SERVER}/{REPO_FULL}/actions/runs/{RUN_ID}"
-          COMMIT_URL= f"{SERVER}/{REPO_FULL}/commit/{SHA}"
+          PAGES_URL  = f"https://{REPO_OWNER}.github.io/{REPO_NAME}/"
+          RUN_URL    = f"{SERVER}/{REPO_FULL}/actions/runs/{RUN_ID}"
+          COMMIT_URL = f"{SERVER}/{REPO_FULL}/commit/{SHA}"
 
-          all_ok      = all(d.get("ok", False) for d in phases.values()) if phases else False
-          banner_color= "#16a34a" if all_ok else "#dc2626"
-          banner_icon = "✅" if all_ok else "❌"
-          banner_text = "All SLAs Met — Build Passing" if all_ok else "SLA Violations Detected — Attention Required"
+          all_ok       = all(d.get("ok", False) for d in phases.values()) if phases else False
+          banner_color = "#16a34a" if all_ok else "#dc2626"
+          banner_text  = "All SLAs Met — Build Passing" if all_ok else "SLA Violations Detected — Attention Required"
 
-          total_pass = sum(d.get("passed",0) for d in phases.values())
-          total_fail = sum(d.get("failed",0) for d in phases.values())
-          total_all  = sum(d.get("total",0)  for d in phases.values())
-          overall_err = round(total_fail/total_all*100,2) if total_all else 0
+          total_pass  = sum(d.get("passed",0) for d in phases.values())
+          total_fail  = sum(d.get("failed",0) for d in phases.values())
+          total_all   = sum(d.get("total",0)  for d in phases.values())
+          overall_err = round(total_fail/total_all*100, 2) if total_all else 0
 
           PHASE_ORDER = [
-              ("baseline",  "Baseline Test",   "50 users · 1 loop · ramp 50s",     "#2563eb"),
-              ("load",      "Load Test",        "150 users · 5 loops · ramp 60s",   "#7c3aed"),
+              ("baseline",  "Baseline Test",    "50 users · 1 loop · ramp 50s",     "#2563eb"),
+              ("light",     "Light Load Test",  "75 users · 3 loops · ramp 50s",    "#0891b2"),
+              ("medium",    "Medium Load Test", "200 users · 5 loops · ramp 60s",   "#9333ea"),
               ("peak",      "Peak Load Test",   "500 users · 8 loops · ramp 90s",   "#d97706"),
               ("stress",    "Stress Test",      "1000 users · 10 loops · ramp 100s","#dc2626"),
               ("endurance", "Endurance Test",   "300 users · 10 min · ramp 100s",   "#059669"),
           ]
           LABEL_ORDER = ["01_Homepage","02_Login","03_View_Product","04_Add_To_Cart","05_Place_Order"]
 
-          # ── Overall summary table ──────────────────────────────────────────
+          # ── Email summary table rows ──────────────────────────────────────
           summary_rows = ""
           for pid, pname, pconf, pcol in PHASE_ORDER:
-              d  = phases.get(pid, {})
-              ok = d.get("ok", False)
+              d    = phases.get(pid, {})
+              ok   = d.get("ok", False)
               vbg  = "#dcfce7" if ok else "#fee2e2"
               vcol = "#16a34a" if ok else "#dc2626"
               vtxt = "PASS"   if ok else "FAIL"
-              summary_rows += f"""
-              <tr>
-                <td style="padding:8px 12px;font-size:13px;">
-                  <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:{pcol};margin-right:6px;"></span>
-                  <strong>{pname}</strong><br>
-                  <span style="font-size:11px;color:#94a3b8;">{pconf}</span>
-                </td>
-                <td style="padding:8px 12px;text-align:center;font-size:13px;">{d.get('total','—')}</td>
-                <td style="padding:8px 12px;text-align:center;font-size:13px;color:#16a34a;font-weight:700;">{d.get('passed','—')}</td>
-                <td style="padding:8px 12px;text-align:center;font-size:13px;color:#dc2626;font-weight:700;">{d.get('failed','—')}</td>
-                <td style="padding:8px 12px;text-align:center;font-size:13px;">{d.get('avg','—')}ms</td>
-                <td style="padding:8px 12px;text-align:center;font-size:13px;">{d.get('p90','—')}ms</td>
-                <td style="padding:8px 12px;text-align:center;font-size:13px;">{d.get('p95','—')}ms</td>
-                <td style="padding:8px 12px;text-align:center;font-size:13px;">{d.get('error_rate','—')}%</td>
-                <td style="padding:8px 12px;text-align:center;">
-                  <span style="background:{vbg};color:{vcol};padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;">{vtxt}</span>
-                </td>
-              </tr>"""
+              summary_rows += f"""<tr><td style="padding:8px 12px;font-size:13px;"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:{pcol};margin-right:6px;"></span><strong>{pname}</strong><br><span style="font-size:11px;color:#94a3b8;">{pconf}</span></td><td style="padding:8px 12px;text-align:center;font-size:13px;">{d.get('total','--')}</td><td style="padding:8px 12px;text-align:center;font-size:13px;color:#16a34a;font-weight:700;">{d.get('passed','--')}</td><td style="padding:8px 12px;text-align:center;font-size:13px;color:#dc2626;font-weight:700;">{d.get('failed','--')}</td><td style="padding:8px 12px;text-align:center;font-size:13px;">{d.get('avg','--')}ms</td><td style="padding:8px 12px;text-align:center;font-size:13px;">{d.get('p90','--')}ms</td><td style="padding:8px 12px;text-align:center;font-size:13px;">{d.get('p95','--')}ms</td><td style="padding:8px 12px;text-align:center;font-size:13px;">{d.get('error_rate','--')}%</td><td style="padding:8px 12px;text-align:center;"><span style="background:{vbg};color:{vcol};padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;">{vtxt}</span></td></tr>"""
 
-          # ── Per-phase detailed cards ───────────────────────────────────────
+          # ── Email per-phase detail cards ──────────────────────────────────
           phase_cards = ""
           for pid, pname, pconf, pcol in PHASE_ORDER:
               d  = phases.get(pid, {})
@@ -498,232 +354,278 @@ jobs:
               sbg  = "#dcfce7" if ok else "#fee2e2"
               scol = "#16a34a" if ok else "#dc2626"
               stxt = "PASS"   if ok else "FAIL"
-
-              # per-label detail rows
+              sla_rt_ok  = d.get("sla_rt",  False)
+              sla_err_ok = d.get("sla_err", False)
               label_rows = ""
               for lbl in LABEL_ORDER:
                   ld = d.get("per_label", {}).get(lbl)
                   if not ld: continue
                   rc  = "#fff7f7" if ld["fail"] > 0 else "white"
                   ftc = "#dc2626" if ld["fail"] > 0 else "#6b7280"
-                  label_rows += f"""
-                  <tr style="background:{rc};border-bottom:1px solid #f1f5f9;">
-                    <td style="padding:5px 8px;font-size:12px;color:#374151;">{lbl}</td>
-                    <td style="padding:5px 8px;font-size:12px;text-align:right;color:#6b7280;">{ld['total']}</td>
-                    <td style="padding:5px 8px;font-size:12px;text-align:right;color:#16a34a;font-weight:600;">{ld['pass']}</td>
-                    <td style="padding:5px 8px;font-size:12px;text-align:right;color:{ftc};font-weight:600;">{ld['fail']}</td>
-                    <td style="padding:5px 8px;font-size:12px;text-align:right;">{ld['avg']}ms</td>
-                    <td style="padding:5px 8px;font-size:12px;text-align:right;">{ld['p90']}ms</td>
-                    <td style="padding:5px 8px;font-size:12px;text-align:right;">{ld['p95']}ms</td>
-                    <td style="padding:5px 8px;font-size:12px;text-align:right;color:{ftc};">{ld['err']}%</td>
-                  </tr>"""
-
-              sla_rt_ok  = d.get("sla_rt",  False)
-              sla_err_ok = d.get("sla_err", False)
-
+                  label_rows += f"""<tr style="background:{rc};border-bottom:1px solid #f1f5f9;"><td style="padding:5px 8px;font-size:12px;color:#374151;">{lbl}</td><td style="padding:5px 8px;font-size:12px;text-align:right;color:#6b7280;">{ld['total']}</td><td style="padding:5px 8px;font-size:12px;text-align:right;color:#16a34a;font-weight:600;">{ld['pass']}</td><td style="padding:5px 8px;font-size:12px;text-align:right;color:{ftc};font-weight:600;">{ld['fail']}</td><td style="padding:5px 8px;font-size:12px;text-align:right;">{ld['avg']}ms</td><td style="padding:5px 8px;font-size:12px;text-align:right;">{ld['p90']}ms</td><td style="padding:5px 8px;font-size:12px;text-align:right;">{ld['p95']}ms</td><td style="padding:5px 8px;font-size:12px;text-align:right;color:{ftc};">{ld['err']}%</td></tr>"""
               phase_cards += f"""
               <div style="border:1px solid #e5e7eb;border-radius:10px;overflow:hidden;margin-bottom:20px;">
                 <div style="background:{pcol};padding:12px 18px;display:flex;justify-content:space-between;align-items:center;">
-                  <div>
-                    <span style="color:white;font-size:15px;font-weight:700;">{pname}</span>
-                    <span style="color:rgba(255,255,255,0.75);font-size:12px;margin-left:10px;">{pconf}</span>
-                  </div>
+                  <div><span style="color:white;font-size:15px;font-weight:700;">{pname}</span><span style="color:rgba(255,255,255,0.75);font-size:12px;margin-left:10px;">{pconf}</span></div>
                   <span style="background:{sbg};color:{scol};padding:3px 12px;border-radius:20px;font-size:12px;font-weight:700;">{stxt}</span>
                 </div>
                 <div style="background:white;padding:14px 18px;">
-                  <!-- SLA badges -->
                   <div style="display:flex;gap:8px;margin-bottom:12px;">
-                    <span style="padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700;background:{'#dcfce7' if sla_rt_ok else '#fee2e2'};color:{'#16a34a' if sla_rt_ok else '#dc2626'};">
-                      {'✓' if sla_rt_ok else '✗'} Avg RT &lt; 2000ms ({d.get('avg','?')}ms)
-                    </span>
-                    <span style="padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700;background:{'#dcfce7' if sla_err_ok else '#fee2e2'};color:{'#16a34a' if sla_err_ok else '#dc2626'};">
-                      {'✓' if sla_err_ok else '✗'} Error Rate &le; 1% ({d.get('error_rate','?')}%)
-                    </span>
+                    <span style="padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700;background:{'#dcfce7' if sla_rt_ok else '#fee2e2'};color:{'#16a34a' if sla_rt_ok else '#dc2626'};">{'&#10003;' if sla_rt_ok else '&#10007;'} Avg RT &lt; 2000ms ({d.get('avg','?')}ms)</span>
+                    <span style="padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700;background:{'#dcfce7' if sla_err_ok else '#fee2e2'};color:{'#16a34a' if sla_err_ok else '#dc2626'};">{'&#10003;' if sla_err_ok else '&#10007;'} Error Rate &le; 1% ({d.get('error_rate','?')}%)</span>
                   </div>
-                  <!-- Summary metrics -->
-                  <table style="width:100%;border-collapse:collapse;margin-bottom:12px;">
-                    <tr>
-                      <td style="text-align:center;padding:8px;background:#f0fdf4;border-radius:6px;">
-                        <div style="font-size:18px;font-weight:700;color:#16a34a;">{d.get('passed','—')}</div>
-                        <div style="font-size:10px;color:#16a34a;">PASSED</div>
-                      </td>
-                      <td style="width:6px;"></td>
-                      <td style="text-align:center;padding:8px;background:#fef2f2;border-radius:6px;">
-                        <div style="font-size:18px;font-weight:700;color:#dc2626;">{d.get('failed','—')}</div>
-                        <div style="font-size:10px;color:#dc2626;">FAILED</div>
-                      </td>
-                      <td style="width:6px;"></td>
-                      <td style="text-align:center;padding:8px;background:#f9fafb;border-radius:6px;">
-                        <div style="font-size:18px;font-weight:700;color:#374151;">{d.get('total','—')}</div>
-                        <div style="font-size:10px;color:#6b7280;">TOTAL</div>
-                      </td>
-                      <td style="width:6px;"></td>
-                      <td style="text-align:center;padding:8px;background:#f9fafb;border-radius:6px;">
-                        <div style="font-size:18px;font-weight:700;color:#374151;">{d.get('avg','—')}ms</div>
-                        <div style="font-size:10px;color:#6b7280;">AVG RT</div>
-                      </td>
-                      <td style="width:6px;"></td>
-                      <td style="text-align:center;padding:8px;background:#f9fafb;border-radius:6px;">
-                        <div style="font-size:18px;font-weight:700;color:#374151;">{d.get('p90','—')}ms</div>
-                        <div style="font-size:10px;color:#6b7280;">P90</div>
-                      </td>
-                      <td style="width:6px;"></td>
-                      <td style="text-align:center;padding:8px;background:#f9fafb;border-radius:6px;">
-                        <div style="font-size:18px;font-weight:700;color:#374151;">{d.get('p95','—')}ms</div>
-                        <div style="font-size:10px;color:#6b7280;">P95</div>
-                      </td>
-                      <td style="width:6px;"></td>
-                      <td style="text-align:center;padding:8px;background:#f9fafb;border-radius:6px;">
-                        <div style="font-size:18px;font-weight:700;color:#374151;">{d.get('min','—')}ms</div>
-                        <div style="font-size:10px;color:#6b7280;">MIN</div>
-                      </td>
-                      <td style="width:6px;"></td>
-                      <td style="text-align:center;padding:8px;background:#f9fafb;border-radius:6px;">
-                        <div style="font-size:18px;font-weight:700;color:#374151;">{d.get('max','—')}ms</div>
-                        <div style="font-size:10px;color:#6b7280;">MAX</div>
-                      </td>
-                    </tr>
-                  </table>
-                  <!-- Per-transaction table -->
-                  <table style="width:100%;border-collapse:collapse;font-size:12px;border:1px solid #f1f5f9;border-radius:6px;overflow:hidden;">
-                    <thead>
-                      <tr style="background:#f8fafc;">
-                        <th style="padding:6px 8px;text-align:left;color:#64748b;font-size:11px;">TRANSACTION</th>
-                        <th style="padding:6px 8px;text-align:right;color:#64748b;font-size:11px;">TOTAL</th>
-                        <th style="padding:6px 8px;text-align:right;color:#64748b;font-size:11px;">PASS</th>
-                        <th style="padding:6px 8px;text-align:right;color:#64748b;font-size:11px;">FAIL</th>
-                        <th style="padding:6px 8px;text-align:right;color:#64748b;font-size:11px;">AVG</th>
-                        <th style="padding:6px 8px;text-align:right;color:#64748b;font-size:11px;">P90</th>
-                        <th style="padding:6px 8px;text-align:right;color:#64748b;font-size:11px;">P95</th>
-                        <th style="padding:6px 8px;text-align:right;color:#64748b;font-size:11px;">ERR%</th>
-                      </tr>
-                    </thead>
-                    <tbody>{label_rows}</tbody>
-                  </table>
-                  <div style="margin-top:10px;text-align:right;">
-                    <a href="{PAGES_URL}{pid}/"
-                       style="font-size:12px;color:{pcol};text-decoration:none;font-weight:600;">
-                      View Full {pname} Dashboard &rarr;
-                    </a>
-                  </div>
+                  <table style="width:100%;border-collapse:collapse;margin-bottom:12px;"><tr>
+                    <td style="text-align:center;padding:8px;background:#f0fdf4;border-radius:6px;"><div style="font-size:18px;font-weight:700;color:#16a34a;">{d.get('passed','--')}</div><div style="font-size:10px;color:#16a34a;">PASSED</div></td>
+                    <td style="width:6px;"></td>
+                    <td style="text-align:center;padding:8px;background:#fef2f2;border-radius:6px;"><div style="font-size:18px;font-weight:700;color:#dc2626;">{d.get('failed','--')}</div><div style="font-size:10px;color:#dc2626;">FAILED</div></td>
+                    <td style="width:6px;"></td>
+                    <td style="text-align:center;padding:8px;background:#f9fafb;border-radius:6px;"><div style="font-size:18px;font-weight:700;color:#374151;">{d.get('total','--')}</div><div style="font-size:10px;color:#6b7280;">TOTAL</div></td>
+                    <td style="width:6px;"></td>
+                    <td style="text-align:center;padding:8px;background:#f9fafb;border-radius:6px;"><div style="font-size:18px;font-weight:700;color:#374151;">{d.get('avg','--')}ms</div><div style="font-size:10px;color:#6b7280;">AVG RT</div></td>
+                    <td style="width:6px;"></td>
+                    <td style="text-align:center;padding:8px;background:#f9fafb;border-radius:6px;"><div style="font-size:18px;font-weight:700;color:#374151;">{d.get('p90','--')}ms</div><div style="font-size:10px;color:#6b7280;">P90</div></td>
+                    <td style="width:6px;"></td>
+                    <td style="text-align:center;padding:8px;background:#f9fafb;border-radius:6px;"><div style="font-size:18px;font-weight:700;color:#374151;">{d.get('p95','--')}ms</div><div style="font-size:10px;color:#6b7280;">P95</div></td>
+                    <td style="width:6px;"></td>
+                    <td style="text-align:center;padding:8px;background:#f9fafb;border-radius:6px;"><div style="font-size:18px;font-weight:700;color:#374151;">{d.get('min','--')}ms</div><div style="font-size:10px;color:#6b7280;">MIN</div></td>
+                    <td style="width:6px;"></td>
+                    <td style="text-align:center;padding:8px;background:#f9fafb;border-radius:6px;"><div style="font-size:18px;font-weight:700;color:#374151;">{d.get('max','--')}ms</div><div style="font-size:10px;color:#6b7280;">MAX</div></td>
+                  </tr></table>
+                  <table style="width:100%;border-collapse:collapse;font-size:12px;border:1px solid #f1f5f9;"><thead><tr style="background:#f8fafc;"><th style="padding:6px 8px;text-align:left;color:#64748b;font-size:11px;">TRANSACTION</th><th style="padding:6px 8px;text-align:right;color:#64748b;font-size:11px;">TOTAL</th><th style="padding:6px 8px;text-align:right;color:#64748b;font-size:11px;">PASS</th><th style="padding:6px 8px;text-align:right;color:#64748b;font-size:11px;">FAIL</th><th style="padding:6px 8px;text-align:right;color:#64748b;font-size:11px;">AVG</th><th style="padding:6px 8px;text-align:right;color:#64748b;font-size:11px;">P90</th><th style="padding:6px 8px;text-align:right;color:#64748b;font-size:11px;">P95</th><th style="padding:6px 8px;text-align:right;color:#64748b;font-size:11px;">ERR%</th></tr></thead><tbody>{label_rows}</tbody></table>
+                  <div style="margin-top:10px;text-align:right;"><a href="{PAGES_URL}{pid}/" style="font-size:12px;color:{pcol};text-decoration:none;font-weight:600;">View Full {pname} Dashboard &rarr;</a></div>
                 </div>
               </div>"""
 
-          html = f"""<!DOCTYPE html>
-          <html><head><meta charset="UTF-8"></head>
+          # ── Write email HTML ──────────────────────────────────────────────
+          email_html = f"""<!DOCTYPE html><html><head><meta charset="UTF-8"></head>
           <body style="margin:0;padding:0;background:#f1f5f9;font-family:Arial,sans-serif;">
             <div style="max-width:780px;margin:24px auto;background:white;border-radius:10px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.09);">
-
-              <!-- Banner -->
               <div style="background:{banner_color};padding:28px 32px;text-align:center;">
-                <div style="font-size:40px;margin-bottom:8px;">{banner_icon}</div>
+                <div style="font-size:40px;margin-bottom:8px;">{'&#x2705;' if all_ok else '&#x274C;'}</div>
                 <h1 style="margin:0;color:white;font-size:22px;font-weight:700;">DemoBlaze Performance Test Report</h1>
                 <p style="margin:8px 0 0;color:rgba(255,255,255,0.88);font-size:14px;">{banner_text}</p>
               </div>
-
-              <!-- Build metadata -->
               <div style="background:#f8fafc;border-bottom:1px solid #e2e8f0;padding:14px 28px;">
-                <table style="width:100%;border-collapse:collapse;font-size:12px;">
-                  <tr>
-                    <td style="padding:4px 8px;"><span style="color:#94a3b8;">REPOSITORY</span><br><strong>{REPO_FULL}</strong></td>
-                    <td style="padding:4px 8px;"><span style="color:#94a3b8;">BRANCH</span><br><strong>{REF}</strong></td>
-                    <td style="padding:4px 8px;"><span style="color:#94a3b8;">COMMIT</span><br><a href="{COMMIT_URL}" style="color:#2563eb;text-decoration:none;font-weight:700;">{SHA}</a></td>
-                    <td style="padding:4px 8px;"><span style="color:#94a3b8;">TRIGGERED BY</span><br><strong>{ACTOR} ({EVENT})</strong></td>
-                    <td style="padding:4px 8px;"><span style="color:#94a3b8;">RUN</span><br><a href="{RUN_URL}" style="color:#2563eb;text-decoration:none;font-weight:700;">#{RUN_NUM}</a></td>
-                  </tr>
-                </table>
+                <table style="width:100%;border-collapse:collapse;font-size:12px;"><tr>
+                  <td style="padding:4px 8px;"><span style="color:#94a3b8;">REPOSITORY</span><br><strong>{REPO_FULL}</strong></td>
+                  <td style="padding:4px 8px;"><span style="color:#94a3b8;">BRANCH</span><br><strong>{REF}</strong></td>
+                  <td style="padding:4px 8px;"><span style="color:#94a3b8;">COMMIT</span><br><a href="{COMMIT_URL}" style="color:#2563eb;text-decoration:none;font-weight:700;">{SHA}</a></td>
+                  <td style="padding:4px 8px;"><span style="color:#94a3b8;">TRIGGERED BY</span><br><strong>{ACTOR} ({EVENT})</strong></td>
+                  <td style="padding:4px 8px;"><span style="color:#94a3b8;">RUN</span><br><a href="{RUN_URL}" style="color:#2563eb;text-decoration:none;font-weight:700;">#{RUN_NUM}</a></td>
+                </tr></table>
               </div>
-
-              <!-- SLA bar -->
               <div style="background:#fffbeb;border-bottom:1px solid #fde68a;padding:10px 28px;font-size:13px;color:#92400e;text-align:center;">
-                <strong>SLA Targets:</strong> &nbsp;
-                Avg Response &lt; 2,000ms &nbsp;|&nbsp; Error Rate &le; 1%
+                <strong>SLA Targets:</strong> &nbsp; Avg Response &lt; 2,000ms &nbsp;|&nbsp; Error Rate &le; 1%
               </div>
-
               <div style="padding:24px 28px;">
-
-                <!-- Overall totals -->
-                <table style="width:100%;border-collapse:collapse;margin-bottom:24px;text-align:center;">
-                  <tr>
-                    <td style="padding:12px;background:#f0fdf4;border-radius:8px;">
-                      <div style="font-size:28px;font-weight:700;color:#16a34a;">{total_pass}</div>
-                      <div style="font-size:12px;color:#16a34a;margin-top:2px;">Total Passed</div>
-                    </td>
-                    <td style="width:10px;"></td>
-                    <td style="padding:12px;background:#fef2f2;border-radius:8px;">
-                      <div style="font-size:28px;font-weight:700;color:#dc2626;">{total_fail}</div>
-                      <div style="font-size:12px;color:#dc2626;margin-top:2px;">Total Failed</div>
-                    </td>
-                    <td style="width:10px;"></td>
-                    <td style="padding:12px;background:#f9fafb;border-radius:8px;">
-                      <div style="font-size:28px;font-weight:700;color:#374151;">{total_all}</div>
-                      <div style="font-size:12px;color:#6b7280;margin-top:2px;">Total Samples</div>
-                    </td>
-                    <td style="width:10px;"></td>
-                    <td style="padding:12px;background:#f9fafb;border-radius:8px;">
-                      <div style="font-size:28px;font-weight:700;color:#374151;">{overall_err}%</div>
-                      <div style="font-size:12px;color:#6b7280;margin-top:2px;">Overall Error Rate</div>
-                    </td>
-                  </tr>
-                </table>
-
-                <!-- Cross-phase summary table -->
+                <table style="width:100%;border-collapse:collapse;margin-bottom:24px;text-align:center;"><tr>
+                  <td style="padding:12px;background:#f0fdf4;border-radius:8px;"><div style="font-size:28px;font-weight:700;color:#16a34a;">{total_pass}</div><div style="font-size:12px;color:#16a34a;margin-top:2px;">Total Passed</div></td>
+                  <td style="width:10px;"></td>
+                  <td style="padding:12px;background:#fef2f2;border-radius:8px;"><div style="font-size:28px;font-weight:700;color:#dc2626;">{total_fail}</div><div style="font-size:12px;color:#dc2626;margin-top:2px;">Total Failed</div></td>
+                  <td style="width:10px;"></td>
+                  <td style="padding:12px;background:#f9fafb;border-radius:8px;"><div style="font-size:28px;font-weight:700;color:#374151;">{total_all}</div><div style="font-size:12px;color:#6b7280;margin-top:2px;">Total Samples</div></td>
+                  <td style="width:10px;"></td>
+                  <td style="padding:12px;background:#f9fafb;border-radius:8px;"><div style="font-size:28px;font-weight:700;color:#374151;">{overall_err}%</div><div style="font-size:12px;color:#6b7280;margin-top:2px;">Overall Error Rate</div></td>
+                </tr></table>
                 <h2 style="font-size:15px;font-weight:700;color:#1e293b;margin:0 0 10px;">All Phases at a Glance</h2>
-                <table style="width:100%;border-collapse:collapse;font-size:12px;margin-bottom:28px;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-                  <thead>
-                    <tr style="background:#f1f5f9;">
-                      <th style="padding:8px 12px;text-align:left;color:#64748b;">PHASE</th>
-                      <th style="padding:8px 12px;text-align:center;color:#64748b;">TOTAL</th>
-                      <th style="padding:8px 12px;text-align:center;color:#64748b;">PASS</th>
-                      <th style="padding:8px 12px;text-align:center;color:#64748b;">FAIL</th>
-                      <th style="padding:8px 12px;text-align:center;color:#64748b;">AVG RT</th>
-                      <th style="padding:8px 12px;text-align:center;color:#64748b;">P90</th>
-                      <th style="padding:8px 12px;text-align:center;color:#64748b;">P95</th>
-                      <th style="padding:8px 12px;text-align:center;color:#64748b;">ERR%</th>
-                      <th style="padding:8px 12px;text-align:center;color:#64748b;">SLA</th>
-                    </tr>
-                  </thead>
+                <table style="width:100%;border-collapse:collapse;font-size:12px;margin-bottom:28px;border:1px solid #e5e7eb;">
+                  <thead><tr style="background:#f1f5f9;"><th style="padding:8px 12px;text-align:left;color:#64748b;">PHASE</th><th style="padding:8px 12px;text-align:center;color:#64748b;">TOTAL</th><th style="padding:8px 12px;text-align:center;color:#64748b;">PASS</th><th style="padding:8px 12px;text-align:center;color:#64748b;">FAIL</th><th style="padding:8px 12px;text-align:center;color:#64748b;">AVG RT</th><th style="padding:8px 12px;text-align:center;color:#64748b;">P90</th><th style="padding:8px 12px;text-align:center;color:#64748b;">P95</th><th style="padding:8px 12px;text-align:center;color:#64748b;">ERR%</th><th style="padding:8px 12px;text-align:center;color:#64748b;">SLA</th></tr></thead>
                   <tbody>{summary_rows}</tbody>
                 </table>
-
-                <!-- Per-phase detail cards -->
                 <h2 style="font-size:15px;font-weight:700;color:#1e293b;margin:0 0 14px;">Detailed Phase Results</h2>
                 {phase_cards}
-
-                <!-- CTA buttons -->
                 <div style="text-align:center;margin-top:24px;">
-                  <a href="{PAGES_URL}"
-                     style="display:inline-block;background:#2563eb;color:white;padding:12px 28px;border-radius:6px;text-decoration:none;font-weight:700;font-size:14px;margin-right:8px;">
-                    View All Reports
-                  </a>
-                  <a href="{RUN_URL}"
-                     style="display:inline-block;background:#475569;color:white;padding:12px 28px;border-radius:6px;text-decoration:none;font-weight:700;font-size:14px;">
-                    Workflow Logs
-                  </a>
+                  <a href="{PAGES_URL}" style="display:inline-block;background:#2563eb;color:white;padding:12px 28px;border-radius:6px;text-decoration:none;font-weight:700;font-size:14px;margin-right:8px;">View All Reports</a>
+                  <a href="{RUN_URL}" style="display:inline-block;background:#475569;color:white;padding:12px 28px;border-radius:6px;text-decoration:none;font-weight:700;font-size:14px;">Workflow Logs</a>
                 </div>
-
               </div>
-
               <div style="background:#f8fafc;border-top:1px solid #e2e8f0;padding:14px 28px;text-align:center;">
-                <p style="margin:0;font-size:12px;color:#94a3b8;">
-                  AmaliTech Training Academy &nbsp;|&nbsp; Divine GIHOZO BAYINGANA &nbsp;|&nbsp;
-                  Generated by GitHub Actions CI/CD &nbsp;|&nbsp; Run #{RUN_NUM}
-                </p>
+                <p style="margin:0;font-size:12px;color:#94a3b8;">AmaliTech Training Academy &nbsp;|&nbsp; Divine GIHOZO BAYINGANA &nbsp;|&nbsp; Run #{RUN_NUM}</p>
               </div>
             </div>
           </body></html>"""
 
           with open("email_body.html", "w") as f:
-              f.write(html)
+              f.write(email_html)
+
+          # ── Build Slack Block Kit payload ─────────────────────────────────
+          slack_color = "#16a34a" if all_ok else "#dc2626"
+          status_text = "All SLAs Met" if all_ok else "SLA Violations Detected"
+          status_icon = ":white_check_mark:" if all_ok else ":x:"
+
+          # Phase summary lines for the overview block
+          phase_summary_lines = []
+          for pid, pname, pconf, pcol in PHASE_ORDER:
+              d    = phases.get(pid, {})
+              ok   = d.get("ok", False)
+              icon = ":white_check_mark:" if ok else ":x:"
+              phase_summary_lines.append(
+                  f"{icon} *{pname}* _({pconf})_\n"
+                  f">Samples: `{d.get('total','--')}`  Failed: `{d.get('failed','--')}`  "
+                  f"Avg RT: `{d.get('avg','--')}ms`  P90: `{d.get('p90','--')}ms`  "
+                  f"P95: `{d.get('p95','--')}ms`  Err: `{d.get('error_rate','--')}%`"
+              )
+
+          # Detailed per-phase blocks
+          detail_blocks = []
+          for pid, pname, pconf, pcol in PHASE_ORDER:
+              d    = phases.get(pid, {})
+              ok   = d.get("ok", False)
+              icon = ":white_check_mark:" if ok else ":x:"
+              stxt = "PASS" if ok else "FAIL"
+
+              sla_rt_ok  = d.get("sla_rt",  False)
+              sla_err_ok = d.get("sla_err", False)
+              sla_rt_icon  = ":white_check_mark:" if sla_rt_ok  else ":x:"
+              sla_err_icon = ":white_check_mark:" if sla_err_ok else ":x:"
+
+              tx_lines = []
+              for lbl in LABEL_ORDER:
+                  ld = d.get("per_label", {}).get(lbl)
+                  if not ld: continue
+                  fail_icon = ":red_circle:" if ld["fail"] > 0 else ":large_green_circle:"
+                  tx_lines.append(
+                      f"{fail_icon} `{lbl}` "
+                      f"Total:{ld['total']} Pass:{ld['pass']} Fail:{ld['fail']} "
+                      f"Avg:{ld['avg']}ms P90:{ld['p90']}ms P95:{ld['p95']}ms Err:{ld['err']}%"
+                  )
+
+              detail_blocks += [
+                  {"type": "divider"},
+                  {
+                      "type": "section",
+                      "text": {
+                          "type": "mrkdwn",
+                          "text": (
+                              f"{icon} *{pname}* — *{stxt}*   _({pconf})_\n"
+                              f"{sla_rt_icon} Avg RT < 2000ms: `{d.get('avg','--')}ms`  "
+                              f"{sla_err_icon} Error Rate \u22641%: `{d.get('error_rate','--')}%`"
+                          )
+                      }
+                  },
+                  {
+                      "type": "section",
+                      "fields": [
+                          {"type": "mrkdwn", "text": f":bar_chart: *Samples:* {d.get('total','--')}"},
+                          {"type": "mrkdwn", "text": f":large_green_circle: *Passed:* {d.get('passed','--')}"},
+                          {"type": "mrkdwn", "text": f":red_circle: *Failed:* {d.get('failed','--')}"},
+                          {"type": "mrkdwn", "text": f":stopwatch: *Avg RT:* {d.get('avg','--')}ms"},
+                          {"type": "mrkdwn", "text": f":chart_with_upwards_trend: *P90:* {d.get('p90','--')}ms"},
+                          {"type": "mrkdwn", "text": f":chart_with_upwards_trend: *P95:* {d.get('p95','--')}ms"},
+                          {"type": "mrkdwn", "text": f":arrow_down: *Min RT:* {d.get('min','--')}ms"},
+                          {"type": "mrkdwn", "text": f":arrow_up: *Max RT:* {d.get('max','--')}ms"},
+                      ]
+                  },
+                  {
+                      "type": "section",
+                      "text": {
+                          "type": "mrkdwn",
+                          "text": "*Transaction Breakdown:*\n" + ("\n".join(tx_lines) if tx_lines else "_No data_")
+                      }
+                  },
+                  {
+                      "type": "actions",
+                      "elements": [{
+                          "type": "button",
+                          "text": {"type": "plain_text", "text": f"View {pname} Dashboard"},
+                          "url": f"{PAGES_URL}{pid}/",
+                          "style": "primary" if ok else "danger"
+                      }]
+                  }
+              ]
+
+          slack_payload = {
+              "attachments": [{
+                  "color": slack_color,
+                  "blocks": [
+                      {
+                          "type": "header",
+                          "text": {
+                              "type": "plain_text",
+                              "text": f"DemoBlaze Performance Report — {status_text}"
+                          }
+                      },
+                      {
+                          "type": "section",
+                          "text": {
+                              "type": "mrkdwn",
+                              "text": f"{status_icon} *{banner_text}*\n_Apache JMeter 5.6.3 / Java 21 — 6 Test Phases_"
+                          }
+                      },
+                      {"type": "divider"},
+                      {
+                          "type": "section",
+                          "fields": [
+                              {"type": "mrkdwn", "text": f"*:file_folder: Repository:*\n{REPO_FULL}"},
+                              {"type": "mrkdwn", "text": f"*:twisted_rightwards_arrows: Branch:*\n`{REF}`"},
+                              {"type": "mrkdwn", "text": f"*:hash: Commit:*\n<{COMMIT_URL}|`{SHA}`>"},
+                              {"type": "mrkdwn", "text": f"*:bust_in_silhouette: Triggered by:*\n{ACTOR} ({EVENT})"},
+                              {"type": "mrkdwn", "text": f"*:gear: Run:*\n<{RUN_URL}|#{RUN_NUM}>"},
+                              {"type": "mrkdwn", "text": f"*:wrench: Tool:*\nJMeter 5.6.3 / Java 21"},
+                          ]
+                      },
+                      {"type": "divider"},
+                      {
+                          "type": "section",
+                          "fields": [
+                              {"type": "mrkdwn", "text": f":large_green_circle: *Total Passed:*\n`{total_pass}`"},
+                              {"type": "mrkdwn", "text": f":red_circle: *Total Failed:*\n`{total_fail}`"},
+                              {"type": "mrkdwn", "text": f":bar_chart: *Total Samples:*\n`{total_all}`"},
+                              {"type": "mrkdwn", "text": f":warning: *Overall Error Rate:*\n`{overall_err}%`"},
+                          ]
+                      },
+                      {"type": "divider"},
+                      {
+                          "type": "section",
+                          "text": {
+                              "type": "mrkdwn",
+                              "text": (
+                                  ":clipboard: *Phase Summary*\n"
+                                  "_SLA: Avg Response < 2,000ms | Error Rate \u22641%_\n\n"
+                                  + "\n\n".join(phase_summary_lines)
+                              )
+                          }
+                      },
+                      *detail_blocks,
+                      {"type": "divider"},
+                      {
+                          "type": "actions",
+                          "elements": [
+                              {
+                                  "type": "button",
+                                  "text": {"type": "plain_text", "text": "View All Reports"},
+                                  "url": PAGES_URL,
+                                  "style": "primary"
+                              },
+                              {
+                                  "type": "button",
+                                  "text": {"type": "plain_text", "text": "Workflow Logs"},
+                                  "url": RUN_URL
+                              }
+                          ]
+                      },
+                      {
+                          "type": "context",
+                          "elements": [{
+                              "type": "mrkdwn",
+                              "text": f"AmaliTech Training Academy | Divine GIHOZO BAYINGANA | Run #{RUN_NUM}"
+                          }]
+                      }
+                  ]
+              }]
+          }
+
+          with open("slack_payload.json", "w") as f:
+              json.dump(slack_payload, f)
 
           env_file = os.environ.get("GITHUB_ENV", "/dev/null")
           with open(env_file, "a") as f:
               f.write(f"OVERALL_STATUS={'PASS' if all_ok else 'FAIL'}\n")
 
-          print("Email body written.")
+          print("Email body and Slack payload written.")
           EOF
 
-      # ── Upload all 5 reports as one artifact ──────────────────────────────
+      # ── Upload all reports ────────────────────────────────────────────────
       - name: Upload All Reports as Artifact
         uses: actions/upload-artifact@v4
         if: always()
@@ -732,13 +634,7 @@ jobs:
           path: ./reports/
           retention-days: 7
 
-      # ── Deploy to GitHub Pages ─────────────────────────────────────────────
-      # /            → landing page (all 5 phase cards)
-      # /baseline/   → Baseline JMeter HTML dashboard
-      # /load/       → Load Test JMeter HTML dashboard
-      # /peak/       → Peak Load Test JMeter HTML dashboard
-      # /stress/     → Stress Test JMeter HTML dashboard
-      # /endurance/  → Endurance Test JMeter HTML dashboard
+      # ── Deploy to GitHub Pages ────────────────────────────────────────────
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         if: always()
@@ -747,9 +643,9 @@ jobs:
           publish_dir: ./reports
           publish_branch: gh-pages
           force_orphan: true
-          commit_message: "ci: publish 5-phase reports — run #${{ github.run_number }}"
+          commit_message: "ci: publish 6-phase reports — run #${{ github.run_number }}"
 
-      # ── Send email ─────────────────────────────────────────────────────────
+      # ── Send Email ────────────────────────────────────────────────────────
       - name: Send Email Notification
         uses: dawidd6/action-send-mail@v3
         if: always()
@@ -763,3 +659,14 @@ jobs:
           html_body: file://email_body.html
           to: ${{ secrets.NOTIFICATION_EMAIL }}
           from: "GitHub Actions <${{ secrets.EMAIL_USERNAME }}>"
+
+      # ── Send Slack Notification ───────────────────────────────────────────
+      - name: Send Slack Notification
+        if: always()
+        run: |
+          curl -s -X POST \
+            -H "Content-Type: application/json" \
+            -d @slack_payload.json \
+            "${{ secrets.SLACK_WEBHOOK_URL }}" \
+            && echo "Slack notification sent successfully" \
+            || echo "Slack notification failed — verify SLACK_WEBHOOK_URL secret is set"
